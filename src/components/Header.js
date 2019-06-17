@@ -5,7 +5,7 @@ import styled from "styled-components";
 import logo from "../assets/jjl-logo.svg";
 
 const Container = styled.header`
-  margin: 20px 15px;
+  padding: 20px 15px;
   display: flex;
   justify-content: space-between;
 `;
@@ -22,6 +22,7 @@ const Links = styled.div`
 
 const Header = () => {
   return (
+    <div>
     <Container>
       <Logo>
       <Link to="/">
@@ -38,6 +39,7 @@ const Header = () => {
         </div>
       </Links>
     </Container>
+    </div>
   );
 };
 
