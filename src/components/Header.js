@@ -8,6 +8,14 @@ const Container = styled.header`
   padding: 20px 15px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  max-width: 994px;
+  background: #fff;
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
 `;
 
 const Logo = styled.div`
@@ -32,10 +40,10 @@ const Header = () => {
       <Links>
         <div>
           <Link to="/projects">PROJECTS</Link>/
-          <Link to="/projects">OVERVIEW</Link>
+          <Link to="/overview">OVERVIEW</Link>
         </div>
         <div>
-          <Link to="/projects">ABOUT</Link>/<Link to="/projects">JOURNAL</Link>
+          <Link to="/about">ABOUT</Link>/<Link to="/projects">JOURNAL</Link>
         </div>
       </Links>
     </Container>
