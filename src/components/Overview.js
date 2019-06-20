@@ -22,12 +22,6 @@ const ImgRow = styled.div`
   padding: 40px 0;
 `;
 
-const DescriptionContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-`;
-
 const Img = styled.img`
   align-self: center;
 `;
@@ -48,7 +42,6 @@ const Overview = () => {
           </ImgRow>
         </ImgContainer>
       </Container>
-      <hr />
     </React.Fragment>
   );
 };
