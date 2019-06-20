@@ -23,6 +23,7 @@ const App = () => {
       <Container>
         <Header />
         <Route exact path="/" component={Home} />
+        <Route exact path="/jjl" component={Home} />
         <Route path="/projects" component={Projects} />
         <Route path="/overview" component={Overview} />
         <Route path="/about" component={About} />
