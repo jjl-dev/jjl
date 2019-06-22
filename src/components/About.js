@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
   header{
     background: ${props => ('#E8E6DC !important')};
   }
+  hr {
+    border-top: 1px solid #C8C8C8; 
+  }
 `
 
 const Container = styled.div`

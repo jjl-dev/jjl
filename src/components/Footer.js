@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.footer`
-  padding: 20px 15px;
+  padding: 100px 15px 20px 15px;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
