@@ -23,6 +23,9 @@ const Bio = styled.div`
   justify-content: space-between;
   max-width: 473px;
   padding: 50px 0;
+  font-size: 15px;
+  line-height: 21px;
+  font-family: Suisse Works Intl;
 `;
 
 const Info = styled.div`
@@ -33,6 +36,17 @@ const Info = styled.div`
 
 const Social = styled.ul`
   padding: 10px 0;
+  font-family: Suisse Works;
+  font-size: 15px;
+  line-height: 21px;
+
+`;
+
+const SocialHeading = styled.li`
+  padding: 10px 0;
+  font-family: Suisse Works Intl;
+  font-size: 15px;
+  line-height: 3px;
 `;
 
 const Img = styled.img`
@@ -61,7 +75,7 @@ const Projects = () => {
 
         <Info>
           <Social>
-            <li>Clients</li>
+            <SocialHeading>Clients</SocialHeading>
             <li>Lululemon</li>
             <li>Hypebeast</li>
             <li>Hypebae</li>
@@ -79,15 +93,15 @@ const Projects = () => {
           </Social>
           <div>
             <Social>
-              <li>Email</li>
+              <SocialHeading>Email</SocialHeading>
               <li>info@jeremyjudelee.com</li>
             </Social>
             <Social>
-              <li>Instagram</li>
+              <SocialHeading>Instagram</SocialHeading>
               <li>@jjudelee</li>
-              <li>Press</li>
             </Social>
             <Social>
+              <SocialHeading>Press</SocialHeading>
               <li>Booooooo.com, 2019</li>
               <li>Mr. Gray Socks, 2018</li>
               <li>The Creator Class</li>

@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Overview from "./components/Overview";
+import Journal from "./components/Journal";
 import Footer from "./components/Footer";
 
 const Container = styled.div`
@@ -22,7 +23,7 @@ const App = () => {
         <Route exact path="/projects" component={Projects} />
         <Route path="/overview" component={Overview} />
         <Route path="/about" component={About} />
-        {/* <Route path="/journal" component={Projects} /> */}
+        <Route path="/Journal" component={Journal} />
         <Footer />
       </Container>
     </Router>

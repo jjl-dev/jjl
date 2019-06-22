@@ -24,6 +24,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 40px 0 30px 0;
+  font-size: 11px;
 `;
 
 const Img = styled.img`

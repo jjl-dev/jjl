@@ -6,6 +6,7 @@ import logo from "../assets/jjl-logo.svg";
 
 const Container = styled.header`
   padding: 20px 15px;
+  font-size: 13px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -43,7 +44,7 @@ const Header = () => {
           <Link to="/overview">OVERVIEW</Link>
         </div>
         <div>
-          <Link to="/about">ABOUT</Link>/<Link to="/projects">JOURNAL</Link>
+          <Link to="/about">ABOUT</Link>/<Link to="/Journal">JOURNAL</Link>
         </div>
       </Links>
     </Container>
