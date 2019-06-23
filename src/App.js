@@ -9,6 +9,7 @@ import About from "./components/About";
 import Overview from "./components/Overview";
 import Journal from "./components/Journal";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollTop";
 
 import SingleProject from "./components/SingleProject";
 
@@ -21,6 +22,7 @@ const Container = styled.div`
 const App = () => {
   return (
     <Router>
+    <ScrollToTop>
       <Container>
         <Header />
         <Route exact path="/" component={Home} />
@@ -32,6 +34,7 @@ const App = () => {
         <Route path="/singleproject" component={SingleProject} />
         <Footer />
       </Container>
+      </ScrollToTop>
     </Router>
   );
 };
