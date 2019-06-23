@@ -25,7 +25,26 @@ const ImgRow = styled.div`
 const DescriptionContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding: 10px 0 40px 0;
+  font-size: 11px;
+  line-height: 17px;
+`;
+
+const DescriptionHeader = styled.div`
+  padding-bottom: 20px;
+`;
+
+const ListHeader = styled.li`
+  padding-bottom: 20px;
+  font-family: Suisse Works Intl;
+`;
+
+const Description = styled.div`
+  flex: 9;
+`;
+
+const Info = styled.div`
+  flex: 7;
 `;
 
 const Img = styled.img`
@@ -37,8 +56,8 @@ const Overview = () => {
     <React.Fragment>
       <Container>
         <DescriptionContainer>
-          <div style={{ flex: "9" }}>
-            <h4>J.CREW, FW18 SOCIAL CAMPAIGN</h4>
+          <Description>
+            <DescriptionHeader>J.CREW, FW18 SOCIAL CAMPAIGN</DescriptionHeader>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               ac nisl id tortor tincidunt auctor et nec quam. Aliquam blandit
@@ -54,19 +73,19 @@ const Overview = () => {
               blandit diam nec erat tincidunt, tincidunt laoreet augue
               iaculis. Praesent quis egestas lacus
             </p>
-          </div>
+          </Description>
           <div style={{ flex: "2" }} />
-          <div style={{ flex: "7" }}>
+          <Info>
             <ul>
-              <li>VANCOUVER, CANADA</li>
+              <ListHeader>VANCOUVER, CANADA</ListHeader>
               <li>Makeup: Megan Kwan</li>
               <li>Styling: Kathleen McCullough</li>
               <li>Furniture: Studio Faculty</li>
             </ul>
-          </div>
-          <div>
-            <p>2018</p>
-          </div>
+          </Info>
+          <ul>
+            <ListHeader>2018</ListHeader>
+          </ul>
         </DescriptionContainer>
         <ImgContainer>
           <ImgRow>
@@ -74,7 +93,12 @@ const Overview = () => {
               <Img src={img3} width="616" alt="jjl img3" />
               <Img src={img1} width="616" alt="jjl img1" />
             </div>
-            <Img src={img2} style={{'align-self': 'flex-start'}} width="363" alt="jjl img2" />
+            <Img
+              src={img2}
+              style={{ alignSelf: "flex-start" }}
+              width="363"
+              alt="jjl img2"
+            />
           </ImgRow>
 
           <ImgRow>

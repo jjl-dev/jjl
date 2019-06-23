@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.footer`
@@ -27,8 +26,8 @@ const Footer = () => {
   return (
     <Container>
         <Links>
-          <Link to="/projects">INSTAGRAM</Link>/
-          <Link to="/projects">EMAIL</Link>
+          <a href="https://www.instagram.com/jeremyjudelee/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>/
+          <a href="mailto:jeremyjudelee@gmail.com">EMAIL</a>
         </Links>
         <Description>
         ©2019 JEREMY JUDE LEE. IMAGES AND CONTENT MAY NOT BE USED WITHOUT WRITTEN PERMISSION. ALL RIGHTS RESERVED. SITE DESIGN BY STUDIO FACULTY

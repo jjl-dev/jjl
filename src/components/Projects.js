@@ -1,10 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
-
-const Container = styled.div`
-  padding: 0 15px;
-  padding-top: 76px;
-`;
 
 const DescriptionContainer = styled.div`
   display: flex;
@@ -17,16 +13,14 @@ const DescriptionContainer = styled.div`
 const Projects = () => {
   return (
     <React.Fragment>
-      <Container>
         <DescriptionContainer>
-          <h4>J.CREW, FW18 SOCIAL CAMPAIGN</h4>
+          <Link to="/singleproject">J.CREW, FW18 SOCIAL CAMPAIGN</Link>
           <h4>2018</h4>
         </DescriptionContainer>
         <DescriptionContainer>
           <h4>NIKE RUNNING, SS17 CAMPAIGN</h4>
           <h4>2018</h4>
         </DescriptionContainer>
-      </Container>
     </React.Fragment>
   );
 };

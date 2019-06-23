@@ -53,7 +53,7 @@ const SocialHeading = styled.li`
 `;
 
 const Img = styled.img`
-  align-self: center;
+align-self: center;
 `;
 
 const Projects = () => {

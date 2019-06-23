@@ -1,5 +1,7 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
+import Projects from "./Projects";
 
 import img1 from "../assets/jjl1.jpg";
 import img2 from "../assets/jjl2.jpg";
@@ -24,13 +26,21 @@ const DescriptionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 40px 0 30px 0;
+  font-size: 11px;
+`;
+
+const MoreProjects = styled.div`
+  padding: 40px 0 30px 0;
+  font-size: 11px;
+  font-family: Suisse Works Intl;
+  letter-spacing: 0.05em;
 `;
 
 const Img = styled.img`
   align-self: center;
 `;
 
-const Projects = () => {
+const Home = () => {
   return (
     <React.Fragment>
       <Container>
@@ -51,10 +61,13 @@ const Projects = () => {
           <h4>OAMC, FEATURED WORK</h4>
           <h4>2018</h4>
         </DescriptionContainer>
+        <Projects />
+        <MoreProjects>
+          <Link to="/projects">MORE PROJECTS</Link>
+        </MoreProjects>
       </Container>
-      <hr />
     </React.Fragment>
   );
 };
 
-export default Projects;
+export default Home;
