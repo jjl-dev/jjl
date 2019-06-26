@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "http://jjl-dev.github.io/jjl",
   "dependencies": {
+    "prismic-javascript": "^2.0.3",
+    "prismic-reactjs": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
