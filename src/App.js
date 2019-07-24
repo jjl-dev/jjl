@@ -13,7 +13,6 @@ import ScrollToTop from "./components/ScrollTop";
 
 import SingleProject from "./components/SingleProject";
 
-
 const Container = styled.div`
   max-width: 1024px;
   margin: auto;

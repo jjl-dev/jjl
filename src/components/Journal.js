@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
 import { Link, RichText, Date } from "prismic-reactjs";
+import linkResolver from "../prismic-configuration";
 
 import JournalItem from "./JournalItem";
 
@@ -21,16 +22,16 @@ class Journal extends React.Component {
   componentWillMount() {
     const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
 
-    	
-Prismic.api(apiEndpoint).then(api => {
-  api.query(
-    Prismic.Predicates.at('document.type', 'jour'),
-    { orderings : '[my.blog_post.date desc]' }
-  ).then(response => {
-    // response is the response object, response.results holds the documents
-    this.setState({ journals: response.results });
-  });
-});
+    Prismic.api(apiEndpoint).then(api => {
+      api
+        .query(Prismic.Predicates.at("document.type", "jour"), {
+          orderings: "[my.blog_post.date desc]"
+        })
+        .then(response => {
+          // response is the response object, response.results holds the documents
+          this.setState({ journals: response.results });
+        });
+    });
   }
 
   render() {
@@ -39,7 +40,11 @@ Prismic.api(apiEndpoint).then(api => {
         <Container>
           <div>
             {this.state.journals.map((journal, index) => (
-              <JournalItem key={index} props={journal.data}/>
+              <JournalItem
+                key={index}
+                props={journal.data}
+                linkResolver={linkResolver(index)}
+              />
             ))}
           </div>
         </Container>
