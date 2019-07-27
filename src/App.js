@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollTop";
 
 import SingleProject from "./components/SingleProject";
+import SingleJournal from "./components/SingleJournal";
+
 
 const Container = styled.div`
   max-width: 1024px;
@@ -29,7 +31,8 @@ const App = () => {
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/overview" component={Overview} />
         <Route path="/about" component={About} />
-        <Route path="/Journal" component={Journal} />
+        <Route exact path="/journal" component={Journal} />
+        <Route path="/journal/:title" component={SingleJournal} />
         <Route path="/singleproject" component={SingleProject} />
         <Footer />
       </Container>

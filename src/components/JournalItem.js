@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const JournalItemContainer = styled.div`
     display: flex;
@@ -7,55 +8,58 @@ const JournalItemContainer = styled.div`
     margin: 10px 0;
     padding: 20px 0 40px 0;
     border-bottom: 1px solid #E5E5E5;
-`
+`;
 const Item = styled.div`
-    flex-basis: 100%;
-    flex: 1 1 0;
-    width: 0;
-    padding-right: 10px;
-`
+  flex-basis: 100%;
+  flex: 1 1 0;
+  width: 0;
+  padding-right: 10px;
+`;
 const Date = styled.div`
-    flex-basis: 100%;
-    flex: 1 1 0;
-    width: 0;
-    font-size: 11px;
-    line-height: 15px;
-    position: relative;
-    right: 50px;
-    text-align: right;
-`
+  flex-basis: 100%;
+  flex: 1 1 0;
+  width: 0;
+  font-size: 11px;
+  line-height: 15px;
+  position: relative;
+  right: 50px;
+  text-align: right;
+`;
+
+const Title = styled(Link)``;
 const Details = styled.div`
-    flex-basis: 100%;
-    flex: 1 1 0;
-    width: 0;
-    font-size: 11px;
-    line-height: 15px;
-`
+  flex-basis: 100%;
+  flex: 1 1 0;
+  width: 0;
+  font-size: 11px;
+  line-height: 15px;
+`;
 const Description = styled.p`
-    margin-top: 26px;
-`
+  margin-top: 26px;
+`;
 const Image = styled.img`
-    width: 100%;
-    margin-right: 10px;
-`
+  width: 100%;
+  margin-right: 10px;
+`;
 
 const JournalItem = props => {
+  const data = props.data.data;
   return (
     <JournalItemContainer>
       <Item>
-        {props.props.featured_image_1.url && (
-          <Image src={props.props.featured_image_1.url} alt="featured 1" ></Image>
+        {data.featured_image_1.url && (
+          <Image src={data.featured_image_1.url} alt="featured 1" />
         )}
       </Item>
       <Item>
-        {props.props.featured_image_2.url && (
-          <Image src={props.props.featured_image_2.url} alt="featured 2" ></Image>
+        {data.featured_image_2.url && (
+          <Image src={data.featured_image_2.url} alt="featured 2" />
         )}
       </Item>
-      <Date>{props.props.date[0].text}</Date>
+      <Date>{data.date[0].text}</Date>
       <Details>
-        <h3>{props.props.title[0].text}</h3>
-        <Description>{props.props.description[0].text}</Description>
+        <Title to={`/journal/${props.data.id}`}>{data.title[0].text}</Title>
+        <Description>{data.description[0].text}</Description>
       </Details>
     </JournalItemContainer>
   );

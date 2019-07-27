@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
-import { Link, RichText, Date } from "prismic-reactjs";
-import linkResolver from "../prismic-configuration";
 
 import JournalItem from "./JournalItem";
 
@@ -40,11 +38,7 @@ class Journal extends React.Component {
         <Container>
           <div>
             {this.state.journals.map((journal, index) => (
-              <JournalItem
-                key={index}
-                props={journal.data}
-                linkResolver={linkResolver(index)}
-              />
+              <JournalItem key={index} data={journal} />
             ))}
           </div>
         </Container>
