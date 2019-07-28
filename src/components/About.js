@@ -6,15 +6,15 @@ import img1 from "../assets/jjlcontact.jpg";
 // update background color of about page
 const GlobalStyle = createGlobalStyle`
   body {
-    background: ${props => ('#E8E6DC')};
+    background: ${props => "#E8E6DC"};
   }
   header{
-    background: ${props => ('#E8E6DC !important')};
+    background: ${props => "#E8E6DC !important"};
   }
   hr {
     border-top: 1px solid #C8C8C8; 
   }
-`
+`;
 
 const Container = styled.div`
   padding: 15px;
@@ -34,7 +34,7 @@ const Bio = styled.div`
 const Info = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 30px;
 `;
 
 const Social = styled.ul`
@@ -42,7 +42,6 @@ const Social = styled.ul`
   font-family: Suisse Works;
   font-size: 15px;
   line-height: 21px;
-
 `;
 
 const SocialHeading = styled.li`
@@ -53,24 +52,24 @@ const SocialHeading = styled.li`
 `;
 
 const Img = styled.img`
-align-self: center;
+  padding: 10px;
 `;
 
 const Projects = () => {
   return (
     <React.Fragment>
-            <GlobalStyle />
+      <GlobalStyle />
 
       <Container>
         <Bio>
           <p>
             Jeremy Jude Lee is a lifestyle photographer and videographer based
             in Vancouver, Canada. Lorem ipsum dolor sit amet, consaement
-            adipiscing elit. Nam non scelerisque turpis, quis iaculis risus.
-            Sed nectar porta arcu. Maecenas malesuada viverra tristique.
-            Aenean egestasmo sem sit amet ultricies maximus. Vestibulum
-            volutpat vestibulum. Maecenas malesuada viverra tristique. Aenean
-            egestasmo sem sit amet ultricies maximus.
+            adipiscing elit. Nam non scelerisque turpis, quis iaculis risus. Sed
+            nectar porta arcu. Maecenas malesuada viverra tristique. Aenean
+            egestasmo sem sit amet ultricies maximus. Vestibulum volutpat
+            vestibulum. Maecenas malesuada viverra tristique. Aenean egestasmo
+            sem sit amet ultricies maximus.
           </p>
         </Bio>
 

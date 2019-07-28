@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Container = styled.div`
   padding: 15px;
@@ -34,7 +34,7 @@ const Description = styled.p`
 `;
 const Image = styled.img`
   width: 100%;
-  margin-right: 10px;
+  margin: 0 10px 30px 0;
 `;
 const BackToJournal = styled(Link)`
   font-family: Suisse Works Intl;
@@ -61,18 +61,17 @@ class SingleJournal extends React.Component {
           orderings: "[my.blog_post.date desc]"
         })
         .then(response => {
-          // response is the response object, response.results holds the documents
           this.setState({ journal: response.results[0] });
         });
     });
   }
 
   render() {
-    let data = this.state.journal.data;
+    const data = this.state.journal.data;
     return (
       <React.Fragment>
         <Container>
-          {this.state.journal.data && (
+          {data && (
             <JournalItemContainer>
               <Item>
                 {data.images.map((journal, index) => (

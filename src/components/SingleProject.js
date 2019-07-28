@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Prismic from "prismic-javascript";
 
 import img1 from "../assets/jjlsp1.jpg";
 import img2 from "../assets/jjlo2.jpg";
 import img3 from "../assets/jjlo3.jpg";
 import img4 from "../assets/jjlo4.jpg";
-import img5 from "../assets/jjlo5.jpg";
 
 const Container = styled.div`
   padding: 0 15px;
@@ -19,7 +19,6 @@ const ImgContainer = styled.div`
 const ImgRow = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
 `;
 
 const DescriptionContainer = styled.div`
@@ -44,70 +43,84 @@ const Description = styled.div`
 `;
 
 const Info = styled.div`
-  flex: 7;
+  flex: 6;
 `;
 
 const Img = styled.img`
   align-self: center;
 `;
 
-const Overview = () => {
-  return (
-    <React.Fragment>
-      <Container>
-        <DescriptionContainer>
-          <Description>
-            <DescriptionHeader>J.CREW, FW18 SOCIAL CAMPAIGN</DescriptionHeader>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              ac nisl id tortor tincidunt auctor et nec quam. Aliquam blandit
-              egestas augue, eget blandit turpis semper quis. Nam porttitor,
-              tellus eu tincidunt commodo, lorem elit interdum urna, id
-              fermentum elit dui ac risus. Sed non egestas tellus. Ut
-              convallis aliquam justo. Proin convallis vulputate nunc ut
-              tincidunt. Pellentesque eu posuere erat. Curabitur in nisl ac
-              purus egestas tempor. Praesent eleifend leo ac metus auctor
-              ultricies nec eu magna. Donec consequat neque in urna
-              sollicitudin porttitor. Fusce a lorem mi. Proin posuere sapien
-              in velit feugiat, molestie sagittis quam scelerisque. Duis
-              blandit diam nec erat tincidunt, tincidunt laoreet augue
-              iaculis. Praesent quis egestas lacus
-            </p>
-          </Description>
-          <div style={{ flex: "2" }} />
-          <Info>
-            <ul>
-              <ListHeader>VANCOUVER, CANADA</ListHeader>
-              <li>Makeup: Megan Kwan</li>
-              <li>Styling: Kathleen McCullough</li>
-              <li>Furniture: Studio Faculty</li>
-            </ul>
-          </Info>
-          <ul>
-            <ListHeader>2018</ListHeader>
-          </ul>
-        </DescriptionContainer>
-        <ImgContainer>
-          <ImgRow>
-            <div>
-              <Img src={img3} width="616" alt="jjl img3" />
-              <Img src={img1} width="616" alt="jjl img1" />
-            </div>
-            <Img
-              src={img2}
-              style={{ alignSelf: "flex-start" }}
-              width="363"
-              alt="jjl img2"
-            />
-          </ImgRow>
+class Overview extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      project: []
+    };
+  }
 
-          <ImgRow>
-            <Img src={img4} width="994px" alt="jjl img3" />
-          </ImgRow>
-        </ImgContainer>
-      </Container>
-    </React.Fragment>
-  );
-};
+  componentWillMount() {
+    const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
+    const projectID = window.location.pathname.replace("/project/", "");
+
+    Prismic.api(apiEndpoint).then(api => {
+      api
+        .query(Prismic.Predicates.at("document.id", projectID), {
+          orderings: "[my.blog_post.date desc]"
+        })
+        .then(response => {
+          this.setState({ project: response.results[0] });
+        });
+    });
+  }
+  render() {
+    const data = this.state.project.data;
+    return (
+      <React.Fragment>
+        {data && (
+          <Container>
+            <DescriptionContainer>
+              <Description>
+                <DescriptionHeader>{data.title[0].text}</DescriptionHeader>
+                <p>{data.description[0].text}</p>
+              </Description>
+              <div style={{ flex: "2 1 3%" }} />
+              <Info>
+                <ul>
+                  <ListHeader>{data.location[0].text}</ListHeader>
+                  {data.support.length && data.support[0].support1.length ?
+                    data.support.map((item, index) => (
+                      <li key={index}>{item.support1[0].text}</li>
+                    ))
+                    : null
+                    }
+                </ul>
+              </Info>
+              <ul>
+                <ListHeader>{data.year[0].text}</ListHeader>
+              </ul>
+            </DescriptionContainer>
+            <ImgContainer>
+              <ImgRow>
+                <div>
+                  <Img src={img3} width="616" alt="jjl img3" />
+                  <Img src={img1} width="616" alt="jjl img1" style={{ marginTop: "15px" }} />
+                </div>
+                <Img
+                  src={img2}
+                  style={{ alignSelf: "flex-start" }}
+                  width="363"
+                  alt="jjl img2"
+                />
+              </ImgRow>
+              <ImgRow>
+                <Img src={img4} width="994px" alt="jjl img3" style={{ marginTop: "15px" }}/>
+              </ImgRow>
+            </ImgContainer>
+          </Container>
+        )}
+      </React.Fragment>
+    );
+  }
+}
 
 export default Overview;
