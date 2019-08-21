@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Container>
-        <ImgContainer>
+        {/* <ImgContainer>
           <Img src={img1} width="363" alt="jjl img3" />
           <Img src={img2} width="363" alt="jjl img4" />
         </ImgContainer>
@@ -75,7 +75,7 @@ const Home = () => {
           <h4>J.CREW, FW18 SOCIAL CAMPAIGN</h4>
           <Year>2018</Year>
         </DescriptionContainer>
-        <hr />
+        <hr /> */}
         <Projects />
         <MoreProjects>
           <Link to="/projects">MORE PROJECTS</Link>
