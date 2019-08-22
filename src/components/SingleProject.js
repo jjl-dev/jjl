@@ -99,7 +99,14 @@ class Overview extends React.Component {
                 <ListHeader>{data.year[0].text}</ListHeader>
               </ul>
             </DescriptionContainer>
+
             <ImgContainer>
+                    {this.state.project.data.project_images.map((item, index) => (
+                      <Img src={item.image.url} key={index} width="500px" alt="jjl project image" />
+                    ))}
+              </ImgContainer>
+
+            {/* <ImgContainer>
               <ImgRow>
                 <div>
                   <Img src={img3} width="616" alt="jjl img3" />
@@ -115,7 +122,7 @@ class Overview extends React.Component {
               <ImgRow>
                 <Img src={img4} width="994px" alt="jjl img3" style={{ marginTop: "15px" }}/>
               </ImgRow>
-            </ImgContainer>
+            </ImgContainer> */}
           </Container>
         )}
       </React.Fragment>
