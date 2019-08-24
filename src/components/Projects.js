@@ -27,7 +27,6 @@ const ImgContainer = styled.div`
 
 const Img = styled.img``;
 
-
 class Projects extends React.Component {
   constructor(props) {
     super(props);
@@ -45,7 +44,37 @@ class Projects extends React.Component {
           orderings: "[my.blog_post.date desc]"
         })
         .then(response => {
-          this.setState({ projects: response.results });
+          let testArr = response.results;
+
+          function ascending(ascending) {
+            return function (a, b) {
+              let first = a.data.order;
+              let second = b.data.order;
+          
+              // equal items sort equally
+              if (first === second) {
+                  return 0;
+              }
+              // nulls sort after anything else
+              else if (first === null) {
+                  return 1;
+              }
+              else if (second === null) {
+                  return -1;
+              }
+              // otherwise, if we're ascending, lowest sorts first
+              else if (ascending) {
+                  return first < second ? -1 : 1;
+              }
+              // if descending, highest sorts first
+              else { 
+                  return first < second ? 1 : -1;
+              }
+            };
+          }
+                    
+          this.setState({ projects: testArr.sort(ascending(true)) });
+
         });
     });
   }
@@ -54,23 +83,29 @@ class Projects extends React.Component {
     return (
       <React.Fragment>
         {this.state.projects.map((project, index) => (
+          <React.Fragment>
+            {project.data.featured_image_1.url && (
+              <ImgContainer>
+                <Img
+                  src={project.data.featured_image_1.url}
+                  width="363"
+                  alt="jjl img3"
+                />
+                <Img
+                  src={project.data.featured_image_2.url}
+                  width="363"
+                  alt="jjl img3"
+                />
+              </ImgContainer>
+            )}
 
-      <React.Fragment>
-        {project.data.featured_image_1.url &&
-          <ImgContainer>
-            <Img src={project.data.featured_image_1.url} width="363" alt="jjl img3" />
-            <Img src={project.data.featured_image_2.url} width="363" alt="jjl img3" />
-            </ImgContainer>
-          }
-        
-          <DescriptionContainer key={index}>
-            <Link to={`/project/${project.id}`}>
-              {project.data.title[0].text}
-            </Link>
-            <Year>{project.data.year[0].text}</Year>
-          </DescriptionContainer>
+            <DescriptionContainer key={index}>
+              <Link to={`/project/${project.id}`}>
+                {project.data.title[0].text}
+              </Link>
+              <Year>{project.data.year[0].text}</Year>
+            </DescriptionContainer>
           </React.Fragment>
-
         ))}
       </React.Fragment>
     );

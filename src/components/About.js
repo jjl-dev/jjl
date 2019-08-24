@@ -110,7 +110,7 @@ const Projects = () => {
               <li>Creep Magazine, 2015</li>
             </Social>
           </div>
-          <Img src={img1} width="237" alt="jjl contact" />
+          <Img src={img1} width="237" height="298" alt="jjl contact" />
         </Info>
       </Container>
     </React.Fragment>
