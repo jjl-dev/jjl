@@ -7,7 +7,10 @@
     "prismic-javascript": "^2.0.3",
     "prismic-reactjs": "^1.0.0",
     "react": "^16.8.6",
+    "react-breakpoints": "^3.0.3",
     "react-dom": "^16.8.6",
+    "react-image-lightbox": "^5.1.0",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.1"

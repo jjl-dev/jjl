@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
-
-import img1 from "../assets/jjlsp1.jpg";
-import img2 from "../assets/jjlo2.jpg";
-import img3 from "../assets/jjlo3.jpg";
-import img4 from "../assets/jjlo4.jpg";
+import Gallery from "react-photo-gallery";
+import { Media } from "react-breakpoints";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 const Container = styled.div`
   padding: 0 15px;
@@ -54,7 +53,11 @@ class Overview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: []
+      project: [],
+      photos: [],
+      gallery: [],
+      photoIndex: 0,
+      isOpen: false
     };
   }
 
@@ -69,11 +72,31 @@ class Overview extends React.Component {
         })
         .then(response => {
           this.setState({ project: response.results[0] });
+
+          response.results[0].data.project_images.map((item, index) => {
+            this.state.photos.push({
+              src: item.image.url + "?index" + index,
+              width: item.image.dimensions.width,
+              height: item.image.dimensions.height
+            });
+            this.state.gallery.push(item.image.url + "?index" + index);
+          });
         });
     });
   }
+
+  handlePhotoClick = e => {
+    let target = e.currentTarget.currentSrc;
+    let index = target.split("?index")[1];
+
+    this.setState({ isOpen: true });
+    this.setState({ photoIndex: index });
+  };
+
   render() {
+    let { photoIndex, isOpen } = this.state;
     const data = this.state.project.data;
+
     return (
       <React.Fragment>
         {data && (
@@ -87,12 +110,11 @@ class Overview extends React.Component {
               <Info>
                 <ul>
                   <ListHeader>{data.location[0].text}</ListHeader>
-                  {data.support.length && data.support[0].support1.length ?
-                    data.support.map((item, index) => (
-                      <li key={index}>{item.support1[0].text}</li>
-                    ))
-                    : null
-                    }
+                  {data.support.length && data.support[0].support1.length
+                    ? data.support.map((item, index) => (
+                        <li key={index}>{item.support1[0].text}</li>
+                      ))
+                    : null}
                 </ul>
               </Info>
               <ul>
@@ -100,28 +122,66 @@ class Overview extends React.Component {
               </ul>
             </DescriptionContainer>
 
-            <ImgContainer>
-                    {this.state.project.data.project_images.map((item, index) => (
-                      <Img src={item.image.url} key={index} width="500px" alt="jjl project image" />
-                    ))}
-              </ImgContainer>
+            <Media>
+              {({ breakpoints, currentBreakpoint }) =>
+                breakpoints[currentBreakpoint] > breakpoints.tabletLandscape ? (
+                  <Gallery
+                    photos={this.state.photos}
+                    targetRowHeight={600}
+                    direction={"row"}
+                    margin={7}
+                    onClick={this.handlePhotoClick}
+                  />
+                ) : (
+                  <Gallery
+                    photos={this.state.photos}
+                    targetRowHeight={300}
+                    direction={"row"}
+                    margin={7}
+                    onClick={this.handlePhotoClick}
+                  />
+                )
+              }
+            </Media>
+
+            {isOpen && (
+              <Lightbox
+                enableZoom={false}
+                mainSrc={this.state.gallery[photoIndex]}
+                nextSrc={
+                  this.state.gallery[
+                    (photoIndex + 1) % this.state.gallery.length
+                  ]
+                }
+                prevSrc={
+                  this.state.gallery[
+                    (photoIndex + this.state.gallery.length - 1) %
+                      this.state.gallery.length
+                  ]
+                }
+                onCloseRequest={() => {
+                  this.setState({ isOpen: false });
+                  this.setState({ photoIndex: 0 });
+                }}
+                onMovePrevRequest={() =>
+                  this.setState({
+                    photoIndex:
+                      (photoIndex + this.state.gallery.length - 1) %
+                      this.state.gallery.length
+                  })
+                }
+                onMoveNextRequest={() =>
+                  this.setState({
+                    photoIndex: (photoIndex + 1) % this.state.gallery.length
+                  })
+                }
+              />
+            )}
 
             {/* <ImgContainer>
-              <ImgRow>
-                <div>
-                  <Img src={img3} width="616" alt="jjl img3" />
-                  <Img src={img1} width="616" alt="jjl img1" style={{ marginTop: "15px" }} />
-                </div>
-                <Img
-                  src={img2}
-                  style={{ alignSelf: "flex-start" }}
-                  width="363"
-                  alt="jjl img2"
-                />
-              </ImgRow>
-              <ImgRow>
-                <Img src={img4} width="994px" alt="jjl img3" style={{ marginTop: "15px" }}/>
-              </ImgRow>
+              {this.state.project.data.project_images.map((item, index) => (
+                <Img src={item.image.url} key={index} width="500px" alt="jjl project image" />
+              ))}
             </ImgContainer> */}
           </Container>
         )}

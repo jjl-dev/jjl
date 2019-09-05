@@ -47,60 +47,81 @@ class Projects extends React.Component {
           let testArr = response.results;
 
           function ascending(ascending) {
-            return function (a, b) {
+            return function(a, b) {
               let first = a.data.order;
               let second = b.data.order;
-          
+
               // equal items sort equally
               if (first === second) {
-                  return 0;
+                return 0;
               }
               // nulls sort after anything else
               else if (first === null) {
-                  return 1;
-              }
-              else if (second === null) {
-                  return -1;
+                return 1;
+              } else if (second === null) {
+                return -1;
               }
               // otherwise, if we're ascending, lowest sorts first
               else if (ascending) {
-                  return first < second ? -1 : 1;
+                return first < second ? -1 : 1;
               }
               // if descending, highest sorts first
-              else { 
-                  return first < second ? 1 : -1;
+              else {
+                return first < second ? 1 : -1;
               }
             };
           }
-                    
-          this.setState({ projects: testArr.sort(ascending(true)) });
 
+          this.setState({ projects: testArr.sort(ascending(true)) });
         });
     });
+  }
+
+  someHandler = (data) =>{
+    console.log(data.hover_image.url)
   }
 
   render() {
     return (
       <React.Fragment>
         {this.state.projects.map((project, index) => (
-          <React.Fragment>
-            {project.data.featured_image_1.url && (
-              <ImgContainer>
-                <Img
-                  src={project.data.featured_image_1.url}
-                  width="363"
-                  alt="jjl img3"
-                />
-                <Img
-                  src={project.data.featured_image_2.url}
-                  width="363"
-                  alt="jjl img3"
-                />
-              </ImgContainer>
-            )}
+          <React.Fragment key={index}>
+            {project.data.featured_image_1.url &&
+              project.data.featured_image_2.url && (
+                <ImgContainer>
+                  {project.data.featured_image_1.dimensions.width === 1800 ? (
+                    <Img
+                      src={project.data.featured_image_1.url}
+                      width="488"
+                      alt="jjl"
+                    />
+                  ) : (
+                    <Img
+                      src={project.data.featured_image_1.url}
+                      width="363"
+                      alt="jjl"
+                    />
+                  )}
+
+                  {project.data.featured_image_2.dimensions.width === 1800 ? (
+                    <Img
+                      src={project.data.featured_image_2.url}
+                      width="488"
+                      alt="jjl"
+                    />
+                  ) : (
+                    <Img
+                      src={project.data.featured_image_2.url}
+                      width="363"
+                      alt="jjl"
+                    />
+                  )}
+                </ImgContainer>
+              )}
 
             <DescriptionContainer key={index}>
-              <Link to={`/project/${project.id}`}>
+              <Link onMouseEnter={this.someHandler(project.data)} to={`/project/${project.id}`}>
+                {/* <img src={project.data.hover_image.url} width="363"  alt="jjl"/> */}
                 {project.data.title[0].text}
               </Link>
               <Year>{project.data.year[0].text}</Year>
