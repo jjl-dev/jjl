@@ -35,7 +35,7 @@ const Header = () => {
     <div>
       <Container>
         <Logo>
-          <NavLink exact={true} activeClassName='is-active' to="/">
+          <NavLink activeClassName='is-active' to="/projects">
             <img src={logo} width="126" alt="jjl logo" />
           </NavLink>
         </Logo>

@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
 
-const DescriptionContainer = styled.div`
+const DescriptionContainer = styled(Link)`
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding: 30px 0 30px 0;
   font-size: 11px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px solid #000;
+  }
 `;
 
 const Year = styled.h4`
@@ -24,6 +29,20 @@ const ImgContainer = styled.div`
   align-items: flex-start;
   padding-top: 50px;
 `;
+let HoverImage = styled.img`
+  position: absolute;
+  right: 140px;
+  max-width: 238px;
+  bottom: -153px;
+  z-index: 1;
+`;
+
+const MoreProjects = styled.div`
+  padding: 30px 0 30px 0;
+  font-size: 11px;
+  font-family: Suisse Works Intl;
+  letter-spacing: 0.05em;
+`;
 
 const Img = styled.img``;
 
@@ -31,17 +50,24 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      activeLink: "",
+      showAllProjects: false
     };
   }
 
   componentWillMount() {
+    this.fetchProjects();
+  }
+
+  fetchProjects = amount => {
     const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
 
     Prismic.api(apiEndpoint).then(api => {
       api
         .query(Prismic.Predicates.at("document.type", "project"), {
-          orderings: "[my.blog_post.date desc]"
+          orderings: "[document.last_publication_date desc]",
+          pageSize: 200
         })
         .then(response => {
           let testArr = response.results;
@@ -75,59 +101,146 @@ class Projects extends React.Component {
           this.setState({ projects: testArr.sort(ascending(true)) });
         });
     });
-  }
+  };
 
-  someHandler = (data) =>{
-    console.log(data.hover_image.url)
-  }
+  showAllProjects = (e, data) => {
+    this.setState({ showAllProjects: true });
+  };
+
+  descriptionEnter = (e, data) => {
+    if (data.hover_image.url) {
+      this.setState({ activeLink: data.hover_image.url });
+    }
+  };
+
+  descriptionLeave = (e, data) => {
+    if (data.hover_image.url) {
+      this.setState({ activeLink: 0 });
+    }
+  };
 
   render() {
+    const { activeLink } = this.state;
     return (
       <React.Fragment>
-        {this.state.projects.map((project, index) => (
-          <React.Fragment key={index}>
-            {project.data.featured_image_1.url &&
-              project.data.featured_image_2.url && (
-                <ImgContainer>
-                  {project.data.featured_image_1.dimensions.width === 1800 ? (
-                    <Img
-                      src={project.data.featured_image_1.url}
-                      width="488"
-                      alt="jjl"
-                    />
-                  ) : (
-                    <Img
-                      src={project.data.featured_image_1.url}
-                      width="363"
-                      alt="jjl"
-                    />
-                  )}
+        {this.state.projects.map((project, index) =>
+          this.state.showAllProjects ? (
+            <React.Fragment key={index}>
+              {project.data.featured_image_1.url &&
+                project.data.featured_image_2.url && (
+                  <ImgContainer>
+                    {project.data.featured_image_1.dimensions.width === 1800 ? (
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="488"
+                        alt="jjl"
+                      />
+                    ) : (
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                    )}
 
-                  {project.data.featured_image_2.dimensions.width === 1800 ? (
-                    <Img
-                      src={project.data.featured_image_2.url}
-                      width="488"
-                      alt="jjl"
-                    />
-                  ) : (
-                    <Img
-                      src={project.data.featured_image_2.url}
-                      width="363"
-                      alt="jjl"
-                    />
-                  )}
-                </ImgContainer>
-              )}
+                    {project.data.featured_image_2.dimensions.width === 1800 ? (
+                      <Img
+                        src={project.data.featured_image_2.url}
+                        width="488"
+                        alt="jjl"
+                      />
+                    ) : (
+                      <Img
+                        src={project.data.featured_image_2.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                    )}
+                  </ImgContainer>
+                )}
 
-            <DescriptionContainer key={index}>
-              <Link onMouseEnter={this.someHandler(project.data)} to={`/project/${project.id}`}>
-                {/* <img src={project.data.hover_image.url} width="363"  alt="jjl"/> */}
+              <DescriptionContainer
+                key={index}
+                to={`/project/${project.id}`}
+                onMouseEnter={e => this.descriptionEnter(e, project.data)}
+                onMouseLeave={e => this.descriptionLeave(e, project.data)}
+              >
+                {project.data.hover_image.url === activeLink && (
+                  <HoverImage
+                    src={project.data.hover_image.url}
+                    width="363"
+                    alt="jjl"
+                  />
+                )}
+
                 {project.data.title[0].text}
-              </Link>
-              <Year>{project.data.year[0].text}</Year>
-            </DescriptionContainer>
-          </React.Fragment>
-        ))}
+                <Year>{project.data.year[0].text}</Year>
+              </DescriptionContainer>
+            </React.Fragment>
+          ) : (
+            index < 10 && (
+              <React.Fragment key={index}>
+                {project.data.featured_image_1.url &&
+                  project.data.featured_image_2.url && (
+                    <ImgContainer>
+                      {project.data.featured_image_1.dimensions.width ===
+                      1800 ? (
+                        <Img
+                          src={project.data.featured_image_1.url}
+                          width="488"
+                          alt="jjl"
+                        />
+                      ) : (
+                        <Img
+                          src={project.data.featured_image_1.url}
+                          width="363"
+                          alt="jjl"
+                        />
+                      )}
+
+                      {project.data.featured_image_2.dimensions.width ===
+                      1800 ? (
+                        <Img
+                          src={project.data.featured_image_2.url}
+                          width="488"
+                          alt="jjl"
+                        />
+                      ) : (
+                        <Img
+                          src={project.data.featured_image_2.url}
+                          width="363"
+                          alt="jjl"
+                        />
+                      )}
+                    </ImgContainer>
+                  )}
+
+                <DescriptionContainer
+                  key={index}
+                  to={`/project/${project.id}`}
+                  onMouseEnter={e => this.descriptionEnter(e, project.data)}
+                  onMouseLeave={e => this.descriptionLeave(e, project.data)}
+                >
+                  {project.data.hover_image.url === activeLink && (
+                    <HoverImage
+                      src={project.data.hover_image.url}
+                      width="363"
+                      alt="jjl"
+                    />
+                  )}
+
+                  {project.data.title[0].text}
+                  <Year>{project.data.year[0].text}</Year>
+                </DescriptionContainer>
+              </React.Fragment>
+            )
+          )
+        )}
+        <MoreProjects>
+          <Link to="/projects" onClick={() => this.showAllProjects()}>
+            MORE PROJECTS
+          </Link>
+        </MoreProjects>
       </React.Fragment>
     );
   }

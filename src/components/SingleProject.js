@@ -1,23 +1,18 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import Gallery from "react-photo-gallery";
 import { Media } from "react-breakpoints";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
+
+const GlobalStyle = createGlobalStyle`
+  header {
+    border-bottom: 1px solid #E5E5E5; 
+  }
+`;
 
 const Container = styled.div`
   padding: 0 15px;
   padding-top: 76px;
-`;
-
-const ImgContainer = styled.div`
-  display: block;
-`;
-
-const ImgRow = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 const DescriptionContainer = styled.div`
@@ -43,10 +38,6 @@ const Description = styled.div`
 
 const Info = styled.div`
   flex: 6;
-`;
-
-const Img = styled.img`
-  align-self: center;
 `;
 
 class Overview extends React.Component {
@@ -85,20 +76,12 @@ class Overview extends React.Component {
     });
   }
 
-  handlePhotoClick = e => {
-    let target = e.currentTarget.currentSrc;
-    let index = target.split("?index")[1];
-
-    this.setState({ isOpen: true });
-    this.setState({ photoIndex: index });
-  };
-
   render() {
-    let { photoIndex, isOpen } = this.state;
     const data = this.state.project.data;
 
     return (
       <React.Fragment>
+        <GlobalStyle />
         {data && (
           <Container>
             <DescriptionContainer>
@@ -130,7 +113,6 @@ class Overview extends React.Component {
                     targetRowHeight={600}
                     direction={"row"}
                     margin={7}
-                    onClick={this.handlePhotoClick}
                   />
                 ) : (
                   <Gallery
@@ -138,45 +120,10 @@ class Overview extends React.Component {
                     targetRowHeight={300}
                     direction={"row"}
                     margin={7}
-                    onClick={this.handlePhotoClick}
                   />
                 )
               }
             </Media>
-
-            {isOpen && (
-              <Lightbox
-                enableZoom={false}
-                mainSrc={this.state.gallery[photoIndex]}
-                nextSrc={
-                  this.state.gallery[
-                    (photoIndex + 1) % this.state.gallery.length
-                  ]
-                }
-                prevSrc={
-                  this.state.gallery[
-                    (photoIndex + this.state.gallery.length - 1) %
-                      this.state.gallery.length
-                  ]
-                }
-                onCloseRequest={() => {
-                  this.setState({ isOpen: false });
-                  this.setState({ photoIndex: 0 });
-                }}
-                onMovePrevRequest={() =>
-                  this.setState({
-                    photoIndex:
-                      (photoIndex + this.state.gallery.length - 1) %
-                      this.state.gallery.length
-                  })
-                }
-                onMoveNextRequest={() =>
-                  this.setState({
-                    photoIndex: (photoIndex + 1) % this.state.gallery.length
-                  })
-                }
-              />
-            )}
 
             {/* <ImgContainer>
               {this.state.project.data.project_images.map((item, index) => (

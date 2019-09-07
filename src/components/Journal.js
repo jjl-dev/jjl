@@ -1,8 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 
 import JournalItem from "./JournalItem";
+
+const GlobalStyle = createGlobalStyle`
+  header {
+    border-bottom: 1px solid #E5E5E5; 
+  }
+`;
 
 const Container = styled.div`
   padding: 15px;
@@ -35,6 +41,7 @@ class Journal extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <GlobalStyle />
         <Container>
           <div>
             {this.state.journals.map((journal, index) => (

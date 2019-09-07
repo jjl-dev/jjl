@@ -1,8 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+const GlobalStyle = createGlobalStyle`
+  header {
+    border-bottom: 1px solid #E5E5E5; 
+  }
+`;
 const Container = styled.div`
   padding: 15px;
   padding-top: 76px;
@@ -69,6 +74,8 @@ class SingleJournal extends React.Component {
     const data = this.state.journal.data;
     return (
       <React.Fragment>
+              <GlobalStyle />
+
         <Container>
           {data && (
             <JournalItemContainer>

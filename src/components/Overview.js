@@ -90,16 +90,15 @@ class Overview extends React.Component {
     };
   }
 
-  handlePhotoClick = e => {
-    let target = e.currentTarget.currentSrc;
-    let index = target.split("?index")[1];
 
-    this.setState({ isOpen: true });
-    // this.setState({ photoIndex: index });
-  };
 
   render() {
     const { photoIndex, isOpen } = this.state;
+
+    const handlePhotoClick = e => {
+      this.setState({ isOpen: true });
+      this.setState({ photoIndex: e - 1 });
+    };
 
     return (
       <React.Fragment>
@@ -107,19 +106,19 @@ class Overview extends React.Component {
           <ImgContainer>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(1)}
                 src={img1}
                 width="237"
                 alt="jjl img1"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(2)}
                 src={img2}
                 width="192"
                 alt="jjl img2"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(3)}
                 src={img3}
                 width="432"
                 alt="jjl img3"
@@ -127,13 +126,13 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(4)}
                 src={img4}
                 width="432"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(5)}
                 src={img5}
                 width="237"
                 alt="jjl img3"
@@ -141,19 +140,19 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(6)}
                 src={img6}
                 width="432"
                 alt="jjl img1"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(7)}
                 src={img7}
                 width="192"
                 alt="jjl img2"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(8)}
                 src={img8}
                 width="237"
                 alt="jjl img3"
@@ -161,19 +160,19 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(9)}
                 src={img9}
                 width="237"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(10)}
                 src={img10}
                 width="237"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(11)}
                 src={img11}
                 width="432"
                 alt="jjl img3"
@@ -181,7 +180,7 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(12)}
                 src={img12}
                 width="194"
                 alt="jjl img3"
@@ -189,19 +188,19 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(13)}
                 src={img13}
                 width="237"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(14)}
                 src={img14}
                 width="194"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(15)}
                 src={img15}
                 width="432"
                 alt="jjl img3"
@@ -209,13 +208,13 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(16)}
                 src={img16}
                 width="432"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(17)}
                 src={img17}
                 width="237"
                 alt="jjl img3"
@@ -223,19 +222,19 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(18)}
                 src={img18}
                 width="432"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(19)}
                 src={img19}
                 width="194"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(20)}
                 src={img20}
                 width="237"
                 alt="jjl img3"
@@ -243,19 +242,19 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(21)}
                 src={img21}
                 width="237"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(22)}
                 src={img22}
                 width="237"
                 alt="jjl img3"
               />
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(23)}
                 src={img23}
                 width="432"
                 alt="jjl img3"
@@ -263,7 +262,7 @@ class Overview extends React.Component {
             </ImgRow>
             <ImgRow>
               <Img
-                onClick={this.handlePhotoClick}
+                onClick={() => handlePhotoClick(24)}
                 src={img24}
                 width="194"
                 alt="jjl img3"
@@ -271,8 +270,6 @@ class Overview extends React.Component {
             </ImgRow>
           </ImgContainer>
         </Container>
-
-        {console.log(this.state.gallery[photoIndex])}
 
         {isOpen && (
           <Lightbox
