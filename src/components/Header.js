@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import logo from "../assets/jjl-logo.svg";
@@ -35,17 +35,17 @@ const Header = () => {
     <div>
       <Container>
         <Logo>
-          <Link to="/">
+          <NavLink exact={true} activeClassName='is-active' to="/">
             <img src={logo} width="126" alt="jjl logo" />
-          </Link>
+          </NavLink>
         </Logo>
         <Links>
           <div>
-            <Link to="/projects">PROJECTS</Link>/
-            <Link to="/overview">OVERVIEW</Link>
+            <NavLink activeClassName='is-active' to="/projects">PROJECTS</NavLink>/
+            <NavLink activeClassName='is-active' to="/overview">OVERVIEW</NavLink>
           </div>
           <div>
-            <Link to="/about">ABOUT</Link>/<Link to="/Journal">JOURNAL</Link>
+            <NavLink activeClassName='is-active' to="/about">ABOUT</NavLink>/<NavLink activeClassName='is-active' to="/Journal">JOURNAL</NavLink>
           </div>
         </Links>
       </Container>

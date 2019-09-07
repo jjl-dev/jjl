@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
-import ProjectsPage from "./components/ProjectsPage";
 import About from "./components/About";
 import Overview from "./components/Overview";
 import Journal from "./components/Journal";

@@ -42,7 +42,6 @@ const BackToJournal = styled(Link)`
   line-height: 30px;
   color: #282829;
 `;
-
 class SingleJournal extends React.Component {
   constructor(props) {
     super(props);

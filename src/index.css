@@ -99,3 +99,8 @@ hr {
 img{
   display: block;
 }
+
+.is-active{
+  font-style: italic;
+
+}
