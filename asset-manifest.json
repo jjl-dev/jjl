@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jjl/static/css/main.c80b1011.chunk.css",
-    "main.js": "/jjl/static/js/main.035844b8.chunk.js",
-    "main.js.map": "/jjl/static/js/main.035844b8.chunk.js.map",
+    "main.js": "/jjl/static/js/main.36590636.chunk.js",
+    "main.js.map": "/jjl/static/js/main.36590636.chunk.js.map",
     "runtime~main.js": "/jjl/static/js/runtime~main.5e541059.js",
     "runtime~main.js.map": "/jjl/static/js/runtime~main.5e541059.js.map",
     "static/css/2.9522b9fe.chunk.css": "/jjl/static/css/2.9522b9fe.chunk.css",
-    "static/js/2.7427927a.chunk.js": "/jjl/static/js/2.7427927a.chunk.js",
-    "static/js/2.7427927a.chunk.js.map": "/jjl/static/js/2.7427927a.chunk.js.map",
+    "static/js/2.19ee6ea4.chunk.js": "/jjl/static/js/2.19ee6ea4.chunk.js",
+    "static/js/2.19ee6ea4.chunk.js.map": "/jjl/static/js/2.19ee6ea4.chunk.js.map",
     "index.html": "/jjl/index.html",
-    "precache-manifest.9bdd2014468682e35d3f2bbf52950270.js": "/jjl/precache-manifest.9bdd2014468682e35d3f2bbf52950270.js",
+    "precache-manifest.8e4ee3c22fcaa888855be2392bc0738b.js": "/jjl/precache-manifest.8e4ee3c22fcaa888855be2392bc0738b.js",
     "service-worker.js": "/jjl/service-worker.js",
     "static/css/2.9522b9fe.chunk.css.map": "/jjl/static/css/2.9522b9fe.chunk.css.map",
     "static/css/main.c80b1011.chunk.css.map": "/jjl/static/css/main.c80b1011.chunk.css.map",
@@ -38,6 +38,7 @@
     "static/media/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-8.jpg": "/jjl/static/media/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-8.3a952ef0.jpg",
     "static/media/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-9.jpg": "/jjl/static/media/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-9.0d5fd83e.jpg",
     "static/media/index.css": "/jjl/static/media/SuisseWorks-Regular-WebS.c228ad38.eot",
+    "static/media/jjl-logo-compact.svg": "/jjl/static/media/jjl-logo-compact.ac622b55.svg",
     "static/media/jjl-logo.svg": "/jjl/static/media/jjl-logo.dce799a0.svg",
     "static/media/jjlcontact.jpg": "/jjl/static/media/jjlcontact.62803942.jpg"
   }

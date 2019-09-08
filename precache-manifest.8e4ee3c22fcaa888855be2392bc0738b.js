@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1a41900fcc42ac933f17f3954c42d4d",
+    "revision": "d076da41f76956630ad31e40345b13db",
     "url": "/jjl/index.html"
   },
   {
-    "revision": "ea02126d260cc154c7f7",
+    "revision": "796a2ca3aeab599feae3",
     "url": "/jjl/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "2f25ca99986671ea1dd5",
+    "revision": "ba97565b225e69f12b6a",
     "url": "/jjl/static/css/main.c80b1011.chunk.css"
   },
   {
-    "revision": "ea02126d260cc154c7f7",
-    "url": "/jjl/static/js/2.7427927a.chunk.js"
+    "revision": "796a2ca3aeab599feae3",
+    "url": "/jjl/static/js/2.19ee6ea4.chunk.js"
   },
   {
-    "revision": "2f25ca99986671ea1dd5",
-    "url": "/jjl/static/js/main.035844b8.chunk.js"
+    "revision": "ba97565b225e69f12b6a",
+    "url": "/jjl/static/js/main.36590636.chunk.js"
   },
   {
     "revision": "c09b1590abae3d6586b4",
@@ -158,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c228ad388f893ba420bf0d87f9a74c8e",
     "url": "/jjl/static/media/SuisseWorks-Regular-WebS.c228ad38.eot"
+  },
+  {
+    "revision": "ac622b55f94ac85ec2a8d9323721d461",
+    "url": "/jjl/static/media/jjl-logo-compact.ac622b55.svg"
   },
   {
     "revision": "dce799a05435a1506aeb8fda65a5c57b",
