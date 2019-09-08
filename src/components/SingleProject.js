@@ -131,7 +131,7 @@ class Overview extends React.Component {
                     return (
                       <Gallery
                         photos={this.state.photos}
-                        targetRowHeight={500}
+                        targetRowHeight={400}
                         direction={"row"}
                         margin={7}
                       />
