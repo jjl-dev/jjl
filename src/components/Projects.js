@@ -236,11 +236,13 @@ class Projects extends React.Component {
             )
           )
         )}
+        {!this.state.showAllProjects && (
         <MoreProjects>
           <Link to="/projects" onClick={() => this.showAllProjects()}>
             MORE PROJECTS
           </Link>
         </MoreProjects>
+        )}
       </React.Fragment>
     );
   }

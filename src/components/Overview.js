@@ -49,10 +49,25 @@ const ImgRow = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding: 44px 0;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 const Img = styled.img`
   align-self: flex-start;
+  cursor: pointer;
+
+  @media only screen and (max-width: 960px) {
+    width: 32%;
+  }
+
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+    padding: 10px 0;
+  }
 `;
 
 class Overview extends React.Component {
@@ -89,8 +104,6 @@ class Overview extends React.Component {
       isOpen: false
     };
   }
-
-
 
   render() {
     const { photoIndex, isOpen } = this.state;

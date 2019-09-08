@@ -35,6 +35,10 @@ const Info = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+
+  @media only screen and (max-width: 575px){
+    flex-direction: column;
+  }
 `;
 
 const Social = styled.ul`
@@ -53,6 +57,10 @@ const SocialHeading = styled.li`
 
 const Img = styled.img`
   padding: 10px;
+
+  @media only screen and (max-width: 575px){
+    padding: 0;
+  }
 `;
 
 const Projects = () => {

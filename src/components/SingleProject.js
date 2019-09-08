@@ -63,14 +63,15 @@ class Overview extends React.Component {
         })
         .then(response => {
           this.setState({ project: response.results[0] });
-
           response.results[0].data.project_images.map((item, index) => {
-            this.state.photos.push({
-              src: item.image.url + "?index" + index,
-              width: item.image.dimensions.width,
-              height: item.image.dimensions.height
-            });
-            this.state.gallery.push(item.image.url + "?index" + index);
+            if (item.image.url) {
+              this.state.photos.push({
+                src: item.image.url,
+                width: item.image.dimensions.width,
+                height: item.image.dimensions.height
+              });
+              this.state.gallery.push(item.image.url + "?index" + index);
+            }
           });
         });
     });
@@ -106,30 +107,55 @@ class Overview extends React.Component {
             </DescriptionContainer>
 
             <Media>
-              {({ breakpoints, currentBreakpoint }) =>
-                breakpoints[currentBreakpoint] > breakpoints.tabletLandscape ? (
-                  <Gallery
-                    photos={this.state.photos}
-                    targetRowHeight={600}
-                    direction={"row"}
-                    margin={7}
-                  />
-                ) : (
-                  <Gallery
-                    photos={this.state.photos}
-                    targetRowHeight={300}
-                    direction={"row"}
-                    margin={7}
-                  />
-                )
-              }
+              {({ breakpoints, currentBreakpoint }) => {
+                switch (currentBreakpoint) {
+                  case "desktop":
+                    return (
+                      <Gallery
+                        photos={this.state.photos}
+                        targetRowHeight={600}
+                        direction={"row"}
+                        margin={7}
+                      />
+                    );
+                  case "tabletLandscape":
+                    return (
+                      <Gallery
+                        photos={this.state.photos}
+                        targetRowHeight={600}
+                        direction={"row"}
+                        margin={7}
+                      />
+                    );
+                  case "tablet":
+                    return (
+                      <Gallery
+                        photos={this.state.photos}
+                        targetRowHeight={500}
+                        direction={"row"}
+                        margin={7}
+                      />
+                    );
+                  case "mobile":
+                    return (
+                      <Gallery
+                        photos={this.state.photos}
+                        direction={"column"}
+                        margin={7}
+                      />
+                    );
+                  default:
+                    return (
+                      <Gallery
+                        photos={this.state.photos}
+                        targetRowHeight={600}
+                        direction={"row"}
+                        margin={7}
+                      />
+                    );
+                }
+              }}
             </Media>
-
-            {/* <ImgContainer>
-              {this.state.project.data.project_images.map((item, index) => (
-                <Img src={item.image.url} key={index} width="500px" alt="jjl project image" />
-              ))}
-            </ImgContainer> */}
           </Container>
         )}
       </React.Fragment>

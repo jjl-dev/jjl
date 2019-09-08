@@ -6,6 +6,10 @@ const Container = styled.footer`
   display: flex;
   justify-content: space-between;
   font-size: 12px;
+
+  @media only screen and (max-width: 575px){
+    flex-direction: column;
+  }
 `;
 
 const Links = styled.div`
@@ -16,6 +20,10 @@ const Description = styled.div`
   max-width: 430px;
   font-size: 9px;
   line-height: 13px;
+
+  @media only screen and (max-width: 575px){
+    padding-top: 20px;
+  }
 `;
 
 const Space = styled.div`
