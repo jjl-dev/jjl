@@ -44,7 +44,7 @@ const Header = () => {
           <NavLink activeClassName="is-active" to="/projects">
             <Media>
               {({ breakpoints, currentBreakpoint }) =>
-                breakpoints[currentBreakpoint] > breakpoints.tabletLandscape ? (
+                breakpoints[currentBreakpoint] > breakpoints.mobile ? (
                   <img src={logo} width="126" alt="jjl logo" />
                 ) : (
                   <img src={logoCompact} width="40" alt="jjl logo" />
@@ -67,10 +67,10 @@ const Header = () => {
             <NavLink activeClassName="is-active" to="/about">
               ABOUT
             </NavLink>
-            {/* /
+            /
             <NavLink activeClassName="is-active" to="/Journal">
               JOURNAL
-            </NavLink> */}
+            </NavLink>
           </div>
         </Links>
       </Container>

@@ -28,6 +28,15 @@ const ImgContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 50px;
+
+  @media only screen and (max-width: 575px){
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 1000px){
+    padding: 0;
+    justify-content: center;
+  }
 `;
 let HoverImage = styled.img`
   position: absolute;
@@ -35,6 +44,10 @@ let HoverImage = styled.img`
   max-width: 238px;
   bottom: -153px;
   z-index: 1;
+
+  @media only screen and (max-width: 575px){
+    display: none;
+  }
 `;
 
 const MoreProjects = styled.div`
@@ -44,7 +57,18 @@ const MoreProjects = styled.div`
   letter-spacing: 0.05em;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+@media only screen and (max-width: 575px){
+  width: 100%;
+}
+`;
+
+const FeaturedImg2 = styled.img`
+  @media only screen and (max-width: 1000px){
+    display: none;
+  }
+`;
+
 
 class Projects extends React.Component {
   constructor(props) {
@@ -144,13 +168,13 @@ class Projects extends React.Component {
                     )}
 
                     {project.data.featured_image_2.dimensions.width === 1800 ? (
-                      <Img
+                      <FeaturedImg2
                         src={project.data.featured_image_2.url}
                         width="488"
                         alt="jjl"
                       />
                     ) : (
-                      <Img
+                      <FeaturedImg2
                         src={project.data.featured_image_2.url}
                         width="363"
                         alt="jjl"
@@ -200,13 +224,13 @@ class Projects extends React.Component {
 
                       {project.data.featured_image_2.dimensions.width ===
                       1800 ? (
-                        <Img
+                        <FeaturedImg2
                           src={project.data.featured_image_2.url}
                           width="488"
                           alt="jjl"
                         />
                       ) : (
-                        <Img
+                        <FeaturedImg2
                           src={project.data.featured_image_2.url}
                           width="363"
                           alt="jjl"

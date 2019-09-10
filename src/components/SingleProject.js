@@ -27,6 +27,10 @@ const DescriptionHeader = styled.div`
   padding-bottom: 20px;
 `;
 
+const DescriptionText = styled.div`
+white-space: pre-wrap;
+`;
+
 const ListHeader = styled.li`
   padding-bottom: 20px;
   font-family: Suisse Works Intl;
@@ -88,7 +92,7 @@ class Overview extends React.Component {
             <DescriptionContainer>
               <Description>
                 <DescriptionHeader>{data.title[0].text}</DescriptionHeader>
-                <p>{data.description[0].text}</p>
+                <DescriptionText>{data.description[0].text}</DescriptionText>
               </Description>
               <div style={{ flex: "2 1 3%" }} />
               <Info>
