@@ -18,10 +18,13 @@ const JournalItemContainer = styled.div`
   margin: 10px 0;
   padding: 20px 0 40px 0;
   border-bottom: 1px solid #e5e5e5;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column-reverse;
+  }
 `;
 const Item = styled.div`
   flex-basis: 50%;
-  width: 0;
   padding-right: 10px;
 `;
 const Date = styled.div`
@@ -30,9 +33,12 @@ const Date = styled.div`
 `;
 const Details = styled.div`
   flex-basis: 36%;
-  width: 0;
   font-size: 11px;
   line-height: 15px;
+
+  @media only screen and (max-width: 575px) {
+    padding-bottom: 20px;
+  }
 `;
 const Description = styled.p`
   margin-top: 26px;
@@ -74,7 +80,7 @@ class SingleJournal extends React.Component {
     const data = this.state.journal.data;
     return (
       <React.Fragment>
-              <GlobalStyle />
+        <GlobalStyle />
 
         <Container>
           {data && (

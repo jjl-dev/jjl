@@ -3,34 +3,54 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const JournalItemContainer = styled.div`
-    display: flex;
-    flex-basis: 100%
-    margin: 10px 0;
-    padding: 20px 0 40px 0;
-    border-bottom: 1px solid #E5E5E5;
+  display: flex;
+  flex-basis: 100%
+  margin: 10px 0;
+  padding: 20px 0 40px 0;
+  border-bottom: 1px solid #E5E5E5;
+
+  @media only screen and (max-width: 575px){
+    flex-direction: column;
+  }
+
 `;
 const Item = styled.div`
   flex-basis: 100%;
   flex: 1 1 0;
-  width: 0;
   padding-right: 10px;
+`;
+
+const FeaturedImage2 = styled.div`
+  flex-basis: 100%;
+  flex: 1 1 0;
+  padding-right: 10px;
+
+  @media only screen and (max-width: 575px){
+    display: none;
+  }
+
 `;
 const Date = styled.div`
   flex-basis: 100%;
   flex: 1 1 0;
-  width: 0;
   font-size: 11px;
   line-height: 15px;
   position: relative;
   right: 50px;
   text-align: right;
+
+  @media only screen and (max-width: 575px){
+    text-align: left;
+    right: 0px;
+    padding-top: 20px;
+  }
+
 `;
 
 const Title = styled(Link)``;
 const Details = styled.div`
   flex-basis: 100%;
   flex: 1 1 0;
-  width: 0;
   font-size: 11px;
   line-height: 15px;
 `;
@@ -51,11 +71,11 @@ const JournalItem = props => {
           <Image src={data.featured_image_1.url} alt="featured 1" />
         )}
       </Item>
-      <Item>
+      <FeaturedImage2>
         {data.featured_image_2.url && (
           <Image src={data.featured_image_2.url} alt="featured 2" />
         )}
-      </Item>
+      </FeaturedImage2>
       <Date>{data.date[0].text}</Date>
       <Details>
         <Title to={`/journal/${props.data.id}`}>{data.title[0].text}</Title>
