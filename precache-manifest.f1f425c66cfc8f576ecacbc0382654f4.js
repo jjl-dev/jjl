@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22684c7528efabcb89eb631a4e98034a",
+    "revision": "cc513b50eae61614971d1a5ef38b8d8f",
     "url": "/jjl/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jjl/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "4f88cfe83dc6f104af38",
-    "url": "/jjl/static/css/main.c80b1011.chunk.css"
+    "revision": "040b53ee925d9066d9e3",
+    "url": "/jjl/static/css/main.7b98d69a.chunk.css"
   },
   {
     "revision": "025b7831290ceb78ec4b",
     "url": "/jjl/static/js/2.5656214e.chunk.js"
   },
   {
-    "revision": "4f88cfe83dc6f104af38",
-    "url": "/jjl/static/js/main.93b3f9d6.chunk.js"
+    "revision": "040b53ee925d9066d9e3",
+    "url": "/jjl/static/js/main.cff15063.chunk.js"
   },
   {
     "revision": "c09b1590abae3d6586b4",
@@ -118,46 +118,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0d5fd83e77c26ca7c388c5b9661f1f43",
     "url": "/jjl/static/media/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-9.0d5fd83e.jpg"
-  },
-  {
-    "revision": "0c6a404fd1628889d2b0f8206e2f3b37",
-    "url": "/jjl/static/media/SuisseIntl-Book-WebM.0c6a404f.eot"
-  },
-  {
-    "revision": "5f777e79ca58a3d3ae6f61d6dbea10af",
-    "url": "/jjl/static/media/SuisseIntl-Book-WebM.5f777e79.ttf"
-  },
-  {
-    "revision": "76e05da9310e54a73c709a4c5541bc5e",
-    "url": "/jjl/static/media/SuisseIntl-Book-WebM.76e05da9.woff2"
-  },
-  {
-    "revision": "c20b7d1194bedb79d9c3d4e2d55941e3",
-    "url": "/jjl/static/media/SuisseIntl-Book-WebM.c20b7d11.woff"
-  },
-  {
-    "revision": "c749c5fbbb83e590263b8832a3ec1ef1",
-    "url": "/jjl/static/media/SuisseIntl-Book-WebM.c749c5fb.svg"
-  },
-  {
-    "revision": "0206138fc90a189009fb3ff796c53c1b",
-    "url": "/jjl/static/media/SuisseWorks-Regular-WebS.0206138f.woff"
-  },
-  {
-    "revision": "0b82f44fc7fed8d97263215e7e667549",
-    "url": "/jjl/static/media/SuisseWorks-Regular-WebS.0b82f44f.ttf"
-  },
-  {
-    "revision": "1e7add548ae284842ba8801b2a4ee832",
-    "url": "/jjl/static/media/SuisseWorks-Regular-WebS.1e7add54.svg"
-  },
-  {
-    "revision": "1fc9b58b4eabf84867bf710ad0728e10",
-    "url": "/jjl/static/media/SuisseWorks-Regular-WebS.1fc9b58b.woff2"
-  },
-  {
-    "revision": "c228ad388f893ba420bf0d87f9a74c8e",
-    "url": "/jjl/static/media/SuisseWorks-Regular-WebS.c228ad38.eot"
   },
   {
     "revision": "ac622b55f94ac85ec2a8d9323721d461",
