@@ -36,7 +36,7 @@ const Info = styled.div`
   justify-content: space-between;
   padding-top: 30px;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     flex-direction: column;
   }
 `;
@@ -58,7 +58,7 @@ const SocialHeading = styled.li`
 const Img = styled.img`
   padding: 10px;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     padding: 0;
   }
 `;
@@ -75,7 +75,7 @@ const Projects = () => {
             videographer from Vancouver, Canada. He started photography as a
             teenager, when he picked up his parents’ cameras, and started
             recording whatever was of interest around him.
-          <br/>
+            <br />
             Now, almost a decade later, Jeremy has solidified a strong
             reputation as one of Vancouver’s “go to” photographers, telling
             visual stories for a long list of a long list of editorial and
@@ -104,7 +104,6 @@ const Projects = () => {
             <li>Maekan</li>
             <li>Grailed</li>
             <li>Etsy</li>
-
           </Social>
           <div>
             <Social>
@@ -113,18 +112,92 @@ const Projects = () => {
             </Social>
             <Social>
               <SocialHeading>Instagram</SocialHeading>
-              <li><a href="https://www.instagram.com/jeremyjudelee" target="_blank" rel="noopener noreferrer">@jeremyjudelee</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/jeremyjudelee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @jeremyjudelee
+                </a>
+              </li>
             </Social>
             <Social>
               <SocialHeading>Press</SocialHeading>
-              <li><a href="https://www.booooooom.com/2019/02/19/myth-and-reality-by-photographer-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer " >Booooooom.com, 2019</a></li>
-              <li><a href="https://thecreatorclass.com/make-the-most-of-your-leading-lines-with-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >The Creator Class, 2015</a></li>
-              <li><a href="https://www.canon.ca/en/consumer/Get-Inspired/One2Watch" target="_blank" rel="noopener noreferrer" >Canon Canada, 2018</a></li>
-              <li><a href="https://mrgray.ca/blogs/stories/jeremy-jude-lee" target="_blank" rel="noopener noreferrer" >Mr. Gray Socks, 2018</a></li>
-              <li><a href="http://www.creepmagazine.com/jeremy-jude-lee" target="_blank" rel="noopener noreferrer" >Creep Magazine, 2015</a></li>
-              <li><a href="https://hypebae.com/2017/7/rubber-soul-editorial-jeremy-jude-lee-lauren-coutts" target="_blank" rel="noopener noreferrer" >Hypebae, 2017</a></li>
-              <li><a href="https://maekan.com/article/sights-sounds-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >Maekan, 2019</a></li>
-              <li><a href="https://missbish.com/the-missbish-photography-workshop-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >MISSBISH 2016</a></li>
+              <li>
+                <a
+                  href="https://www.booooooom.com/2019/02/19/myth-and-reality-by-photographer-jeremy-jude-lee/"
+                  target="_blank"
+                  rel="noopener noreferrer "
+                >
+                  Booooooom.com, 2019
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maekan.com/article/sights-sounds-jeremy-jude-lee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Maekan, 2019
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.canon.ca/en/consumer/Get-Inspired/One2Watch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Canon Canada, 2018
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mrgray.ca/blogs/stories/jeremy-jude-lee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mr. Gray Socks, 2018
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://hypebae.com/2017/7/rubber-soul-editorial-jeremy-jude-lee-lauren-coutts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hypebae, 2017
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://missbish.com/the-missbish-photography-workshop-jeremy-jude-lee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MISSBISH 2016
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.creepmagazine.com/jeremy-jude-lee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Creep Magazine, 2015
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://thecreatorclass.com/make-the-most-of-your-leading-lines-with-jeremy-jude-lee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Creator Class, 2015
+                </a>
+              </li>
             </Social>
           </div>
           <Img src={img1} width="237" height="298" alt="jjl contact" />
