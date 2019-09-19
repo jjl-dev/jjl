@@ -29,11 +29,11 @@ const ImgContainer = styled.div`
   align-items: flex-start;
   padding-top: 50px;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     padding: 0;
   }
 
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 1000px) {
     padding: 0;
     justify-content: center;
   }
@@ -45,7 +45,7 @@ let HoverImage = styled.img`
   bottom: -153px;
   z-index: 1;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     display: none;
   }
 `;
@@ -58,17 +58,20 @@ const MoreProjects = styled.div`
 `;
 
 const Img = styled.img`
-@media only screen and (max-width: 575px){
-  width: 100%;
-}
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
 `;
 
 const FeaturedImg2 = styled.img`
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 1000px) {
     display: none;
   }
 `;
 
+const ClientTitle = styled.span`
+  font-style: italic;
+`;
 
 class Projects extends React.Component {
   constructor(props) {
@@ -196,8 +199,10 @@ class Projects extends React.Component {
                     alt="jjl"
                   />
                 )}
-
-                {project.data.title[0].text}
+                <div>
+                  {project.data.client[0].text}
+                  <ClientTitle>{project.data.title[0].text} </ClientTitle>
+                </div>
                 <Year>{project.data.year[0].text}</Year>
               </DescriptionContainer>
             </React.Fragment>
@@ -253,7 +258,10 @@ class Projects extends React.Component {
                     />
                   )}
 
-                  {project.data.title[0].text}
+                  <div>
+                    {project.data.client[0].text}
+                    <ClientTitle>{project.data.title[0].text} </ClientTitle>
+                  </div>
                   <Year>{project.data.year[0].text}</Year>
                 </DescriptionContainer>
               </React.Fragment>
@@ -261,11 +269,11 @@ class Projects extends React.Component {
           )
         )}
         {!this.state.showAllProjects && (
-        <MoreProjects>
-          <Link to="/projects" onClick={() => this.showAllProjects()}>
-            MORE PROJECTS
-          </Link>
-        </MoreProjects>
+          <MoreProjects>
+            <Link to="/projects" onClick={() => this.showAllProjects()}>
+              MORE PROJECTS
+            </Link>
+          </MoreProjects>
         )}
       </React.Fragment>
     );

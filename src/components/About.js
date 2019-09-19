@@ -113,7 +113,7 @@ const Projects = () => {
             </Social>
             <Social>
               <SocialHeading>Instagram</SocialHeading>
-              <li>@jjudelee</li>
+              <li><a href="https://www.instagram.com/jeremyjudelee" target="_blank" rel="noopener noreferrer">@jeremyjudelee</a></li>
             </Social>
             <Social>
               <SocialHeading>Press</SocialHeading>
@@ -124,7 +124,7 @@ const Projects = () => {
               <li><a href="http://www.creepmagazine.com/jeremy-jude-lee" target="_blank" rel="noopener noreferrer" >Creep Magazine, 2015</a></li>
               <li><a href="https://hypebae.com/2017/7/rubber-soul-editorial-jeremy-jude-lee-lauren-coutts" target="_blank" rel="noopener noreferrer" >Hypebae, 2017</a></li>
               <li><a href="https://maekan.com/article/sights-sounds-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >Maekan, 2019</a></li>
-              <li><a href="https://missbish.com/the-missbish-photography-workshop-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >MISSBISH</a></li>
+              <li><a href="https://missbish.com/the-missbish-photography-workshop-jeremy-jude-lee/" target="_blank" rel="noopener noreferrer" >MISSBISH 2016</a></li>
             </Social>
           </div>
           <Img src={img1} width="237" height="298" alt="jjl contact" />

@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import Gallery from "react-photo-gallery";
 import { Media } from "react-breakpoints";
+import ReactGridLayout from 'react-grid-layout';
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -21,6 +22,11 @@ const DescriptionContainer = styled.div`
   padding: 10px 0 40px 0;
   font-size: 11px;
   line-height: 17px;
+
+  @media only screen and (max-width: 575px){
+    flex-direction: column;
+  }
+
 `;
 
 const DescriptionHeader = styled.div`
@@ -34,6 +40,12 @@ white-space: pre-wrap;
 const ListHeader = styled.li`
   padding-bottom: 20px;
   font-family: Suisse Works Intl;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 575px){
+    padding-top: 20px;
+  }
+  
 `;
 
 const Description = styled.div`
@@ -42,6 +54,10 @@ const Description = styled.div`
 
 const Info = styled.div`
   flex: 6;
+`;
+
+const ClientTitle = styled.span`
+  font-style: italic;
 `;
 
 class Overview extends React.Component {
@@ -91,7 +107,7 @@ class Overview extends React.Component {
           <Container>
             <DescriptionContainer>
               <Description>
-                <DescriptionHeader>{data.title[0].text}</DescriptionHeader>
+                <DescriptionHeader>{data.client[0].text}<ClientTitle>{data.title[0].text}</ClientTitle></DescriptionHeader>
                 <DescriptionText>{data.description[0].text}</DescriptionText>
               </Description>
               <div style={{ flex: "2 1 3%" }} />
@@ -109,6 +125,12 @@ class Overview extends React.Component {
                 <ListHeader>{data.year[0].text}</ListHeader>
               </ul>
             </DescriptionContainer>
+
+            {/* <ReactGridLayout className="layout" cols={2} rowHeight={30} width={1200}>
+              <div key="1" data-grid={{x: 0, y: 0, w: 1, h: 2, static: true}}>a</div>
+              <div key="2" data-grid={{x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4}}>b</div>
+              <div key="3" data-grid={{x: 4, y: 0, w: 1, h: 2}}>c</div>
+            </ReactGridLayout> */}
 
             <Media>
               {({ breakpoints, currentBreakpoint }) => {
