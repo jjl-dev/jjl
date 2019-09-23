@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const JournalItemContainer = styled.div`
+const JournalItemContainer = styled(Link)`
   display: flex;
   flex-basis: 100%
   margin: 10px 0;
@@ -47,7 +47,7 @@ const Date = styled.div`
 
 `;
 
-const Title = styled(Link)``;
+const Title = styled.div``;
 const Details = styled.div`
   flex-basis: 100%;
   flex: 1 1 0;
@@ -65,7 +65,7 @@ const Image = styled.img`
 const JournalItem = props => {
   const data = props.data.data;
   return (
-    <JournalItemContainer>
+    <JournalItemContainer to={`/journal/${props.data.id}`}>
       <Item>
         {data.featured_image_1.url && (
           <Image src={data.featured_image_1.url} alt="featured 1" />
@@ -78,7 +78,7 @@ const JournalItem = props => {
       </FeaturedImage2>
       <Date>{data.date[0].text}</Date>
       <Details>
-        <Title to={`/journal/${props.data.id}`}>{data.title[0].text}</Title>
+        <Title>{data.title[0].text}</Title>
         <Description>{data.description[0].text}</Description>
       </Details>
     </JournalItemContainer>

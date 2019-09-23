@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
 
-const DescriptionContainer = styled(Link)`
+const ProjectContainer = styled(Link)`
+
+`;
+
+const DescriptionContainer = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -21,9 +25,6 @@ const Year = styled.h4`
 `;
 
 const ImgContainer = styled.div`
-  &:first-child {
-    padding: 0;
-  }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -152,7 +153,7 @@ class Projects extends React.Component {
       <React.Fragment>
         {this.state.projects.map((project, index) =>
           this.state.showAllProjects ? (
-            <React.Fragment key={index}>
+            <ProjectContainer key={index} to={`/project/${project.id}`}>
               {project.data.featured_image_1.url &&
                 project.data.featured_image_2.url && (
                   <ImgContainer>
@@ -188,7 +189,6 @@ class Projects extends React.Component {
 
               <DescriptionContainer
                 key={index}
-                to={`/project/${project.id}`}
                 onMouseEnter={e => this.descriptionEnter(e, project.data)}
                 onMouseLeave={e => this.descriptionLeave(e, project.data)}
               >
@@ -205,10 +205,11 @@ class Projects extends React.Component {
                 </div>
                 <Year>{project.data.year[0].text}</Year>
               </DescriptionContainer>
-            </React.Fragment>
+            </ProjectContainer>
           ) : (
             index < 10 && (
-              <React.Fragment key={index}>
+              <ProjectContainer key={index}
+              to={`/project/${project.id}`}>
                 {project.data.featured_image_1.url &&
                   project.data.featured_image_2.url && (
                     <ImgContainer>
@@ -246,7 +247,6 @@ class Projects extends React.Component {
 
                 <DescriptionContainer
                   key={index}
-                  to={`/project/${project.id}`}
                   onMouseEnter={e => this.descriptionEnter(e, project.data)}
                   onMouseLeave={e => this.descriptionLeave(e, project.data)}
                 >
@@ -264,7 +264,7 @@ class Projects extends React.Component {
                   </div>
                   <Year>{project.data.year[0].text}</Year>
                 </DescriptionContainer>
-              </React.Fragment>
+              </ProjectContainer>
             )
           )
         )}

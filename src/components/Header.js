@@ -74,11 +74,7 @@ const MobileNav = styled.div`
   top: 56px;
   right: 0;
   border-top: 1px solid #c8c8c8;
-  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein .5s; /* Firefox < 16 */
-  -ms-animation: fadein .5s; /* Internet Explorer */
-  -o-animation: fadein .5s; /* Opera < 12.1 */
-  animation: fadein .5s;
+  overflow: hidden;
 `;
 
 const Bio = styled.div`
@@ -87,7 +83,7 @@ const Bio = styled.div`
   line-height: 21px;
   font-family: Suisse Works Intl;
   position: absolute;
-  bottom: 40px;
+  bottom: 140px;
 `;
 
 class Header extends React.Component {
@@ -142,77 +138,99 @@ class Header extends React.Component {
             ) : (
               <Container>
                 <Logo>
-                  <NavLink activeClassName="is-active" to="/projects" onClick={() => this.handleLinkClick()}>
+                  <NavLink
+                    activeClassName="is-active"
+                    to="/projects"
+                    onClick={() => this.handleLinkClick()}
+                  >
                     <img src={logoCompact} width="40" alt="jjl logo" />
                   </NavLink>
                 </Logo>
                 {this.state.menuOpen ? (
-                  <MobileNavIconActive
-                    onClick={() => this.handleMenuClick()}
-                  ></MobileNavIconActive>
+                  <React.Fragment>
+                    <MobileNavIconActive
+                      onClick={() => this.handleMenuClick()}
+                    ></MobileNavIconActive>
+                    <GlobalNavStyle />
+                  </React.Fragment>
                 ) : (
                   <MobileNavIcon
                     onClick={() => this.handleMenuClick()}
                   ></MobileNavIcon>
                 )}
 
-                {this.state.menuOpen && (
-                  <React.Fragment>
-                    <GlobalNavStyle />
-                    <MobileNav className={this.state.menuOpen ? 'hello' : 'nope'}>
-                      <Links>
-                        <div>
-                          <NavLink activeClassName="is-active" to="/projects" onClick={() => this.handleLinkClick()}>
-                            PROJECTS
-                          </NavLink>
-                          /
-                          <NavLink activeClassName="is-active" to="/overview" onClick={() => this.handleLinkClick()}>
-                            OVERVIEW
-                          </NavLink>
-                        </div>
-                        <div>
-                          <NavLink activeClassName="is-active" to="/about" onClick={() => this.handleLinkClick()}>
-                            ABOUT
-                          </NavLink>
-                          /
-                          <NavLink activeClassName="is-active" to="/Journal" onClick={() => this.handleLinkClick()}>
-                            JOURNAL
-                          </NavLink>
-                        </div>
-                      </Links>
-                      <Bio>
-                        <p>
-                          Jeremy Jude Lee is a lifestyle and commercial
-                          photographer and videographer from Vancouver, Canada.
-                          He started photography as a teenager, when he picked
-                          up his parents’ cameras, and started recording
-                          whatever was of interest around him.
-                          <br />
-                          Now, almost a decade later, Jeremy has solidified a
-                          strong reputation as one of Vancouver’s “go to”
-                          photographers, telling visual stories for a long list
-                          of a long list of editorial and commercial clients.
-                        </p>
+                <React.Fragment>
+                  <MobileNav
+                    className={this.state.menuOpen ? "fadeIn" : "fadeOut"}
+                  >
+                    <Links>
+                      <div>
+                        <NavLink
+                          activeClassName="is-active"
+                          to="/projects"
+                          onClick={() => this.handleLinkClick()}
+                        >
+                          PROJECTS
+                        </NavLink>
+                        /
+                        <NavLink
+                          activeClassName="is-active"
+                          to="/overview"
+                          onClick={() => this.handleLinkClick()}
+                        >
+                          OVERVIEW
+                        </NavLink>
+                      </div>
+                      <div>
+                        <NavLink
+                          activeClassName="is-active"
+                          to="/about"
+                          onClick={() => this.handleLinkClick()}
+                        >
+                          ABOUT
+                        </NavLink>
+                        /
+                        <NavLink
+                          activeClassName="is-active"
+                          to="/Journal"
+                          onClick={() => this.handleLinkClick()}
+                        >
+                          JOURNAL
+                        </NavLink>
+                      </div>
+                    </Links>
+                    <Bio>
+                      <p>
+                        Jeremy Jude Lee is a lifestyle and commercial
+                        photographer and videographer from Vancouver, Canada. He
+                        started photography as a teenager, when he picked up his
+                        parents’ cameras, and started recording whatever was of
+                        interest around him.
                         <br />
-                        <a
-                          href="https://www.instagram.com/jeremyjudelee"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Instagram 
-                        </a> 
-                        / 
-                        <a
-                          href="https://www.instagram.com/jeremyjudelee"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Email
-                        </a>
-                      </Bio>
-                    </MobileNav>
-                  </React.Fragment>
-                )}
+                        Now, almost a decade later, Jeremy has solidified a
+                        strong reputation as one of Vancouver’s “go to”
+                        photographers, telling visual stories for a long list of
+                        a long list of editorial and commercial clients.
+                      </p>
+                      <br />
+                      <a
+                        href="https://www.instagram.com/jeremyjudelee"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Instagram
+                      </a>
+                      /
+                      <a
+                        href="https://www.instagram.com/jeremyjudelee"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Email
+                      </a>
+                    </Bio>
+                  </MobileNav>
+                </React.Fragment>
               </Container>
             )
           }

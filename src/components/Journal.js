@@ -43,11 +43,9 @@ class Journal extends React.Component {
       <React.Fragment>
         <GlobalStyle />
         <Container>
-          <div>
-            {this.state.journals.map((journal, index) => (
-              <JournalItem key={index} data={journal} />
-            ))}
-          </div>
+          {this.state.journals.map((journal, index) => (
+            <JournalItem key={index} data={journal} />
+          ))}
         </Container>
       </React.Fragment>
     );
