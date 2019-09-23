@@ -194,13 +194,13 @@ img {
   font-style: italic;
 }
 
-.fadeOut{
-  opacity:0;
-  transition: width 0.5s, height 0.5s, opacity 0.3s;
+.fadeOut {
+  opacity: 0;
   visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s;
 }
-.fadeIn{
-  opacity:1;
-  transition: width 0.5s, height 0.5s, opacity 0.3s;
+.fadeIn {
+  opacity: 1;
   visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s;
 }

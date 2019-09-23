@@ -68,7 +68,7 @@ const MobileNavIconActive = styled.div`
 
 const MobileNav = styled.div`
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background: #e8e6dc;
   width: 100%;
   top: 56px;
@@ -170,9 +170,9 @@ class Header extends React.Component {
                           to="/projects"
                           onClick={() => this.handleLinkClick()}
                         >
-                          PROJECTS
+                          PROJECTS &nbsp;
                         </NavLink>
-                        /
+                        / &nbsp;
                         <NavLink
                           activeClassName="is-active"
                           to="/overview"
@@ -187,9 +187,9 @@ class Header extends React.Component {
                           to="/about"
                           onClick={() => this.handleLinkClick()}
                         >
-                          ABOUT
+                          ABOUT &nbsp;
                         </NavLink>
-                        /
+                        / &nbsp;
                         <NavLink
                           activeClassName="is-active"
                           to="/Journal"
