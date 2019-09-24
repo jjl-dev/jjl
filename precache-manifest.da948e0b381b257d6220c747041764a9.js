@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d49045ed6b3c033e1d576cc19092989",
+    "revision": "048f64ce4b2b5ea49e2425c92b2bbb68",
     "url": "/jjl/index.html"
   },
   {
-    "revision": "12a6c27da26bf5b8882a",
+    "revision": "c1fbefa5d1ee7df59331",
     "url": "/jjl/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "93454fabb1bb9b5bbf6b",
-    "url": "/jjl/static/css/main.86e45dda.chunk.css"
+    "revision": "3bbd357af476fc89f3c3",
+    "url": "/jjl/static/css/main.6c23a04d.chunk.css"
   },
   {
-    "revision": "12a6c27da26bf5b8882a",
-    "url": "/jjl/static/js/2.9d895513.chunk.js"
+    "revision": "c1fbefa5d1ee7df59331",
+    "url": "/jjl/static/js/2.c90bbaf1.chunk.js"
   },
   {
-    "revision": "93454fabb1bb9b5bbf6b",
-    "url": "/jjl/static/js/main.341540e9.chunk.js"
+    "revision": "3bbd357af476fc89f3c3",
+    "url": "/jjl/static/js/main.add030f2.chunk.js"
   },
   {
     "revision": "c09b1590abae3d6586b4",
@@ -160,6 +160,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jjl/static/media/SuisseWorks-Regular-WebS.c228ad38.eot"
   },
   {
+    "revision": "c4a04ae8427764e525419cf63ee73f53",
+    "url": "/jjl/static/media/close.c4a04ae8.svg"
+  },
+  {
     "revision": "ac622b55f94ac85ec2a8d9323721d461",
     "url": "/jjl/static/media/jjl-logo-compact.ac622b55.svg"
   },
@@ -170,5 +174,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "62803942bb52bf6ed5622d5675769dc0",
     "url": "/jjl/static/media/jjlcontact.62803942.jpg"
+  },
+  {
+    "revision": "ff2b96719fb93f9698bfe4070dea4e27",
+    "url": "/jjl/static/media/next.ff2b9671.svg"
+  },
+  {
+    "revision": "290174b6259ea557de7fde682836d3c6",
+    "url": "/jjl/static/media/previous.290174b6.svg"
   }
 ]);
