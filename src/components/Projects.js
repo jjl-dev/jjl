@@ -4,7 +4,9 @@ import styled from "styled-components";
 import Prismic from "prismic-javascript";
 
 const ProjectContainer = styled(Link)`
-
+  div:hover{
+    opacity: .8;
+  }
 `;
 
 const DescriptionContainer = styled.div`

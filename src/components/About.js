@@ -75,7 +75,7 @@ const Projects = () => {
             videographer from Vancouver, Canada. He started photography as a
             teenager, when he picked up his parents’ cameras, and started
             recording whatever was of interest around him.
-            <br />
+            <br /><br />
             Now, almost a decade later, Jeremy has solidified a strong
             reputation as one of Vancouver’s “go to” photographers, telling
             visual stories for a long list of a long list of editorial and

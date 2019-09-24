@@ -110,7 +110,7 @@ class Overview extends React.Component {
                 <DescriptionHeader>{data.client[0].text}<ClientTitle>{data.title[0].text}</ClientTitle></DescriptionHeader>
                 <DescriptionText>{data.description[0].text}</DescriptionText>
               </Description>
-              <div style={{ flex: "2 1 3%" }} />
+              <div style={{ flex: "1 1 5%" }} />
               <Info>
                 <ul>
                   <ListHeader>{data.location[0].text}</ListHeader>

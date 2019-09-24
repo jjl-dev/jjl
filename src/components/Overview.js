@@ -287,6 +287,7 @@ class Overview extends React.Component {
         {isOpen && (
           <Lightbox
             enableZoom={false}
+            imagePadding={80}
             mainSrc={this.state.gallery[photoIndex]}
             nextSrc={
               this.state.gallery[(photoIndex + 1) % this.state.gallery.length]

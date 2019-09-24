@@ -32,12 +32,21 @@ const Date = styled.div`
   line-height: 15px;
 `;
 const Details = styled.div`
-  flex-basis: 36%;
+  flex-basis: 37%;
   font-size: 11px;
   line-height: 15px;
 
   @media only screen and (max-width: 575px) {
     padding-bottom: 20px;
+  }
+`;
+const DetailsInner = styled.div`
+  position: fixed;
+  width: 360px;
+
+  @media only screen and (max-width: 575px) {
+    position: relative;
+    width: 100%;
   }
 `;
 const Description = styled.p`
@@ -95,10 +104,12 @@ class SingleJournal extends React.Component {
                 ))}
               </Item>
               <Details>
+                <DetailsInner>
                 <h3>{data.title[0].text}</h3>
                 <Date>{data.date[0].text}</Date>
 
                 <Description>{data.description[0].text}</Description>
+                </DetailsInner>
               </Details>
             </JournalItemContainer>
           )}

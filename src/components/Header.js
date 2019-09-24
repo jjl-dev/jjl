@@ -43,6 +43,10 @@ const Links = styled.div`
   justify-content: space-between;
   flex-grow: 1;
 
+  a:hover{
+    opacity: .8;
+  }
+
   @media only screen and (max-width: 575px) {
     display: block;
     font-size: 16px;
@@ -117,18 +121,18 @@ class Header extends React.Component {
                 <Links>
                   <div>
                     <NavLink activeClassName="is-active" to="/projects">
-                      PROJECTS
+                      PROJECTS&nbsp;
                     </NavLink>
-                    /
+                    /&nbsp;
                     <NavLink activeClassName="is-active" to="/overview">
                       OVERVIEW
                     </NavLink>
                   </div>
                   <div>
                     <NavLink activeClassName="is-active" to="/about">
-                      ABOUT
+                      ABOUT&nbsp;
                     </NavLink>
-                    /
+                    /&nbsp;
                     <NavLink activeClassName="is-active" to="/Journal">
                       JOURNAL
                     </NavLink>
@@ -222,9 +226,7 @@ class Header extends React.Component {
                       </a>
                       /
                       <a
-                        href="https://www.instagram.com/jeremyjudelee"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:info@jeremyjudelee.com"
                       >
                         Email
                       </a>
