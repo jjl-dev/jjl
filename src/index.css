@@ -186,8 +186,13 @@ hr {
   margin: 0;
 }
 
+.individual-project img{
+  padding: 8px;
+}
+
 img {
   display: block;
+  box-sizing: border-box;
 }
 
 .is-active {
