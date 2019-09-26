@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import Gallery from "react-photo-gallery";
 import { Media } from "react-breakpoints";
-import ReactGridLayout from 'react-grid-layout';
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -23,10 +22,9 @@ const DescriptionContainer = styled.div`
   font-size: 11px;
   line-height: 17px;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     flex-direction: column;
   }
-
 `;
 
 const DescriptionHeader = styled.div`
@@ -34,7 +32,7 @@ const DescriptionHeader = styled.div`
 `;
 
 const DescriptionText = styled.div`
-white-space: pre-wrap;
+  white-space: pre-wrap;
 `;
 
 const ListHeader = styled.li`
@@ -42,10 +40,9 @@ const ListHeader = styled.li`
   font-family: Suisse Works Intl;
   text-transform: uppercase;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     padding-top: 20px;
   }
-  
 `;
 
 const Description = styled.div`
@@ -58,6 +55,58 @@ const Info = styled.div`
 
 const ClientTitle = styled.span`
   font-style: italic;
+`;
+
+const ImageRow = styled.div``;
+
+const TwoImageContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 575px) {
+    display: block;
+  }
+`;
+
+const SingleLandscape = styled.img`
+  width: 100%;
+`;
+const OneLandscape = styled.img`
+  width: 70%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
+`;
+const TwoLandscape = styled.img`
+  width: 50%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
+`;
+
+const SinglePortraitRight = styled.img`
+  width: 60%;
+  float: right;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
+`;
+const SinglePortraitLeft = styled.img`
+  width: 60%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
+`;
+const OnePortrait = styled.img`
+  width: 30%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
+`;
+const TwoPortrait = styled.img`
+  width: 50%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
 `;
 
 class Overview extends React.Component {
@@ -99,7 +148,7 @@ class Overview extends React.Component {
 
   render() {
     const data = this.state.project.data;
-
+    console.log(data);
     return (
       <React.Fragment>
         <GlobalStyle />
@@ -107,7 +156,10 @@ class Overview extends React.Component {
           <Container>
             <DescriptionContainer>
               <Description>
-                <DescriptionHeader>{data.client[0].text}<ClientTitle>{data.title[0].text}</ClientTitle></DescriptionHeader>
+                <DescriptionHeader>
+                  {data.client[0].text}
+                  <ClientTitle>{data.title[0].text}</ClientTitle>
+                </DescriptionHeader>
                 <DescriptionText>{data.description[0].text}</DescriptionText>
               </Description>
               <div style={{ flex: "1 1 5%" }} />
@@ -126,13 +178,115 @@ class Overview extends React.Component {
               </ul>
             </DescriptionContainer>
 
-            {/* <ReactGridLayout className="layout" cols={2} rowHeight={30} width={1200}>
-              <div key="1" data-grid={{x: 0, y: 0, w: 1, h: 2, static: true}}>a</div>
-              <div key="2" data-grid={{x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4}}>b</div>
-              <div key="3" data-grid={{x: 4, y: 0, w: 1, h: 2}}>c</div>
-            </ReactGridLayout> */}
+            {data.image_row.length
+              ? data.image_row.map((item, index) => (
+                  <ImageRow key={index} className="individual-project">
+                    {/* if there is only image 1 */}
+                    {item.image_row_1.url && item.image_row_2.url == null ? (
+                      item.image_row_1.dimensions.width === 1800 ? (
+                        <SingleLandscape
+                          src={item.image_row_1.url}
+                          alt="item.image_row_1.url"
+                        />
+                      ) : (
+                        <SinglePortraitRight
+                          src={item.image_row_1.url}
+                          alt="item.image_row_1.url"
+                        />
+                      )
+                    ) : null}
 
-            <Media>
+                    {/* if there is only image 2 */}
+                    {item.image_row_2.url && item.image_row_1.url == null ? (
+                      item.image_row_2.dimensions.width === 1800 ? (
+                        <SingleLandscape
+                          src={item.image_row_2.url}
+                          alt={item.image_row_2.url}
+                        />
+                      ) : (
+                        <SinglePortraitLeft
+                          src={item.image_row_2.url}
+                          alt={item.image_row_2.url}
+                        />
+                      )
+                    ) : null}
+
+                    {/* if there is image 1 and image 2 */}
+                    {item.image_row_1.url && item.image_row_2.url ? (
+                      // if image 1 and image 2 are both landscape
+                      item.image_row_1.dimensions.width === 1800 &&
+                      item.image_row_2.dimensions.width === 1800 ? (
+                        <TwoImageContainer>
+                          <TwoLandscape
+                            src={item.image_row_1.url}
+                            alt={item.image_row_1.url}
+                          />
+                          <TwoLandscape
+                            src={item.image_row_2.url}
+                            alt={item.image_row_2.url}
+                          />
+                        </TwoImageContainer>
+                      ) : null
+                    ) : null}
+
+                    {/* if there is image 1 and image 2 */}
+                    {item.image_row_1.url && item.image_row_2.url ? (
+                      // if image 1 and image 2 are both landscape
+                      item.image_row_1.dimensions.width === 1200 &&
+                      item.image_row_2.dimensions.width === 1200 ? (
+                        <TwoImageContainer>
+                          <TwoPortrait
+                            src={item.image_row_1.url}
+                            alt={item.image_row_1.url}
+                          />
+                          <TwoPortrait
+                            src={item.image_row_2.url}
+                            alt={item.image_row_2.url}
+                          />
+                        </TwoImageContainer>
+                      ) : null
+                    ) : null}
+
+                    {/* if there is image 1 and image 2 */}
+                    {item.image_row_1.url && item.image_row_2.url ? (
+                      // if image 1 is landscape and image 2 is portrait
+                      item.image_row_1.dimensions.width === 1800 &&
+                      item.image_row_2.dimensions.width === 1200 ? (
+                        <TwoImageContainer>
+                          <OneLandscape
+                            src={item.image_row_1.url}
+                            alt={item.image_row_1.url}
+                          />
+                          <OnePortrait
+                            src={item.image_row_2.url}
+                            alt={item.image_row_2.url}
+                          />
+                        </TwoImageContainer>
+                      ) : null
+                    ) : null}
+
+                    {/* if there is image 1 and image 2 */}
+                    {item.image_row_1.url && item.image_row_2.url ? (
+                      // if image 1 is portrait and image 2 is landscape
+                      item.image_row_1.dimensions.width === 1200 &&
+                      item.image_row_2.dimensions.width === 1800 ? (
+                        <TwoImageContainer>
+                          <OnePortrait
+                            src={item.image_row_1.url}
+                            alt={item.image_row_1.url}
+                          />
+                          <OneLandscape
+                            src={item.image_row_2.url}
+                            alt={item.image_row_2.url}
+                          />
+                        </TwoImageContainer>
+                      ) : null
+                    ) : null}
+                  </ImageRow>
+                ))
+              : null}
+
+            {/* <Media>
               {({ breakpoints, currentBreakpoint }) => {
                 switch (currentBreakpoint) {
                   case "desktop":
@@ -181,7 +335,7 @@ class Overview extends React.Component {
                     );
                 }
               }}
-            </Media>
+            </Media> */}
           </Container>
         )}
       </React.Fragment>
