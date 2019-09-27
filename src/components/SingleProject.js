@@ -232,8 +232,8 @@ class Overview extends React.Component {
                     {/* if there is image 1 and image 2 */}
                     {item.image_row_1.url && item.image_row_2.url ? (
                       // if image 1 and image 2 are both landscape
-                      item.image_row_1.dimensions.width === 1200 &&
-                      item.image_row_2.dimensions.width === 1200 ? (
+                      item.image_row_1.dimensions.width > 1000 && item.image_row_1.dimensions.width < 1500 &&
+                      item.image_row_2.dimensions.width > 1000 && item.image_row_2.dimensions.width < 1500 ? (
                         <TwoImageContainer>
                           <TwoPortrait
                             src={item.image_row_1.url}
@@ -251,7 +251,7 @@ class Overview extends React.Component {
                     {item.image_row_1.url && item.image_row_2.url ? (
                       // if image 1 is landscape and image 2 is portrait
                       item.image_row_1.dimensions.width === 1800 &&
-                      item.image_row_2.dimensions.width === 1200 ? (
+                      item.image_row_2.dimensions.width > 1000 && item.image_row_2.dimensions.width < 1500 ? (
                         <TwoImageContainer>
                           <OneLandscape
                             src={item.image_row_1.url}
@@ -268,7 +268,7 @@ class Overview extends React.Component {
                     {/* if there is image 1 and image 2 */}
                     {item.image_row_1.url && item.image_row_2.url ? (
                       // if image 1 is portrait and image 2 is landscape
-                      item.image_row_1.dimensions.width === 1200 &&
+                      item.image_row_1.dimensions.width > 1000 && item.image_row_1.dimensions.width < 1500 &&
                       item.image_row_2.dimensions.width === 1800 ? (
                         <TwoImageContainer>
                           <OnePortrait
