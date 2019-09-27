@@ -6,6 +6,7 @@ const Container = styled.footer`
   display: flex;
   justify-content: space-between;
   font-size: 12px;
+  clear: both;
 
   @media only screen and (max-width: 575px){
     flex-direction: column;

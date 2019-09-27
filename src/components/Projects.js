@@ -159,32 +159,55 @@ class Projects extends React.Component {
               {project.data.featured_image_1.url &&
                 project.data.featured_image_2.url && (
                   <ImgContainer>
-                    {project.data.featured_image_1.dimensions.width === 1800 ? (
-                      <Img
-                        src={project.data.featured_image_1.url}
-                        width="488"
-                        alt="jjl"
-                      />
-                    ) : (
+                    {project.data.featured_image_1.dimensions.width > 1000 && project.data.featured_image_1.dimensions.width < 1500 && project.data.featured_image_2.dimensions.width > 1000 && project.data.featured_image_2.dimensions.width < 1500 ? (
+                      <React.Fragment>
                       <Img
                         src={project.data.featured_image_1.url}
                         width="363"
                         alt="jjl"
                       />
+                      <FeaturedImg2
+                        src={project.data.featured_image_2.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                      </React.Fragment>
+                    ) : (
+                      null
                     )}
 
-                    {project.data.featured_image_2.dimensions.width === 1800 ? (
+                    {project.data.featured_image_1.dimensions.width > 1000 && project.data.featured_image_1.dimensions.width < 1500 && project.data.featured_image_2.dimensions.width === 1800 ? (
+                      <React.Fragment>
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="237"
+                        alt="jjl"
+                      />
                       <FeaturedImg2
                         src={project.data.featured_image_2.url}
                         width="488"
                         alt="jjl"
                       />
+                      </React.Fragment>
                     ) : (
+                      null
+                    )}
+
+                    {project.data.featured_image_2.dimensions.width > 1000 && project.data.featured_image_2.dimensions.width < 1500 && project.data.featured_image_1.dimensions.width === 1800 ? (
+                      <React.Fragment>
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="616"
+                        alt="jjl"
+                      />
                       <FeaturedImg2
                         src={project.data.featured_image_2.url}
                         width="363"
                         alt="jjl"
                       />
+                      </React.Fragment>
+                    ) : (
+                      null
                     )}
                   </ImgContainer>
                 )}
@@ -215,35 +238,56 @@ class Projects extends React.Component {
                 {project.data.featured_image_1.url &&
                   project.data.featured_image_2.url && (
                     <ImgContainer>
-                      {project.data.featured_image_1.dimensions.width ===
-                      1800 ? (
-                        <Img
-                          src={project.data.featured_image_1.url}
-                          width="488"
-                          alt="jjl"
-                        />
-                      ) : (
-                        <Img
-                          src={project.data.featured_image_1.url}
-                          width="363"
-                          alt="jjl"
-                        />
-                      )}
+                      {project.data.featured_image_1.dimensions.width > 1000 && project.data.featured_image_1.dimensions.width < 1500 && project.data.featured_image_2.dimensions.width > 1000 && project.data.featured_image_2.dimensions.width < 1500 ? (
+                      <React.Fragment>
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                      <FeaturedImg2
+                        src={project.data.featured_image_2.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                      </React.Fragment>
+                    ) : (
+                      null
+                    )}
 
-                      {project.data.featured_image_2.dimensions.width ===
-                      1800 ? (
-                        <FeaturedImg2
-                          src={project.data.featured_image_2.url}
-                          width="488"
-                          alt="jjl"
-                        />
-                      ) : (
-                        <FeaturedImg2
-                          src={project.data.featured_image_2.url}
-                          width="363"
-                          alt="jjl"
-                        />
-                      )}
+                    {project.data.featured_image_1.dimensions.width > 1000 && project.data.featured_image_1.dimensions.width < 1500 && project.data.featured_image_2.dimensions.width === 1800 ? (
+                      <React.Fragment>
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="237"
+                        alt="jjl"
+                      />
+                      <FeaturedImg2
+                        src={project.data.featured_image_2.url}
+                        width="488"
+                        alt="jjl"
+                      />
+                      </React.Fragment>
+                    ) : (
+                      null
+                    )}
+
+                    {project.data.featured_image_2.dimensions.width > 1000 && project.data.featured_image_2.dimensions.width < 1500 && project.data.featured_image_1.dimensions.width === 1800 ? (
+                      <React.Fragment>
+                      <Img
+                        src={project.data.featured_image_1.url}
+                        width="616"
+                        alt="jjl"
+                      />
+                      <FeaturedImg2
+                        src={project.data.featured_image_2.url}
+                        width="363"
+                        alt="jjl"
+                      />
+                      </React.Fragment>
+                    ) : (
+                      null
+                    )}
                     </ImgContainer>
                   )}
 

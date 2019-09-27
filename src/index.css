@@ -186,6 +186,11 @@ hr {
   margin: 0;
 }
 
+.individual-project{
+  width: 102%;
+  margin-left: -8px;
+}
+
 .individual-project img{
   padding: 8px;
 }

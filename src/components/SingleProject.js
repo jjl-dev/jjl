@@ -1,8 +1,6 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
-import Gallery from "react-photo-gallery";
-import { Media } from "react-breakpoints";
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -62,6 +60,7 @@ const ImageRow = styled.div``;
 const TwoImageContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  clear: both;
   @media only screen and (max-width: 575px) {
     display: block;
   }
@@ -71,13 +70,15 @@ const SingleLandscape = styled.img`
   width: 100%;
 `;
 const OneLandscape = styled.img`
-  width: 70%;
+  width: 60%;
+  height: 60%;
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
 `;
 const TwoLandscape = styled.img`
   width: 50%;
+  height: 50%;
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
@@ -97,13 +98,15 @@ const SinglePortraitLeft = styled.img`
   }
 `;
 const OnePortrait = styled.img`
-  width: 30%;
+  width: 40%;
+  height: 40%;
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
 `;
 const TwoPortrait = styled.img`
   width: 50%;
+  height: 50%;
   @media only screen and (max-width: 575px) {
     width: 100%;
   }
@@ -286,56 +289,6 @@ class Overview extends React.Component {
                 ))
               : null}
 
-            {/* <Media>
-              {({ breakpoints, currentBreakpoint }) => {
-                switch (currentBreakpoint) {
-                  case "desktop":
-                    return (
-                      <Gallery
-                        photos={this.state.photos}
-                        targetRowHeight={600}
-                        direction={"row"}
-                        margin={7}
-                      />
-                    );
-                  case "tabletLandscape":
-                    return (
-                      <Gallery
-                        photos={this.state.photos}
-                        targetRowHeight={600}
-                        direction={"row"}
-                        margin={7}
-                      />
-                    );
-                  case "tablet":
-                    return (
-                      <Gallery
-                        photos={this.state.photos}
-                        targetRowHeight={400}
-                        direction={"row"}
-                        margin={7}
-                      />
-                    );
-                  case "mobile":
-                    return (
-                      <Gallery
-                        photos={this.state.photos}
-                        direction={"column"}
-                        margin={7}
-                      />
-                    );
-                  default:
-                    return (
-                      <Gallery
-                        photos={this.state.photos}
-                        targetRowHeight={600}
-                        direction={"row"}
-                        margin={7}
-                      />
-                    );
-                }
-              }}
-            </Media> */}
           </Container>
         )}
       </React.Fragment>
