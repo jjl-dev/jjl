@@ -186,12 +186,7 @@ hr {
   margin: 0;
 }
 
-.individual-project{
-  width: 102%;
-  margin-left: -8px;
-}
-
-.individual-project img{
+.individual-project img {
   padding: 8px;
 }
 
@@ -215,30 +210,30 @@ img {
   transition: visibility 0.3s, opacity 0.3s;
 }
 
-.ril__toolbar{
+.ril__toolbar {
   background: 0 !important;
 }
 
-.ril__outer{
+.ril__outer {
   background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
-.ril__toolbarRightSide{
+.ril__toolbarRightSide {
   padding-right: 0 !important;
   padding-top: 10px !important;
 }
 
-.ril__closeButton{
+.ril__closeButton {
   background: url(assets/close.svg) no-repeat !important;
   background-size: 60% 60% !important;
 }
 
-.ril__navButtonPrev{
+.ril__navButtonPrev {
   background: url(assets/previous.svg) no-repeat !important;
   background-size: 80% 80% !important;
 }
 
-.ril__navButtonNext{
+.ril__navButtonNext {
   background: url(assets/next.svg) no-repeat !important;
   background-size: 80% 80% !important;
 }
