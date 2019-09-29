@@ -109,6 +109,7 @@ const SinglePortraitRight = styled.img`
   float: right;
   @media only screen and (max-width: 575px) {
     width: 100%;
+    margin-top: 0 !important;
   }
 `;
 const SinglePortraitLeft = styled.img`
@@ -230,9 +231,16 @@ class Overview extends React.Component {
                                   alt="item.image_row_1.url"
                                 />
                               ) : (
+                                item.image_row_1.alt === "negative-margin" ? (
+                                  <SinglePortraitRight
+                                  src={item.image_row_1.url}
+                                  alt={item.image_row_1.url}
+                                  style={{"marginTop": "-175px"}}
+                                />
+                                ):
                                 <SinglePortraitRight
                                   src={item.image_row_1.url}
-                                  alt="item.image_row_1.url"
+                                  alt={item.image_row_1.url}
                                 />
                               )
                             ) : null}
