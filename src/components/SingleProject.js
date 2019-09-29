@@ -235,7 +235,7 @@ class Overview extends React.Component {
                                   <SinglePortraitRight
                                   src={item.image_row_1.url}
                                   alt={item.image_row_1.url}
-                                  style={{"marginTop": "-175px"}}
+                                  style={{"marginTop": "-17%"}}
                                 />
                                 ):
                                 <SinglePortraitRight
