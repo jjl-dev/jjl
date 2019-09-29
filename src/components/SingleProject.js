@@ -65,6 +65,14 @@ const ClientTitle = styled.span`
   font-style: italic;
 `;
 
+const VideoContainer = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+`;
+
 const ImageRow = styled.div``;
 
 const TwoImageContainer = styled.div`
@@ -162,6 +170,11 @@ class Overview extends React.Component {
   render() {
     const data = this.state.project.data;
     console.log(data);
+
+    function createMarkup() {
+      return { __html: data.video.html };
+    }
+
     return (
       <React.Fragment>
         <GlobalStyle />
@@ -190,6 +203,12 @@ class Overview extends React.Component {
                 <ListHeader>{data.year[0].text}</ListHeader>
               </ul>
             </DescriptionContainer>
+
+            {data.video.html && (
+              <VideoContainer>
+                <div dangerouslySetInnerHTML={createMarkup()} />
+              </VideoContainer>
+            )}
 
             <ProjectImageContainer>
               {data.image_row.length
