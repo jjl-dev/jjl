@@ -2,6 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import FadeIn from "react-lazyload-fadein";
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -88,34 +89,42 @@ class SingleJournal extends React.Component {
   render() {
     const data = this.state.journal.data;
     return (
-      <React.Fragment>
-        <GlobalStyle />
+      <div className={"component-wrapper"}>
+        <FadeIn height={100} duration={300} easing={"ease-in-out"}>
+          {onload => (
+            <React.Fragment>
+              <GlobalStyle />
 
-        <Container>
-          {data && (
-            <JournalItemContainer>
-              <Item>
-                {data.images.map((journal, index) => (
-                  <Image
-                    key={index}
-                    src={journal.journal_images.url}
-                    alt="image"
-                  />
-                ))}
-              </Item>
-              <Details>
-                <DetailsInner>
-                <h3>{data.title[0].text}</h3>
-                <Date>{data.date[0].text}</Date>
+              <Container onLoad={onload}>
+                {data && (
+                  <JournalItemContainer>
+                    {data.images.length > 0 && (
+                      <Item>
+                        {data.images.map((journal, index) => (
+                          <Image
+                            key={index}
+                            src={journal.journal_images.url}
+                            alt="image"
+                          />
+                        ))}
+                      </Item>
+                    )}
+                    <Details>
+                      <DetailsInner>
+                        <h3>{data.title[0].text}</h3>
+                        <Date>{data.date[0].text}</Date>
 
-                <Description>{data.description[0].text}</Description>
-                </DetailsInner>
-              </Details>
-            </JournalItemContainer>
+                        <Description>{data.description[0].text}</Description>
+                      </DetailsInner>
+                    </Details>
+                  </JournalItemContainer>
+                )}
+                <BackToJournal to="/journal">BACK TO JOURNAL</BackToJournal>
+              </Container>
+            </React.Fragment>
           )}
-          <BackToJournal to="/journal">BACK TO JOURNAL</BackToJournal>
-        </Container>
-      </React.Fragment>
+        </FadeIn>
+      </div>
     );
   }
 }

@@ -114,7 +114,7 @@ class Overview extends React.Component {
       this.setState({ photoIndex: e - 1 });
     };
 
-    const imageFadeInDuration = 400;
+    const imageFadeInDuration = 300;
     const imageHeight = 700;
 
     return (
@@ -170,7 +170,11 @@ class Overview extends React.Component {
             </ImgRow>
 
             <ImgRow>
-              <FadeIn height={imageHeight} duration={imageFadeInDuration} easing={"ease-in-out"}>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
                 {onload => (
                   <Img
                     onClick={() => handlePhotoClick(4)}

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
+import FadeIn from "react-lazyload-fadein";
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -11,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   padding: 0 15px;
   padding-top: 76px;
+  min-height: 600px;
 `;
 
 const ProjectImageContainer = styled.div`
@@ -176,156 +178,166 @@ class Overview extends React.Component {
     }
 
     return (
-      <React.Fragment>
-        <GlobalStyle />
-        {data && (
-          <Container>
-            <DescriptionContainer>
-              <Description>
-                <DescriptionHeader>
-                  {data.client[0].text}
-                  <ClientTitle>{data.title[0].text}</ClientTitle>
-                </DescriptionHeader>
-                <DescriptionText>{data.description[0].text}</DescriptionText>
-              </Description>
-              <div style={{ flex: "1 1 5%" }} />
-              <Info>
-                <ul>
-                  <ListHeader>{data.location[0].text}</ListHeader>
-                  {data.support.length && data.support[0].support1.length
-                    ? data.support.map((item, index) => (
-                        <li key={index}>{item.support1[0].text}</li>
-                      ))
-                    : null}
-                </ul>
-              </Info>
-              <ul>
-                <ListHeader>{data.year[0].text}</ListHeader>
-              </ul>
-            </DescriptionContainer>
+      <div className={"component-wrapper"}>
+        <FadeIn height={100} duration={300} easing={"ease-in-out"}>
+          {onload => (
+            <React.Fragment>
+              <GlobalStyle />
+              {data && (
+                <Container onLoad={onload}>
+                  <DescriptionContainer>
+                    <Description>
+                      <DescriptionHeader>
+                        {data.client[0].text}
+                        <ClientTitle>{data.title[0].text}</ClientTitle>
+                      </DescriptionHeader>
+                      <DescriptionText>
+                        {data.description[0].text}
+                      </DescriptionText>
+                    </Description>
+                    <div style={{ flex: "1 1 5%" }} />
+                    <Info>
+                      <ul>
+                        <ListHeader>{data.location[0].text}</ListHeader>
+                        {data.support.length && data.support[0].support1.length
+                          ? data.support.map((item, index) => (
+                              <li key={index}>{item.support1[0].text}</li>
+                            ))
+                          : null}
+                      </ul>
+                    </Info>
+                    <ul>
+                      <ListHeader>{data.year[0].text}</ListHeader>
+                    </ul>
+                  </DescriptionContainer>
 
-            {data.video.html && (
-              <VideoContainer>
-                <div dangerouslySetInnerHTML={createMarkup()} />
-              </VideoContainer>
-            )}
+                  {data.video.html && (
+                    <VideoContainer>
+                      <div dangerouslySetInnerHTML={createMarkup()} />
+                    </VideoContainer>
+                  )}
 
-            <ProjectImageContainer>
-              {data.image_row.length
-                ? data.image_row.map((item, index) => (
-                    <ImageRow key={index} className="individual-project">
-                      {/* if there is only image 1 */}
-                      {item.image_row_1.url && item.image_row_2.url == null ? (
-                        item.image_row_1.dimensions.width === 1800 ? (
-                          <SingleLandscape
-                            src={item.image_row_1.url}
-                            alt="item.image_row_1.url"
-                          />
-                        ) : (
-                          <SinglePortraitRight
-                            src={item.image_row_1.url}
-                            alt="item.image_row_1.url"
-                          />
-                        )
-                      ) : null}
+                  <ProjectImageContainer>
+                    {data.image_row.length
+                      ? data.image_row.map((item, index) => (
+                          <ImageRow key={index} className="individual-project">
+                            {/* if there is only image 1 */}
+                            {item.image_row_1.url &&
+                            item.image_row_2.url == null ? (
+                              item.image_row_1.dimensions.width === 1800 ? (
+                                <SingleLandscape
+                                  src={item.image_row_1.url}
+                                  alt="item.image_row_1.url"
+                                />
+                              ) : (
+                                <SinglePortraitRight
+                                  src={item.image_row_1.url}
+                                  alt="item.image_row_1.url"
+                                />
+                              )
+                            ) : null}
 
-                      {/* if there is only image 2 */}
-                      {item.image_row_2.url && item.image_row_1.url == null ? (
-                        item.image_row_2.dimensions.width === 1800 ? (
-                          <SingleLandscape
-                            src={item.image_row_2.url}
-                            alt={item.image_row_2.url}
-                          />
-                        ) : (
-                          <SinglePortraitLeft
-                            src={item.image_row_2.url}
-                            alt={item.image_row_2.url}
-                          />
-                        )
-                      ) : null}
+                            {/* if there is only image 2 */}
+                            {item.image_row_2.url &&
+                            item.image_row_1.url == null ? (
+                              item.image_row_2.dimensions.width === 1800 ? (
+                                <SingleLandscape
+                                  src={item.image_row_2.url}
+                                  alt={item.image_row_2.url}
+                                />
+                              ) : (
+                                <SinglePortraitLeft
+                                  src={item.image_row_2.url}
+                                  alt={item.image_row_2.url}
+                                />
+                              )
+                            ) : null}
 
-                      {/* if there is image 1 and image 2 */}
-                      {item.image_row_1.url && item.image_row_2.url ? (
-                        // if image 1 and image 2 are both landscape
-                        item.image_row_1.dimensions.width === 1800 &&
-                        item.image_row_2.dimensions.width === 1800 ? (
-                          <TwoImageContainer>
-                            <TwoLandscape
-                              src={item.image_row_1.url}
-                              alt={item.image_row_1.url}
-                            />
-                            <TwoLandscape
-                              src={item.image_row_2.url}
-                              alt={item.image_row_2.url}
-                            />
-                          </TwoImageContainer>
-                        ) : null
-                      ) : null}
+                            {/* if there is image 1 and image 2 */}
+                            {item.image_row_1.url && item.image_row_2.url ? (
+                              // if image 1 and image 2 are both landscape
+                              item.image_row_1.dimensions.width === 1800 &&
+                              item.image_row_2.dimensions.width === 1800 ? (
+                                <TwoImageContainer>
+                                  <TwoLandscape
+                                    src={item.image_row_1.url}
+                                    alt={item.image_row_1.url}
+                                  />
+                                  <TwoLandscape
+                                    src={item.image_row_2.url}
+                                    alt={item.image_row_2.url}
+                                  />
+                                </TwoImageContainer>
+                              ) : null
+                            ) : null}
 
-                      {/* if there is image 1 and image 2 */}
-                      {item.image_row_1.url && item.image_row_2.url ? (
-                        // if image 1 and image 2 are both landscape
-                        item.image_row_1.dimensions.width > 1000 &&
-                        item.image_row_1.dimensions.width < 1500 &&
-                        item.image_row_2.dimensions.width > 1000 &&
-                        item.image_row_2.dimensions.width < 1500 ? (
-                          <TwoImageContainer>
-                            <TwoPortrait
-                              src={item.image_row_1.url}
-                              alt={item.image_row_1.url}
-                            />
-                            <TwoPortrait
-                              src={item.image_row_2.url}
-                              alt={item.image_row_2.url}
-                            />
-                          </TwoImageContainer>
-                        ) : null
-                      ) : null}
+                            {/* if there is image 1 and image 2 */}
+                            {item.image_row_1.url && item.image_row_2.url ? (
+                              // if image 1 and image 2 are both landscape
+                              item.image_row_1.dimensions.width > 1000 &&
+                              item.image_row_1.dimensions.width < 1500 &&
+                              item.image_row_2.dimensions.width > 1000 &&
+                              item.image_row_2.dimensions.width < 1500 ? (
+                                <TwoImageContainer>
+                                  <TwoPortrait
+                                    src={item.image_row_1.url}
+                                    alt={item.image_row_1.url}
+                                  />
+                                  <TwoPortrait
+                                    src={item.image_row_2.url}
+                                    alt={item.image_row_2.url}
+                                  />
+                                </TwoImageContainer>
+                              ) : null
+                            ) : null}
 
-                      {/* if there is image 1 and image 2 */}
-                      {item.image_row_1.url && item.image_row_2.url ? (
-                        // if image 1 is landscape and image 2 is portrait
-                        item.image_row_1.dimensions.width === 1800 &&
-                        item.image_row_2.dimensions.width > 1000 &&
-                        item.image_row_2.dimensions.width < 1500 ? (
-                          <TwoImageContainer>
-                            <OneLandscape
-                              src={item.image_row_1.url}
-                              alt={item.image_row_1.url}
-                            />
-                            <OnePortrait
-                              src={item.image_row_2.url}
-                              alt={item.image_row_2.url}
-                            />
-                          </TwoImageContainer>
-                        ) : null
-                      ) : null}
+                            {/* if there is image 1 and image 2 */}
+                            {item.image_row_1.url && item.image_row_2.url ? (
+                              // if image 1 is landscape and image 2 is portrait
+                              item.image_row_1.dimensions.width === 1800 &&
+                              item.image_row_2.dimensions.width > 1000 &&
+                              item.image_row_2.dimensions.width < 1500 ? (
+                                <TwoImageContainer>
+                                  <OneLandscape
+                                    src={item.image_row_1.url}
+                                    alt={item.image_row_1.url}
+                                  />
+                                  <OnePortrait
+                                    src={item.image_row_2.url}
+                                    alt={item.image_row_2.url}
+                                  />
+                                </TwoImageContainer>
+                              ) : null
+                            ) : null}
 
-                      {/* if there is image 1 and image 2 */}
-                      {item.image_row_1.url && item.image_row_2.url ? (
-                        // if image 1 is portrait and image 2 is landscape
-                        item.image_row_1.dimensions.width > 1000 &&
-                        item.image_row_1.dimensions.width < 1500 &&
-                        item.image_row_2.dimensions.width === 1800 ? (
-                          <TwoImageContainer>
-                            <OnePortrait
-                              src={item.image_row_1.url}
-                              alt={item.image_row_1.url}
-                            />
-                            <OneLandscape
-                              src={item.image_row_2.url}
-                              alt={item.image_row_2.url}
-                            />
-                          </TwoImageContainer>
-                        ) : null
-                      ) : null}
-                    </ImageRow>
-                  ))
-                : null}
-            </ProjectImageContainer>
-          </Container>
-        )}
-      </React.Fragment>
+                            {/* if there is image 1 and image 2 */}
+                            {item.image_row_1.url && item.image_row_2.url ? (
+                              // if image 1 is portrait and image 2 is landscape
+                              item.image_row_1.dimensions.width > 1000 &&
+                              item.image_row_1.dimensions.width < 1500 &&
+                              item.image_row_2.dimensions.width === 1800 ? (
+                                <TwoImageContainer>
+                                  <OnePortrait
+                                    src={item.image_row_1.url}
+                                    alt={item.image_row_1.url}
+                                  />
+                                  <OneLandscape
+                                    src={item.image_row_2.url}
+                                    alt={item.image_row_2.url}
+                                  />
+                                </TwoImageContainer>
+                              ) : null
+                            ) : null}
+                          </ImageRow>
+                        ))
+                      : null}
+                  </ProjectImageContainer>
+                </Container>
+              )}
+            </React.Fragment>
+          )}
+        </FadeIn>
+      </div>
     );
   }
 }

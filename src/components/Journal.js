@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
+import FadeIn from "react-lazyload-fadein";
 
 import JournalItem from "./JournalItem";
 
@@ -40,14 +41,20 @@ class Journal extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <GlobalStyle />
-        <Container>
-          {this.state.journals.map((journal, index) => (
-            <JournalItem key={index} data={journal} />
-          ))}
-        </Container>
-      </React.Fragment>
+      <div className={"component-wrapper"}>
+        <FadeIn height={100} duration={300} easing={"ease-in-out"}>
+          {onload => (
+            <React.Fragment>
+              <GlobalStyle />
+              <Container onLoad={onload}>
+                {this.state.journals.map((journal, index) => (
+                  <JournalItem key={index} data={journal} />
+                ))}
+              </Container>
+            </React.Fragment>
+          )}
+        </FadeIn>
+      </div>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./components/Header";
@@ -18,12 +18,11 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const App = () => {
+const App = ({ location }) => {
   return (
-    <Router>
-      <ScrollToTop>
-        <Container>
-          <Header />
+    <ScrollToTop>
+      <Container>
+        <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/jjl" component={Home} />
           <Route exact path="/projects" component={Home} />
@@ -32,11 +31,10 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route exact path="/journal" component={Journal} />
           <Route path="/journal/:id" component={SingleJournal} />
-          <Footer />
-        </Container>
-      </ScrollToTop>
-    </Router>
+        <Footer />
+      </Container>
+    </ScrollToTop>
   );
 };
 
-export default App;
+export default withRouter(App);

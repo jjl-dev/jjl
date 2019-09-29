@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
+import FadeIn from "react-lazyload-fadein";
 
 const ProjectContainer = styled(Link)`
   div:first-child :hover {
@@ -152,10 +153,13 @@ class Projects extends React.Component {
   render() {
     const { activeLink } = this.state;
     return (
+      <div className={'component-wrapper'}>
+      <FadeIn height={100} duration={300} easing={"ease-in-out"}>
+        {onload => (
       <React.Fragment>
         {this.state.projects.map((project, index) =>
           this.state.showAllProjects ? (
-            <ProjectContainer key={index} to={`/project/${project.id}`}>
+            <ProjectContainer onLoad={onload} key={index} to={`/project/${project.id}`}>
               {project.data.featured_image_1.url &&
                 project.data.featured_image_2.url && (
                   <ImgContainer>
@@ -234,7 +238,7 @@ class Projects extends React.Component {
             </ProjectContainer>
           ) : (
             index < 10 && (
-              <ProjectContainer key={index} to={`/project/${project.id}`}>
+              <ProjectContainer onLoad={onload} key={index} to={`/project/${project.id}`}>
                 {project.data.featured_image_1.url &&
                   project.data.featured_image_2.url && (
                     <ImgContainer>
@@ -325,6 +329,9 @@ class Projects extends React.Component {
           </MoreProjects>
         )}
       </React.Fragment>
+      )}
+      </FadeIn>
+    </div>
     );
   }
 }

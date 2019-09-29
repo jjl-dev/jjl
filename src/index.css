@@ -186,6 +186,11 @@ hr {
   margin: 0;
 }
 
+.component-wrapper > div{
+  display: block !important;
+  min-height: 600px;
+}
+
 iframe {
   position: absolute;
   top: 0;
