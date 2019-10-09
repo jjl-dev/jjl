@@ -77,6 +77,10 @@ const ClientTitle = styled.span`
   font-style: italic;
 `;
 
+const MoreProjectsLink = styled.a`
+  cursor: pointer;
+`;
+
 class Projects extends React.Component {
   constructor(props) {
     super(props);
@@ -323,9 +327,9 @@ class Projects extends React.Component {
         )}
         {!this.state.showAllProjects && (
           <MoreProjects>
-            <Link to="/projects" onClick={() => this.showAllProjects()}>
+            <MoreProjectsLink onClick={() => this.showAllProjects()}>
               MORE PROJECTS
-            </Link>
+            </MoreProjectsLink>
           </MoreProjects>
         )}
       </React.Fragment>

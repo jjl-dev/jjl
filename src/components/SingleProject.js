@@ -172,7 +172,6 @@ class Overview extends React.Component {
 
   render() {
     const data = this.state.project.data;
-    console.log(data);
 
     function createMarkup() {
       return { __html: data.video.html };
@@ -218,6 +217,16 @@ class Overview extends React.Component {
                     </VideoContainer>
                   )}
 
+                  {data.hover_image.url && (
+                    <img
+                      src={data.hover_image.url}
+                      alt="jjl"
+                      width="0"
+                      height="0"
+                    />
+                  )}
+
+                  {!data.video.html && (
                   <ProjectImageContainer>
                     {data.image_row.length
                       ? data.image_row.map((item, index) => (
@@ -340,6 +349,7 @@ class Overview extends React.Component {
                         ))
                       : null}
                   </ProjectImageContainer>
+                  )}
                 </Container>
               )}
             </React.Fragment>
