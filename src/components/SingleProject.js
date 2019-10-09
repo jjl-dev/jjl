@@ -244,7 +244,7 @@ class Overview extends React.Component {
                                   <SinglePortraitRight
                                   src={item.image_row_1.url}
                                   alt={item.image_row_1.url}
-                                  style={{"marginTop": "-17.4%"}}
+                                  style={{"marginTop": "-18.6%"}}
                                 />
                                 ):
                                 <SinglePortraitRight
@@ -263,10 +263,18 @@ class Overview extends React.Component {
                                   alt={item.image_row_2.url}
                                 />
                               ) : (
+                                item.image_row_2.alt === "negative-margin" ? (
+                                  <SinglePortraitLeft
+                                  src={item.image_row_2.url}
+                                  alt={item.image_row_2.url}
+                                  style={{"marginTop": "-18.6%"}}
+                                />
+                                ):
                                 <SinglePortraitLeft
                                   src={item.image_row_2.url}
                                   alt={item.image_row_2.url}
                                 />
+
                               )
                             ) : null}
 
