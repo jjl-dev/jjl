@@ -116,6 +116,7 @@ const SinglePortraitLeft = styled.img`
   width: 60%;
   @media only screen and (max-width: 575px) {
     width: 100%;
+    margin-top: 0 !important;
   }
 `;
 const OnePortrait = styled.img`
