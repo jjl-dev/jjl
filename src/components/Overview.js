@@ -38,7 +38,7 @@ import img24 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commerci
 
 const Container = styled.div`
   padding: 0 15px;
-  padding-top: 76px;
+  padding-top: 26px;
 `;
 
 const ImgContainer = styled.div`
