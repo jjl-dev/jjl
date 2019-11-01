@@ -25,7 +25,7 @@ const Container = styled.div`
 const Bio = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 473px;
+  max-width: 540px;
   padding: 50px 0;
   font-size: 15px;
   line-height: 21px;
@@ -74,16 +74,12 @@ const About = () => {
 
             <Bio>
               <p>
-                Jeremy Jude Lee is a lifestyle and commercial photographer and
-                videographer from Vancouver, Canada. He started photography as a
-                teenager, when he picked up his parents’ cameras, and started
-                recording whatever was of interest around him.
+                Jeremy Jude Lee is a lifestyle and commercial photographer and videographer based out of Vancouver, Canada.
                 <br />
                 <br />
-                Now, almost a decade later, Jeremy has solidified a strong
-                reputation as one of Vancouver’s “go to” photographers, telling
-                visual stories for a long list of a long list of editorial and
-                commercial clients.
+                Growing up in the city, Lee finds inspiration in the environment that surrounds him, using his lens as a way to frame and document the world as he sees it. His ability to capture unseen moments and evoke feeling through his images has established Lee as one of Vancouver’s go-to lifestyle photographers, and has taken him around the world telling visual stories in both film and in digital, for his global clients. 
+                <br/><br/>
+                He’s also a very nice guy.
               </p>
             </Bio>
 

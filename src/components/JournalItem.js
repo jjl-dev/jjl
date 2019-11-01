@@ -36,8 +36,9 @@ const Date = styled.div`
   font-size: 11px;
   line-height: 15px;
   position: relative;
-  right: 50px;
+  right: 70px;
   text-align: right;
+  font-family: Suisse Works Intl;
 
   @media only screen and (max-width: 575px){
     text-align: left;
@@ -56,6 +57,7 @@ const Details = styled.div`
 `;
 const Description = styled.p`
   margin-top: 26px;
+  white-space: pre-wrap;
 `;
 const Image = styled.img`
   width: 100%;

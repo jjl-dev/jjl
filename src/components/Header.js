@@ -114,7 +114,7 @@ class Header extends React.Component {
             breakpoints[currentBreakpoint] > breakpoints.mobile ? (
               <Container>
                 <Logo>
-                  <NavLink activeClassName="is-active" to="/projects">
+                  <NavLink activeClassName="is-active" to="/">
                     <img src={logo} width="126" alt="jjl logo" />
                   </NavLink>
                 </Logo>

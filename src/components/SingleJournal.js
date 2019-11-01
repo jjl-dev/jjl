@@ -30,7 +30,8 @@ const Item = styled.div`
 `;
 const Date = styled.div`
   font-size: 11px;
-  line-height: 15px;
+  line-height: 20px;
+  font-family: Suisse Works Intl;
 `;
 const Details = styled.div`
   flex-basis: 37%;
@@ -52,6 +53,7 @@ const DetailsInner = styled.div`
 `;
 const Description = styled.p`
   margin-top: 26px;
+  white-space: pre-wrap;
 `;
 const Image = styled.img`
   width: 100%;
