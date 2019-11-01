@@ -4,7 +4,7 @@ import Projects from "./Projects"
 
 const Container = styled.div`
   padding: 0 15px;
-  padding-top: 76px;
+  padding-top: 30px;
 `;
 
 const ProjectsPage = () => {
