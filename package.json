@@ -2,7 +2,7 @@
   "name": "jjl",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jjl-dev.github.io/jjl",
+  "homepage": "http://jjl-dev.github.io/",
   "dependencies": {
     "prismic-javascript": "^2.0.3",
     "prismic-reactjs": "^1.0.0",

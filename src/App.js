@@ -24,7 +24,6 @@ const App = ({ location }) => {
       <Container>
         <Header />
           <Route exact path="/" component={Overview} />
-          <Route exact path="/jjl" component={Home} />
           <Route exact path="/projects" component={Home} />
           <Route path="/project/:id" component={SingleProject} />
           <Route path="/overview" component={Overview} />

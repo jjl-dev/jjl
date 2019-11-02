@@ -221,7 +221,7 @@ class Overview extends React.Component {
                   {data.hover_image.url && (
                     <img
                       src={data.hover_image.url}
-                      alt="jjl"
+                      alt="jeremyjudelee"
                       width="0"
                       height="0"
                     />
