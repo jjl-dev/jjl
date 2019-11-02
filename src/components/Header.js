@@ -144,7 +144,7 @@ class Header extends React.Component {
                 <Logo>
                   <NavLink
                     activeClassName="is-active"
-                    to="/projects"
+                    to="/"
                     onClick={() => this.handleLinkClick()}
                   >
                     <img src={logoCompact} width="40" alt="jjl logo" />
