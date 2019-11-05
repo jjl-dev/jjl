@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+import { Route, withRouter, Redirect } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./components/Header";
@@ -30,6 +30,7 @@ const App = ({ location }) => {
           <Route path="/about" component={About} />
           <Route exact path="/journal" component={Journal} />
           <Route path="/journal/:id" component={SingleJournal} />
+          <Redirect to="/" />
         <Footer />
       </Container>
     </ScrollToTop>
