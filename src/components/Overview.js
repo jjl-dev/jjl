@@ -62,7 +62,21 @@ const Img = styled.img`
   cursor: pointer;
 
   @media only screen and (max-width: 960px) {
-    width: 32%;
+    width: 94%;
+  }
+
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+    padding: 10px 0;
+  }
+`;
+
+const ImgSingle = styled.img`
+  align-self: flex-start;
+  cursor: pointer;
+
+  @media only screen and (max-width: 960px) {
+    width: 29%;
   }
 
   @media only screen and (max-width: 575px) {
@@ -304,7 +318,7 @@ class Overview extends React.Component {
                 easing={"ease-in-out"}
               >
                 {onload => (
-                  <Img
+                  <ImgSingle
                     onClick={() => handlePhotoClick(12)}
                     src={img12}
                     onLoad={onload}
@@ -494,7 +508,7 @@ class Overview extends React.Component {
                 easing={"ease-in-out"}
               >
                 {onload => (
-                  <Img
+                  <ImgSingle
                     onClick={() => handlePhotoClick(24)}
                     src={img24}
                     onLoad={onload}
