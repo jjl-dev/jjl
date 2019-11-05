@@ -106,7 +106,7 @@ class SingleJournal extends React.Component {
                           <Image
                             key={index}
                             src={journal.journal_images.url}
-                            alt="image"
+                            alt="Jeremy Jude Lee Journal"
                           />
                         ))}
                       </Item>

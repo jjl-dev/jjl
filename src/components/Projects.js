@@ -175,12 +175,12 @@ class Projects extends React.Component {
                         <Img
                           src={project.data.featured_image_1.url}
                           width="363"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                         <FeaturedImg2
                           src={project.data.featured_image_2.url}
                           width="363"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                       </React.Fragment>
                     ) : null}
@@ -192,12 +192,12 @@ class Projects extends React.Component {
                         <Img
                           src={project.data.featured_image_1.url}
                           width="237"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                         <FeaturedImg2
                           src={project.data.featured_image_2.url}
                           width="488"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                       </React.Fragment>
                     ) : null}
@@ -209,12 +209,12 @@ class Projects extends React.Component {
                         <Img
                           src={project.data.featured_image_1.url}
                           width="616"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                         <FeaturedImg2
                           src={project.data.featured_image_2.url}
                           width="363"
-                          alt="jjl"
+                          alt="Jeremy Jude Lee Project"
                         />
                       </React.Fragment>
                     ) : null}
@@ -230,7 +230,7 @@ class Projects extends React.Component {
                   <HoverImage
                     src={project.data.hover_image.url}
                     width="363"
-                    alt="jjl"
+                    alt="Jeremy Jude Lee Project"
                   />
                 )}
                 <div>
@@ -254,12 +254,12 @@ class Projects extends React.Component {
                           <Img
                             src={project.data.featured_image_1.url}
                             width="363"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                           <FeaturedImg2
                             src={project.data.featured_image_2.url}
                             width="363"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                         </React.Fragment>
                       ) : null}
@@ -272,12 +272,12 @@ class Projects extends React.Component {
                           <Img
                             src={project.data.featured_image_1.url}
                             width="237"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                           <FeaturedImg2
                             src={project.data.featured_image_2.url}
                             width="488"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                         </React.Fragment>
                       ) : null}
@@ -290,12 +290,12 @@ class Projects extends React.Component {
                           <Img
                             src={project.data.featured_image_1.url}
                             width="616"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                           <FeaturedImg2
                             src={project.data.featured_image_2.url}
                             width="363"
-                            alt="jjl"
+                            alt="Jeremy Jude Lee Project"
                           />
                         </React.Fragment>
                       ) : null}
@@ -311,7 +311,7 @@ class Projects extends React.Component {
                     <HoverImage
                       src={project.data.hover_image.url}
                       width="363"
-                      alt="jjl"
+                      alt="Jeremy Jude Lee Project"
                     />
                   )}
 

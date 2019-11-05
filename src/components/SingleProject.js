@@ -221,7 +221,7 @@ class Overview extends React.Component {
                   {data.hover_image.url && (
                     <img
                       src={data.hover_image.url}
-                      alt="jeremyjudelee"
+                      alt="Jeremy Jude Lee Project"
                       width="0"
                       height="0"
                     />
@@ -238,13 +238,13 @@ class Overview extends React.Component {
                               item.image_row_1.dimensions.width === 1800 ? (
                                 <SingleLandscape
                                   src={item.image_row_1.url}
-                                  alt="item.image_row_1.url"
+                                  alt="Jeremy Jude Lee Project"
                                 />
                               ) : (
                                 item.image_row_1.alt === "negative-margin" ? (
                                   <SinglePortraitRight
                                   src={item.image_row_1.url}
-                                  alt={item.image_row_1.url}
+                                  alt="Jeremy Jude Lee Project"
                                   style={{"marginTop": "-18.6%"}}
                                 />
                                 ):
@@ -252,14 +252,14 @@ class Overview extends React.Component {
                                 item.image_row_1.alt === "negative-margin-1440" ? (
                                   <SinglePortraitRight
                                   src={item.image_row_1.url}
-                                  alt={item.image_row_1.url}
+                                  alt="Jeremy Jude Lee Project"
                                   style={{"marginTop": "-9%"}}
                                 />
                                 ):
 
                                 <SinglePortraitRight
                                   src={item.image_row_1.url}
-                                  alt={item.image_row_1.url}
+                                  alt="Jeremy Jude Lee Project"
                                 />
                               )
                             ) : null}
@@ -270,13 +270,13 @@ class Overview extends React.Component {
                               item.image_row_2.dimensions.width === 1800 ? (
                                 <SingleLandscape
                                   src={item.image_row_2.url}
-                                  alt={item.image_row_2.url}
+                                  alt="Jeremy Jude Lee Project"
                                 />
                               ) : (
                                 item.image_row_2.alt === "negative-margin" ? (
                                   <SinglePortraitLeft
                                   src={item.image_row_2.url}
-                                  alt={item.image_row_2.url}
+                                  alt="Jeremy Jude Lee Project"
                                   style={{"marginTop": "-18.6%"}}
                                 />
                                 ):
@@ -284,14 +284,14 @@ class Overview extends React.Component {
                                 item.image_row_2.alt === "negative-margin-1440" ? (
                                   <SinglePortraitLeft
                                   src={item.image_row_2.url}
-                                  alt={item.image_row_2.url}
+                                  alt="Jeremy Jude Lee Project"
                                   style={{"marginTop": "-9%"}}
                                 />
                                 ):
 
                                 <SinglePortraitLeft
                                   src={item.image_row_2.url}
-                                  alt={item.image_row_2.url}
+                                  alt="Jeremy Jude Lee Project"
                                 />
 
                               )
@@ -305,11 +305,11 @@ class Overview extends React.Component {
                                 <TwoImageContainer>
                                   <TwoLandscape
                                     src={item.image_row_1.url}
-                                    alt={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                   <TwoLandscape
                                     src={item.image_row_2.url}
-                                    alt={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                 </TwoImageContainer>
                               ) : null
@@ -325,11 +325,11 @@ class Overview extends React.Component {
                                 <TwoImageContainer>
                                   <TwoPortrait
                                     src={item.image_row_1.url}
-                                    alt={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                   <TwoPortrait
                                     src={item.image_row_2.url}
-                                    alt={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                 </TwoImageContainer>
                               ) : null
@@ -344,11 +344,11 @@ class Overview extends React.Component {
                                 <TwoImageContainer>
                                   <OneLandscape
                                     src={item.image_row_1.url}
-                                    alt={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                   <OnePortrait
                                     src={item.image_row_2.url}
-                                    alt={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                 </TwoImageContainer>
                               ) : null
@@ -363,11 +363,11 @@ class Overview extends React.Component {
                                 <TwoImageContainer>
                                   <OnePortrait
                                     src={item.image_row_1.url}
-                                    alt={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                   <OneLandscape
                                     src={item.image_row_2.url}
-                                    alt={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
                                   />
                                 </TwoImageContainer>
                               ) : null

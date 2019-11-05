@@ -70,12 +70,12 @@ const JournalItem = props => {
     <JournalItemContainer to={`/journal/${props.data.id}`}>
       <Item>
         {data.featured_image_1.url && (
-          <Image src={data.featured_image_1.url} alt="featured 1" />
+          <Image src={data.featured_image_1.url} alt="Jeremy Jude Lee Journal" />
         )}
       </Item>
       <FeaturedImage2>
         {data.featured_image_2.url && (
-          <Image src={data.featured_image_2.url} alt="featured 2" />
+          <Image src={data.featured_image_2.url} alt="Jeremy Jude Lee Journal" />
         )}
       </FeaturedImage2>
       <Date>{data.date[0].text}</Date>

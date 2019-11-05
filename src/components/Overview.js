@@ -133,7 +133,7 @@ class Overview extends React.Component {
                     src={img1}
                     onLoad={onload}
                     width="237"
-                    alt={img1}
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -148,7 +148,7 @@ class Overview extends React.Component {
                     src={img2}
                     onLoad={onload}
                     width="192"
-                    alt={img2}
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -163,7 +163,7 @@ class Overview extends React.Component {
                     src={img3}
                     onLoad={onload}
                     width="432"
-                    alt={img3}
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -181,7 +181,7 @@ class Overview extends React.Component {
                     onLoad={onload}
                     src={img4}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -196,7 +196,7 @@ class Overview extends React.Component {
                     src={img5}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -214,7 +214,7 @@ class Overview extends React.Component {
                     src={img6}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img1"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -229,7 +229,7 @@ class Overview extends React.Component {
                     src={img7}
                     onLoad={onload}
                     width="192"
-                    alt="jjl img2"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -244,7 +244,7 @@ class Overview extends React.Component {
                     src={img8}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -262,7 +262,7 @@ class Overview extends React.Component {
                     src={img9}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -277,7 +277,7 @@ class Overview extends React.Component {
                     src={img10}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -292,7 +292,7 @@ class Overview extends React.Component {
                     src={img11}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -309,7 +309,7 @@ class Overview extends React.Component {
                     src={img12}
                     onLoad={onload}
                     width="194"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -326,7 +326,7 @@ class Overview extends React.Component {
                     src={img13}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -341,7 +341,7 @@ class Overview extends React.Component {
                     src={img14}
                     onLoad={onload}
                     width="194"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -356,7 +356,7 @@ class Overview extends React.Component {
                     src={img15}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -373,7 +373,7 @@ class Overview extends React.Component {
                     src={img16}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -388,7 +388,7 @@ class Overview extends React.Component {
                     src={img17}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -405,7 +405,7 @@ class Overview extends React.Component {
                     src={img18}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -420,7 +420,7 @@ class Overview extends React.Component {
                     src={img19}
                     onLoad={onload}
                     width="194"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -435,7 +435,7 @@ class Overview extends React.Component {
                     src={img20}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -452,7 +452,7 @@ class Overview extends React.Component {
                     src={img21}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -467,7 +467,7 @@ class Overview extends React.Component {
                     src={img22}
                     onLoad={onload}
                     width="237"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -482,7 +482,7 @@ class Overview extends React.Component {
                     src={img23}
                     onLoad={onload}
                     width="432"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>
@@ -499,7 +499,7 @@ class Overview extends React.Component {
                     src={img24}
                     onLoad={onload}
                     width="194"
-                    alt="jjl img3"
+                    alt="Jeremy Jude Lee"
                   />
                 )}
               </FadeIn>

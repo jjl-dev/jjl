@@ -115,7 +115,7 @@ class Header extends React.Component {
               <Container>
                 <Logo>
                   <NavLink activeClassName="is-active" to="/">
-                    <img src={logo} width="126" alt="jjl logo" />
+                    <img src={logo} width="126" alt="Jeremy Jude Lee Logo" />
                   </NavLink>
                 </Logo>
                 <Links>
@@ -147,7 +147,7 @@ class Header extends React.Component {
                     to="/"
                     onClick={() => this.handleLinkClick()}
                   >
-                    <img src={logoCompact} width="40" alt="jjl logo" />
+                    <img src={logoCompact} width="40" alt="Jeremy Jude Lee Logo" />
                   </NavLink>
                 </Logo>
                 {this.state.menuOpen ? (
