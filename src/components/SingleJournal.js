@@ -53,7 +53,7 @@ const DetailsInner = styled.div`
     padding: 0;
   }
 `;
-const Description = styled.p`
+const Description = styled.div`
   margin-top: 26px;
   white-space: pre-wrap;
 `;
@@ -92,6 +92,11 @@ class SingleJournal extends React.Component {
 
   render() {
     const data = this.state.journal.data;
+
+    function createMarkup() {
+      return {__html: data.description[0].text};
+    }
+
     return (
       <div className={"component-wrapper"}>
         <FadeIn height={100} duration={300} easing={"ease-in-out"}>
@@ -118,7 +123,11 @@ class SingleJournal extends React.Component {
                         <h3>{data.title[0].text}</h3>
                         <Date>{data.date[0].text}</Date>
 
-                        <Description>{data.description[0].text}</Description>
+                        {data.description[0].text && (
+                          <Description>
+                            <p dangerouslySetInnerHTML={createMarkup()} />
+                          </Description>
+                        )}
                       </DetailsInner>
                     </Details>
                   </JournalItemContainer>

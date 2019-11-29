@@ -55,7 +55,7 @@ const Details = styled.div`
   font-size: 11px;
   line-height: 15px;
 `;
-const Description = styled.p`
+const Description = styled.div`
   margin-top: 26px;
   white-space: pre-wrap;
 `;
@@ -66,6 +66,11 @@ const Image = styled.img`
 
 const JournalItem = props => {
   const data = props.data.data;
+
+  function createMarkup() {
+    return {__html: data.description[0].text};
+  }
+
   return (
     <JournalItemContainer to={`/journal/${props.data.id}`}>
       <Item>
@@ -81,7 +86,11 @@ const JournalItem = props => {
       <Date>{data.date[0].text}</Date>
       <Details>
         <Title>{data.title[0].text}</Title>
-        <Description>{data.description[0].text}</Description>
+        {data.description[0].text && (
+          <Description>
+            <p dangerouslySetInnerHTML={createMarkup()} />
+          </Description>
+        )}
       </Details>
     </JournalItemContainer>
   );
