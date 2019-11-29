@@ -44,11 +44,13 @@ const Details = styled.div`
 `;
 const DetailsInner = styled.div`
   position: fixed;
-  width: 360px;
+  max-width: 360px;
+  padding-right: 10px;
 
   @media only screen and (max-width: 575px) {
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 `;
 const Description = styled.p`
