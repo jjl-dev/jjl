@@ -30,7 +30,6 @@ const App = ({ location }) => {
           <Route path="/about" component={About} />
           <Route exact path="/journal" component={Journal} />
           <Route path="/journal/:id" component={SingleJournal} />
-          <Redirect to="/" />
         <Footer />
       </Container>
     </ScrollToTop>
