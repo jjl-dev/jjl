@@ -163,7 +163,7 @@ class Projects extends React.Component {
       <React.Fragment>
         {this.state.projects.map((project, index) =>
           this.state.showAllProjects ? (
-            <ProjectContainer onLoad={onload} key={index} to={`/project/${project.id}`}>
+            <ProjectContainer onLoad={onload} key={index} to={`/project/${project.uid}`}>
               {project.data.featured_image_1.url &&
                 project.data.featured_image_2.url && (
                   <ImgContainer>
@@ -242,7 +242,7 @@ class Projects extends React.Component {
             </ProjectContainer>
           ) : (
             index < 10 && (
-              <ProjectContainer onLoad={onload} key={index} to={`/project/${project.id}`}>
+              <ProjectContainer onLoad={onload} key={index} to={`/project/${project.uid}`}>
                 {project.data.featured_image_1.url &&
                   project.data.featured_image_2.url && (
                     <ImgContainer>

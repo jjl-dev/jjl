@@ -134,7 +134,7 @@ const TwoPortrait = styled.img`
   }
 `;
 
-class Overview extends React.Component {
+class SingleProject extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -148,11 +148,11 @@ class Overview extends React.Component {
 
   componentWillMount() {
     const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
-    const projectID = window.location.pathname.replace("/project/", "");
+    const projectuID = window.location.pathname.replace("/project/", "");
 
     Prismic.api(apiEndpoint).then(api => {
       api
-        .query(Prismic.Predicates.at("document.id", projectID), {
+        .query(Prismic.Predicates.at("my.project.uid", projectuID), {
           orderings: "[my.blog_post.date desc]"
         })
         .then(response => {
@@ -387,4 +387,4 @@ class Overview extends React.Component {
   }
 }
 
-export default Overview;
+export default SingleProject;
