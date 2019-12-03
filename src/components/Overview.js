@@ -36,6 +36,23 @@ import img23 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commerci
 
 import img24 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-24.jpg";
 
+import img25 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-25.jpg";
+import img26 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-26.jpg";
+import img27 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-27.jpg";
+
+import img28 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-28.jpg";
+import img29 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-29.jpg";
+
+import img30 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-30.jpg";
+import img31 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-31.jpg";
+import img32 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-32.jpg";
+
+import img33 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-33.jpg";
+import img34 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-34.jpg";
+import img35 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-35.jpg";
+
+import img36 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-36.jpg";
+
 const Container = styled.div`
   padding: 0 15px;
   padding-top: 30px;
@@ -113,7 +130,19 @@ class Overview extends React.Component {
         img21,
         img22,
         img23,
-        img24
+        img24,
+        img25,
+        img26,
+        img27,
+        img28,
+        img29,
+        img30,
+        img31,
+        img32,
+        img33,
+        img34,
+        img35,
+        img36
       ],
       photoIndex: 0,
       isOpen: false
@@ -147,7 +176,7 @@ class Overview extends React.Component {
                     src={img1}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -162,7 +191,7 @@ class Overview extends React.Component {
                     src={img2}
                     onLoad={onload}
                     width="192"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -177,7 +206,7 @@ class Overview extends React.Component {
                     src={img3}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -195,7 +224,7 @@ class Overview extends React.Component {
                     onLoad={onload}
                     src={img4}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -210,7 +239,7 @@ class Overview extends React.Component {
                     src={img5}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -228,7 +257,7 @@ class Overview extends React.Component {
                     src={img6}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -243,7 +272,7 @@ class Overview extends React.Component {
                     src={img7}
                     onLoad={onload}
                     width="192"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -258,7 +287,7 @@ class Overview extends React.Component {
                     src={img8}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -276,7 +305,7 @@ class Overview extends React.Component {
                     src={img9}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -291,7 +320,7 @@ class Overview extends React.Component {
                     src={img10}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -306,7 +335,7 @@ class Overview extends React.Component {
                     src={img11}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -323,7 +352,7 @@ class Overview extends React.Component {
                     src={img12}
                     onLoad={onload}
                     width="194"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -340,7 +369,7 @@ class Overview extends React.Component {
                     src={img13}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -355,7 +384,7 @@ class Overview extends React.Component {
                     src={img14}
                     onLoad={onload}
                     width="194"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -370,7 +399,7 @@ class Overview extends React.Component {
                     src={img15}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -387,7 +416,7 @@ class Overview extends React.Component {
                     src={img16}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -402,7 +431,7 @@ class Overview extends React.Component {
                     src={img17}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -419,7 +448,7 @@ class Overview extends React.Component {
                     src={img18}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -434,7 +463,7 @@ class Overview extends React.Component {
                     src={img19}
                     onLoad={onload}
                     width="194"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -449,7 +478,7 @@ class Overview extends React.Component {
                     src={img20}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -466,7 +495,7 @@ class Overview extends React.Component {
                     src={img21}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -481,7 +510,7 @@ class Overview extends React.Component {
                     src={img22}
                     onLoad={onload}
                     width="237"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -496,7 +525,7 @@ class Overview extends React.Component {
                     src={img23}
                     onLoad={onload}
                     width="432"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
@@ -513,11 +542,202 @@ class Overview extends React.Component {
                     src={img24}
                     onLoad={onload}
                     width="194"
-                    alt="Jeremy Jude Lee"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
                   />
                 )}
               </FadeIn>
             </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(25)}
+                    src={img25}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(26)}
+                    src={img26}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(27)}
+                    src={img27}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(28)}
+                    src={img28}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(29)}
+                    src={img29}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(30)}
+                    src={img30}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(31)}
+                    src={img31}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(32)}
+                    src={img32}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(33)}
+                    src={img33}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(34)}
+                    src={img34}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(35)}
+                    src={img35}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <ImgSingle
+                    onClick={() => handlePhotoClick(36)}
+                    src={img36}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
           </ImgContainer>
         </Container>
 
