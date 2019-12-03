@@ -81,7 +81,7 @@ class SingleJournal extends React.Component {
 
     Prismic.api(apiEndpoint).then(api => {
       api
-        .query(Prismic.Predicates.at("document.id", journalID), {
+        .query(Prismic.Predicates.at("my.jour.uid", journalID), {
           orderings: "[my.blog_post.date desc]"
         })
         .then(response => {

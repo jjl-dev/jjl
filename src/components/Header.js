@@ -196,7 +196,7 @@ class Header extends React.Component {
                         / &nbsp;
                         <NavLink
                           activeClassName="is-active"
-                          to="/Journal"
+                          to="/journal"
                           onClick={() => this.handleLinkClick()}
                         >
                           JOURNAL
