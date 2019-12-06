@@ -114,26 +114,26 @@ class Header extends React.Component {
             breakpoints[currentBreakpoint] > breakpoints.mobile ? (
               <Container>
                 <Logo>
-                  <NavLink activeClassName="is-active" to="/">
+                  <NavLink rel='canonical' activeClassName="is-active" to="/">
                     <img src={logo} width="126" alt="Jeremy Jude Lee Logo" />
                   </NavLink>
                 </Logo>
                 <Links>
                   <div>
-                    <NavLink activeClassName="is-active" to="/projects">
+                    <NavLink rel='canonical' activeClassName="is-active" to="/projects">
                       PROJECTS&nbsp;
                     </NavLink>
                     /&nbsp;
-                    <NavLink activeClassName="is-active" to="/overview">
+                    <NavLink rel='canonical' activeClassName="is-active" to="/overview">
                       OVERVIEW
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink activeClassName="is-active" to="/about">
+                    <NavLink rel='canonical' activeClassName="is-active" to="/about">
                       ABOUT&nbsp;
                     </NavLink>
                     /&nbsp;
-                    <NavLink activeClassName="is-active" to="/Journal">
+                    <NavLink rel='canonical' activeClassName="is-active" to="/journal">
                       JOURNAL
                     </NavLink>
                   </div>
