@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 import img1 from "../assets/jjlcontact.jpg";
 
@@ -66,7 +67,15 @@ const Img = styled.img`
 
 const About = () => {
   return (
-    <div className={'component-wrapper'}>
+    <div className={"component-wrapper"}>
+      <Helmet>
+        <title>Jeremy Jude Lee About</title>
+        <meta name="description" content="Jeremy Jude Lee About" />
+        <meta
+          name="keywords"
+          content="jeremy jude lee, about, vancouver bc, canada, lifestyle photography"
+        />
+      </Helmet>
       <FadeIn height={100} duration={300} easing={"ease-in-out"}>
         {onload => (
           <Container onLoad={onload}>
@@ -74,11 +83,19 @@ const About = () => {
 
             <Bio>
               <p>
-                Jeremy Jude Lee is a lifestyle and commercial photographer and videographer based out of Vancouver, Canada.
+                Jeremy Jude Lee is a lifestyle and commercial photographer and
+                videographer based out of Vancouver, Canada.
                 <br />
                 <br />
-                Growing up in the city, Lee finds inspiration in the environment that surrounds him, using his lens as a way to frame and document the world as he sees it. His ability to capture unseen moments and evoke feeling through his images has established Lee as one of Vancouver’s go-to lifestyle photographers, and has taken him around the world telling visual stories in both film and in digital, for his global clients. 
-                <br/><br/>
+                Growing up in the city, Lee finds inspiration in the environment
+                that surrounds him, using his lens as a way to frame and
+                document the world as he sees it. His ability to capture unseen
+                moments and evoke feeling through his images has established Lee
+                as one of Vancouver’s go-to lifestyle photographers, and has
+                taken him around the world telling visual stories in both film
+                and in digital, for his global clients.
+                <br />
+                <br />
                 He’s also a very nice guy.
               </p>
             </Bio>

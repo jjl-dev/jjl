@@ -2,6 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 import JournalItem from "./JournalItem";
 
@@ -42,6 +43,14 @@ class Journal extends React.Component {
   render() {
     return (
       <div className={"component-wrapper"}>
+        <Helmet>
+          <title>Jeremy Jude Lee Journal</title>
+          <meta name="description" content="Jeremy Jude Lee Journal" />
+          <meta
+            name="keywords"
+            content="jeremy jude lee, blog, journal, vancouver bc, canada, lifestyle photography"
+          />
+        </Helmet>
         <FadeIn height={100} duration={300} easing={"ease-in-out"}>
           {onload => (
             <React.Fragment>

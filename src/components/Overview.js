@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 import img1 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-1.jpg";
 import img2 from "../assets/OVERVIEW-jeremyjudelee-vancouver-lifestyle-commercial-photographer-2.jpg";
@@ -162,6 +163,14 @@ class Overview extends React.Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <title>Jeremy Jude Lee : Lifestyle and Commercial Photographer</title>
+          <meta name="description" content="Jeremy Jude Lee is a lifestyle and commercial photographer and videographer based out of Vancouver, Canada. He's also a very nice guy." />
+          <meta
+            name="keywords"
+            content="jeremy jude lee, overview, portfolio, vancouver bc, canada, lifestyle photography"
+          />
+        </Helmet>
         <Container>
           <ImgContainer>
             <ImgRow>
@@ -737,7 +746,6 @@ class Overview extends React.Component {
                 )}
               </FadeIn>
             </ImgRow>
-
           </ImgContainer>
         </Container>
 

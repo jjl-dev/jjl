@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Prismic from "prismic-javascript";
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 const ProjectContainer = styled(Link)`
   div:first-child :hover {
@@ -157,185 +158,225 @@ class Projects extends React.Component {
   render() {
     const { activeLink } = this.state;
     return (
-      <div className={'component-wrapper'}>
-      <FadeIn height={100} duration={300} easing={"ease-in-out"}>
-        {onload => (
-      <React.Fragment>
-        {this.state.projects.map((project, index) =>
-          this.state.showAllProjects ? (
-            <ProjectContainer onLoad={onload} key={index} to={`/project/${project.uid}`}>
-              {project.data.featured_image_1.url &&
-                project.data.featured_image_2.url && (
-                  <ImgContainer>
-                    {project.data.featured_image_1.dimensions.width > 1000 &&
-                    project.data.featured_image_1.dimensions.width < 1500 &&
-                    project.data.featured_image_2.dimensions.width > 1000 &&
-                    project.data.featured_image_2.dimensions.width < 1500 ? (
-                      <React.Fragment>
-                        <Img
-                          src={project.data.featured_image_1.url}
+      <div className={"component-wrapper"}>
+        <Helmet>
+          <title>Jeremy Jude Lee Projects</title>
+          <meta name="description" content="Jeremy Jude Lee Projects" />
+          <meta
+            name="keywords"
+            content="jeremy jude lee, projects, vancouver bc, canada, lifestyle photography"
+          />
+        </Helmet>
+        <FadeIn height={100} duration={300} easing={"ease-in-out"}>
+          {onload => (
+            <React.Fragment>
+              {this.state.projects.map((project, index) =>
+                this.state.showAllProjects ? (
+                  <ProjectContainer
+                    onLoad={onload}
+                    key={index}
+                    to={`/project/${project.uid}`}
+                  >
+                    {project.data.featured_image_1.url &&
+                      project.data.featured_image_2.url && (
+                        <ImgContainer>
+                          {project.data.featured_image_1.dimensions.width >
+                            1000 &&
+                          project.data.featured_image_1.dimensions.width <
+                            1500 &&
+                          project.data.featured_image_2.dimensions.width >
+                            1000 &&
+                          project.data.featured_image_2.dimensions.width <
+                            1500 ? (
+                            <React.Fragment>
+                              <Img
+                                src={project.data.featured_image_1.url}
+                                width="363"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                              <FeaturedImg2
+                                src={project.data.featured_image_2.url}
+                                width="363"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                            </React.Fragment>
+                          ) : null}
+
+                          {project.data.featured_image_1.dimensions.width >
+                            1000 &&
+                          project.data.featured_image_1.dimensions.width <
+                            1500 &&
+                          project.data.featured_image_2.dimensions.width ===
+                            1800 ? (
+                            <React.Fragment>
+                              <Img
+                                src={project.data.featured_image_1.url}
+                                width="237"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                              <FeaturedImg2
+                                src={project.data.featured_image_2.url}
+                                width="488"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                            </React.Fragment>
+                          ) : null}
+
+                          {project.data.featured_image_2.dimensions.width >
+                            1000 &&
+                          project.data.featured_image_2.dimensions.width <
+                            1500 &&
+                          project.data.featured_image_1.dimensions.width ===
+                            1800 ? (
+                            <React.Fragment>
+                              <Img
+                                src={project.data.featured_image_1.url}
+                                width="616"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                              <FeaturedImg2
+                                src={project.data.featured_image_2.url}
+                                width="363"
+                                alt="Jeremy Jude Lee Project"
+                              />
+                            </React.Fragment>
+                          ) : null}
+                        </ImgContainer>
+                      )}
+
+                    <DescriptionContainer
+                      key={index}
+                      onMouseEnter={e => this.descriptionEnter(e, project.data)}
+                      onMouseLeave={e => this.descriptionLeave(e, project.data)}
+                    >
+                      {project.data.hover_image.url === activeLink && (
+                        <HoverImage
+                          src={project.data.hover_image.url}
                           width="363"
                           alt="Jeremy Jude Lee Project"
                         />
-                        <FeaturedImg2
-                          src={project.data.featured_image_2.url}
-                          width="363"
-                          alt="Jeremy Jude Lee Project"
-                        />
-                      </React.Fragment>
-                    ) : null}
+                      )}
+                      <div>
+                        {project.data.client[0].text}
+                        <ClientTitle>{project.data.title[0].text} </ClientTitle>
+                      </div>
+                      <Year>{project.data.year[0].text}</Year>
+                    </DescriptionContainer>
+                  </ProjectContainer>
+                ) : (
+                  index < 10 && (
+                    <ProjectContainer
+                      onLoad={onload}
+                      key={index}
+                      to={`/project/${project.uid}`}
+                    >
+                      {project.data.featured_image_1.url &&
+                        project.data.featured_image_2.url && (
+                          <ImgContainer>
+                            {project.data.featured_image_1.dimensions.width >
+                              1000 &&
+                            project.data.featured_image_1.dimensions.width <
+                              1500 &&
+                            project.data.featured_image_2.dimensions.width >
+                              1000 &&
+                            project.data.featured_image_2.dimensions.width <
+                              1500 ? (
+                              <React.Fragment>
+                                <Img
+                                  src={project.data.featured_image_1.url}
+                                  width="363"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                                <FeaturedImg2
+                                  src={project.data.featured_image_2.url}
+                                  width="363"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                              </React.Fragment>
+                            ) : null}
 
-                    {project.data.featured_image_1.dimensions.width > 1000 &&
-                    project.data.featured_image_1.dimensions.width < 1500 &&
-                    project.data.featured_image_2.dimensions.width === 1800 ? (
-                      <React.Fragment>
-                        <Img
-                          src={project.data.featured_image_1.url}
-                          width="237"
-                          alt="Jeremy Jude Lee Project"
-                        />
-                        <FeaturedImg2
-                          src={project.data.featured_image_2.url}
-                          width="488"
-                          alt="Jeremy Jude Lee Project"
-                        />
-                      </React.Fragment>
-                    ) : null}
+                            {project.data.featured_image_1.dimensions.width >
+                              1000 &&
+                            project.data.featured_image_1.dimensions.width <
+                              1500 &&
+                            project.data.featured_image_2.dimensions.width ===
+                              1800 ? (
+                              <React.Fragment>
+                                <Img
+                                  src={project.data.featured_image_1.url}
+                                  width="237"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                                <FeaturedImg2
+                                  src={project.data.featured_image_2.url}
+                                  width="488"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                              </React.Fragment>
+                            ) : null}
 
-                    {project.data.featured_image_2.dimensions.width > 1000 &&
-                    project.data.featured_image_2.dimensions.width < 1500 &&
-                    project.data.featured_image_1.dimensions.width === 1800 ? (
-                      <React.Fragment>
-                        <Img
-                          src={project.data.featured_image_1.url}
-                          width="616"
-                          alt="Jeremy Jude Lee Project"
-                        />
-                        <FeaturedImg2
-                          src={project.data.featured_image_2.url}
-                          width="363"
-                          alt="Jeremy Jude Lee Project"
-                        />
-                      </React.Fragment>
-                    ) : null}
-                  </ImgContainer>
-                )}
+                            {project.data.featured_image_2.dimensions.width >
+                              1000 &&
+                            project.data.featured_image_2.dimensions.width <
+                              1500 &&
+                            project.data.featured_image_1.dimensions.width ===
+                              1800 ? (
+                              <React.Fragment>
+                                <Img
+                                  src={project.data.featured_image_1.url}
+                                  width="616"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                                <FeaturedImg2
+                                  src={project.data.featured_image_2.url}
+                                  width="363"
+                                  alt="Jeremy Jude Lee Project"
+                                />
+                              </React.Fragment>
+                            ) : null}
+                          </ImgContainer>
+                        )}
 
-              <DescriptionContainer
-                key={index}
-                onMouseEnter={e => this.descriptionEnter(e, project.data)}
-                onMouseLeave={e => this.descriptionLeave(e, project.data)}
-              >
-                {project.data.hover_image.url === activeLink && (
-                  <HoverImage
-                    src={project.data.hover_image.url}
-                    width="363"
-                    alt="Jeremy Jude Lee Project"
-                  />
-                )}
-                <div>
-                  {project.data.client[0].text}
-                  <ClientTitle>{project.data.title[0].text} </ClientTitle>
-                </div>
-                <Year>{project.data.year[0].text}</Year>
-              </DescriptionContainer>
-            </ProjectContainer>
-          ) : (
-            index < 10 && (
-              <ProjectContainer onLoad={onload} key={index} to={`/project/${project.uid}`}>
-                {project.data.featured_image_1.url &&
-                  project.data.featured_image_2.url && (
-                    <ImgContainer>
-                      {project.data.featured_image_1.dimensions.width > 1000 &&
-                      project.data.featured_image_1.dimensions.width < 1500 &&
-                      project.data.featured_image_2.dimensions.width > 1000 &&
-                      project.data.featured_image_2.dimensions.width < 1500 ? (
-                        <React.Fragment>
-                          <Img
-                            src={project.data.featured_image_1.url}
+                      <DescriptionContainer
+                        key={index}
+                        onMouseEnter={e =>
+                          this.descriptionEnter(e, project.data)
+                        }
+                        onMouseLeave={e =>
+                          this.descriptionLeave(e, project.data)
+                        }
+                      >
+                        {project.data.hover_image.url === activeLink && (
+                          <HoverImage
+                            src={project.data.hover_image.url}
                             width="363"
                             alt="Jeremy Jude Lee Project"
                           />
-                          <FeaturedImg2
-                            src={project.data.featured_image_2.url}
-                            width="363"
-                            alt="Jeremy Jude Lee Project"
-                          />
-                        </React.Fragment>
-                      ) : null}
+                        )}
 
-                      {project.data.featured_image_1.dimensions.width > 1000 &&
-                      project.data.featured_image_1.dimensions.width < 1500 &&
-                      project.data.featured_image_2.dimensions.width ===
-                        1800 ? (
-                        <React.Fragment>
-                          <Img
-                            src={project.data.featured_image_1.url}
-                            width="237"
-                            alt="Jeremy Jude Lee Project"
-                          />
-                          <FeaturedImg2
-                            src={project.data.featured_image_2.url}
-                            width="488"
-                            alt="Jeremy Jude Lee Project"
-                          />
-                        </React.Fragment>
-                      ) : null}
-
-                      {project.data.featured_image_2.dimensions.width > 1000 &&
-                      project.data.featured_image_2.dimensions.width < 1500 &&
-                      project.data.featured_image_1.dimensions.width ===
-                        1800 ? (
-                        <React.Fragment>
-                          <Img
-                            src={project.data.featured_image_1.url}
-                            width="616"
-                            alt="Jeremy Jude Lee Project"
-                          />
-                          <FeaturedImg2
-                            src={project.data.featured_image_2.url}
-                            width="363"
-                            alt="Jeremy Jude Lee Project"
-                          />
-                        </React.Fragment>
-                      ) : null}
-                    </ImgContainer>
-                  )}
-
-                <DescriptionContainer
-                  key={index}
-                  onMouseEnter={e => this.descriptionEnter(e, project.data)}
-                  onMouseLeave={e => this.descriptionLeave(e, project.data)}
-                >
-                  {project.data.hover_image.url === activeLink && (
-                    <HoverImage
-                      src={project.data.hover_image.url}
-                      width="363"
-                      alt="Jeremy Jude Lee Project"
-                    />
-                  )}
-
-                  <div>
-                    {project.data.client[0].text}
-                    <ClientTitle>{project.data.title[0].text} </ClientTitle>
-                  </div>
-                  <Year>{project.data.year[0].text}</Year>
-                </DescriptionContainer>
-              </ProjectContainer>
-            )
-          )
-        )}
-        {!this.state.showAllProjects && (
-          <MoreProjects>
-            <MoreProjectsLink onClick={() => this.showAllProjects()}>
-              MORE PROJECTS
-            </MoreProjectsLink>
-          </MoreProjects>
-        )}
-      </React.Fragment>
-      )}
-      </FadeIn>
-    </div>
+                        <div>
+                          {project.data.client[0].text}
+                          <ClientTitle>
+                            {project.data.title[0].text}{" "}
+                          </ClientTitle>
+                        </div>
+                        <Year>{project.data.year[0].text}</Year>
+                      </DescriptionContainer>
+                    </ProjectContainer>
+                  )
+                )
+              )}
+              {!this.state.showAllProjects && (
+                <MoreProjects>
+                  <MoreProjectsLink onClick={() => this.showAllProjects()}>
+                    MORE PROJECTS
+                  </MoreProjectsLink>
+                </MoreProjects>
+              )}
+            </React.Fragment>
+          )}
+        </FadeIn>
+      </div>
     );
   }
 }

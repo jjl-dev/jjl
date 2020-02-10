@@ -10,6 +10,7 @@
     "react-breakpoints": "^3.0.3",
     "react-dom": "^16.8.6",
     "react-grid-layout": "^0.16.6",
+    "react-helmet": "^5.2.1",
     "react-image-lightbox": "^5.1.0",
     "react-lazyload-fadein": "^1.1.0",
     "react-photo-gallery": "^8.0.0",

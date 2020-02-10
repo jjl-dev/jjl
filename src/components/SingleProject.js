@@ -2,6 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -173,6 +174,7 @@ class SingleProject extends React.Component {
 
   render() {
     const data = this.state.project.data;
+    const title = `${this.state.project.uid}`;
 
     function createMarkup() {
       return { __html: data.video.html };
@@ -180,6 +182,14 @@ class SingleProject extends React.Component {
 
     return (
       <div className={"component-wrapper"}>
+        <Helmet>
+          <title>Jeremy Jude Lee {title}</title>
+          <meta name="description" content="Jeremy Jude Lee Projects" />
+          <meta
+            name="keywords"
+            content="jeremy jude lee, projects, vancouver bc, canada, lifestyle photography"
+          />
+        </Helmet>
         <FadeIn height={100} duration={300} easing={"ease-in-out"}>
           {onload => (
             <React.Fragment>
@@ -228,154 +238,152 @@ class SingleProject extends React.Component {
                   )}
 
                   {!data.video.html && (
-                  <ProjectImageContainer>
-                    {data.image_row.length
-                      ? data.image_row.map((item, index) => (
-                          <ImageRow key={index} className="individual-project">
-                            {/* if there is only image 1 */}
-                            {item.image_row_1.url &&
-                            item.image_row_2.url == null ? (
-                              item.image_row_1.dimensions.width === 1800 ? (
-                                <SingleLandscape
-                                  src={item.image_row_1.url}
-                                  alt="Jeremy Jude Lee Project"
-                                />
-                              ) : (
-                                item.image_row_1.alt === "negative-margin" ? (
+                    <ProjectImageContainer>
+                      {data.image_row.length
+                        ? data.image_row.map((item, index) => (
+                            <ImageRow
+                              key={index}
+                              className="individual-project"
+                            >
+                              {/* if there is only image 1 */}
+                              {item.image_row_1.url &&
+                              item.image_row_2.url == null ? (
+                                item.image_row_1.dimensions.width === 1800 ? (
+                                  <SingleLandscape
+                                    src={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
+                                  />
+                                ) : item.image_row_1.alt ===
+                                  "negative-margin" ? (
                                   <SinglePortraitRight
-                                  src={item.image_row_1.url}
-                                  alt="Jeremy Jude Lee Project"
-                                  style={{"marginTop": "-18.6%"}}
-                                />
-                                ):
-
-                                item.image_row_1.alt === "negative-margin-1440" ? (
+                                    src={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
+                                    style={{ marginTop: "-18.6%" }}
+                                  />
+                                ) : item.image_row_1.alt ===
+                                  "negative-margin-1440" ? (
                                   <SinglePortraitRight
-                                  src={item.image_row_1.url}
-                                  alt="Jeremy Jude Lee Project"
-                                  style={{"marginTop": "-9%"}}
-                                />
-                                ):
+                                    src={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
+                                    style={{ marginTop: "-9%" }}
+                                  />
+                                ) : (
+                                  <SinglePortraitRight
+                                    src={item.image_row_1.url}
+                                    alt="Jeremy Jude Lee Project"
+                                  />
+                                )
+                              ) : null}
 
-                                <SinglePortraitRight
-                                  src={item.image_row_1.url}
-                                  alt="Jeremy Jude Lee Project"
-                                />
-                              )
-                            ) : null}
-
-                            {/* if there is only image 2 */}
-                            {item.image_row_2.url &&
-                            item.image_row_1.url == null ? (
-                              item.image_row_2.dimensions.width === 1800 ? (
-                                <SingleLandscape
-                                  src={item.image_row_2.url}
-                                  alt="Jeremy Jude Lee Project"
-                                />
-                              ) : (
-                                item.image_row_2.alt === "negative-margin" ? (
+                              {/* if there is only image 2 */}
+                              {item.image_row_2.url &&
+                              item.image_row_1.url == null ? (
+                                item.image_row_2.dimensions.width === 1800 ? (
+                                  <SingleLandscape
+                                    src={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
+                                  />
+                                ) : item.image_row_2.alt ===
+                                  "negative-margin" ? (
                                   <SinglePortraitLeft
-                                  src={item.image_row_2.url}
-                                  alt="Jeremy Jude Lee Project"
-                                  style={{"marginTop": "-18.6%"}}
-                                />
-                                ):
-
-                                item.image_row_2.alt === "negative-margin-1440" ? (
+                                    src={item.image_row_2.url}
+                                    alt="Jeremy Jude Lee Project"
+                                    style={{ marginTop: "-18.6%" }}
+                                  />
+                                ) : item.image_row_2.alt ===
+                                  "negative-margin-1440" ? (
                                   <SinglePortraitLeft
-                                  src={item.image_row_2.url}
-                                  alt="Jeremy Jude Lee Project"
-                                  style={{"marginTop": "-9%"}}
-                                />
-                                ):
-
-                                <SinglePortraitLeft
-                                  src={item.image_row_2.url}
-                                  alt="Jeremy Jude Lee Project"
-                                />
-
-                              )
-                            ) : null}
-
-                            {/* if there is image 1 and image 2 */}
-                            {item.image_row_1.url && item.image_row_2.url ? (
-                              // if image 1 and image 2 are both landscape
-                              item.image_row_1.dimensions.width === 1800 &&
-                              item.image_row_2.dimensions.width === 1800 ? (
-                                <TwoImageContainer>
-                                  <TwoLandscape
-                                    src={item.image_row_1.url}
+                                    src={item.image_row_2.url}
                                     alt="Jeremy Jude Lee Project"
+                                    style={{ marginTop: "-9%" }}
                                   />
-                                  <TwoLandscape
+                                ) : (
+                                  <SinglePortraitLeft
                                     src={item.image_row_2.url}
                                     alt="Jeremy Jude Lee Project"
                                   />
-                                </TwoImageContainer>
-                              ) : null
-                            ) : null}
+                                )
+                              ) : null}
 
-                            {/* if there is image 1 and image 2 */}
-                            {item.image_row_1.url && item.image_row_2.url ? (
-                              // if image 1 and image 2 are both landscape
-                              item.image_row_1.dimensions.width > 1000 &&
-                              item.image_row_1.dimensions.width < 1500 &&
-                              item.image_row_2.dimensions.width > 1000 &&
-                              item.image_row_2.dimensions.width < 1500 ? (
-                                <TwoImageContainer>
-                                  <TwoPortrait
-                                    src={item.image_row_1.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                  <TwoPortrait
-                                    src={item.image_row_2.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                </TwoImageContainer>
-                              ) : null
-                            ) : null}
+                              {/* if there is image 1 and image 2 */}
+                              {item.image_row_1.url && item.image_row_2.url ? (
+                                // if image 1 and image 2 are both landscape
+                                item.image_row_1.dimensions.width === 1800 &&
+                                item.image_row_2.dimensions.width === 1800 ? (
+                                  <TwoImageContainer>
+                                    <TwoLandscape
+                                      src={item.image_row_1.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                    <TwoLandscape
+                                      src={item.image_row_2.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                  </TwoImageContainer>
+                                ) : null
+                              ) : null}
 
-                            {/* if there is image 1 and image 2 */}
-                            {item.image_row_1.url && item.image_row_2.url ? (
-                              // if image 1 is landscape and image 2 is portrait
-                              item.image_row_1.dimensions.width === 1800 &&
-                              item.image_row_2.dimensions.width > 1000 &&
-                              item.image_row_2.dimensions.width < 1500 ? (
-                                <TwoImageContainer>
-                                  <OneLandscape
-                                    src={item.image_row_1.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                  <OnePortrait
-                                    src={item.image_row_2.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                </TwoImageContainer>
-                              ) : null
-                            ) : null}
+                              {/* if there is image 1 and image 2 */}
+                              {item.image_row_1.url && item.image_row_2.url ? (
+                                // if image 1 and image 2 are both landscape
+                                item.image_row_1.dimensions.width > 1000 &&
+                                item.image_row_1.dimensions.width < 1500 &&
+                                item.image_row_2.dimensions.width > 1000 &&
+                                item.image_row_2.dimensions.width < 1500 ? (
+                                  <TwoImageContainer>
+                                    <TwoPortrait
+                                      src={item.image_row_1.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                    <TwoPortrait
+                                      src={item.image_row_2.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                  </TwoImageContainer>
+                                ) : null
+                              ) : null}
 
-                            {/* if there is image 1 and image 2 */}
-                            {item.image_row_1.url && item.image_row_2.url ? (
-                              // if image 1 is portrait and image 2 is landscape
-                              item.image_row_1.dimensions.width > 1000 &&
-                              item.image_row_1.dimensions.width < 1500 &&
-                              item.image_row_2.dimensions.width === 1800 ? (
-                                <TwoImageContainer>
-                                  <OnePortrait
-                                    src={item.image_row_1.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                  <OneLandscape
-                                    src={item.image_row_2.url}
-                                    alt="Jeremy Jude Lee Project"
-                                  />
-                                </TwoImageContainer>
-                              ) : null
-                            ) : null}
-                          </ImageRow>
-                        ))
-                      : null}
-                  </ProjectImageContainer>
+                              {/* if there is image 1 and image 2 */}
+                              {item.image_row_1.url && item.image_row_2.url ? (
+                                // if image 1 is landscape and image 2 is portrait
+                                item.image_row_1.dimensions.width === 1800 &&
+                                item.image_row_2.dimensions.width > 1000 &&
+                                item.image_row_2.dimensions.width < 1500 ? (
+                                  <TwoImageContainer>
+                                    <OneLandscape
+                                      src={item.image_row_1.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                    <OnePortrait
+                                      src={item.image_row_2.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                  </TwoImageContainer>
+                                ) : null
+                              ) : null}
+
+                              {/* if there is image 1 and image 2 */}
+                              {item.image_row_1.url && item.image_row_2.url ? (
+                                // if image 1 is portrait and image 2 is landscape
+                                item.image_row_1.dimensions.width > 1000 &&
+                                item.image_row_1.dimensions.width < 1500 &&
+                                item.image_row_2.dimensions.width === 1800 ? (
+                                  <TwoImageContainer>
+                                    <OnePortrait
+                                      src={item.image_row_1.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                    <OneLandscape
+                                      src={item.image_row_2.url}
+                                      alt="Jeremy Jude Lee Project"
+                                    />
+                                  </TwoImageContainer>
+                                ) : null
+                              ) : null}
+                            </ImageRow>
+                          ))
+                        : null}
+                    </ProjectImageContainer>
                   )}
                 </Container>
               )}

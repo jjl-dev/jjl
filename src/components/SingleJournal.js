@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import FadeIn from "react-lazyload-fadein";
+import { Helmet } from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
   header {
@@ -92,6 +93,7 @@ class SingleJournal extends React.Component {
 
   render() {
     const data = this.state.journal.data;
+    const title = `${this.state.journal.uid}`;
 
     function createMarkup() {
       return {__html: data.description[0].text};
@@ -99,6 +101,14 @@ class SingleJournal extends React.Component {
 
     return (
       <div className={"component-wrapper"}>
+        <Helmet>
+          <title>Jeremy Jude Lee {title}</title>
+          <meta name="description" content="Jeremy Jude Lee Projects" />
+          <meta
+            name="keywords"
+            content="jeremy jude lee, projects, vancouver bc, canada, lifestyle photography"
+          />
+        </Helmet>
         <FadeIn height={100} duration={300} easing={"ease-in-out"}>
           {onload => (
             <React.Fragment>
