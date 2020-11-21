@@ -69,7 +69,7 @@ const About = () => {
   return (
     <div className={"component-wrapper"}>
       <Helmet>
-        <title>Jeremy Jude Lee About</title>
+        <title>Jeremy Jude Lee : About</title>
         <meta name="description" content="Jeremy Jude Lee About" />
         <meta
           name="keywords"
@@ -106,18 +106,18 @@ const About = () => {
               <Social>
                 <SocialHeading>Clients</SocialHeading>
                 <li>Lululemon</li>
+                <li>Nike Canada</li>
                 <li>Hypebeast</li>
-                <li>Canon Canada</li>
                 <li>Herschel Supply Co.</li>
+                <li>Canon Canada</li>
                 <li>Highsnobiety</li>
                 <li>Native Shoes</li>
-                <li>ClassPass</li>
-                <li>J.Crew x New Balance</li>
+                <li>Saje Wellness</li>
                 <li>Studio Faculty</li>
                 <li>Myodetox</li>
                 <li>Roden Gray</li>
-                <li>Bailey Nelson</li>
                 <li>Everlane</li>
+                <li>Aritzia</li>
                 <li>Maekan</li>
                 <li>Grailed</li>
                 <li>Etsy</li>
@@ -141,6 +141,16 @@ const About = () => {
                 </Social>
                 <Social>
                   <SocialHeading>Press</SocialHeading>
+                  <li>
+                    <a
+                      href="https://www.heremagazine.com/articles/vancouver-bc-local-guide"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Here Magazine, 2020
+                    </a>
+                  </li>
+                  
                   <li>
                     <a
                       href="https://www.booooooom.com/2019/02/19/myth-and-reality-by-photographer-jeremy-jude-lee/"

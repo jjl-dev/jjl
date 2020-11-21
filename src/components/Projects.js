@@ -160,7 +160,7 @@ class Projects extends React.Component {
     return (
       <div className={"component-wrapper"}>
         <Helmet>
-          <title>Jeremy Jude Lee Projects</title>
+          <title>Jeremy Jude Lee : Projects</title>
           <meta name="description" content="Jeremy Jude Lee Projects" />
           <meta
             name="keywords"

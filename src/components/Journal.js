@@ -44,7 +44,7 @@ class Journal extends React.Component {
     return (
       <div className={"component-wrapper"}>
         <Helmet>
-          <title>Jeremy Jude Lee Journal</title>
+          <title>Jeremy Jude Lee : Journal</title>
           <meta name="description" content="Jeremy Jude Lee Journal" />
           <meta
             name="keywords"

@@ -93,16 +93,17 @@ class SingleJournal extends React.Component {
 
   render() {
     const data = this.state.journal.data;
-    const title = `${this.state.journal.uid}`;
+    const friendlyTitle = data && data.title ? data.title[0].text : ''
 
     function createMarkup() {
       return {__html: data.description[0].text};
     }
 
     return (
+      
       <div className={"component-wrapper"}>
         <Helmet>
-          <title>Jeremy Jude Lee {title}</title>
+          <title>Jeremy Jude Lee : {friendlyTitle}</title>
           <meta name="description" content="Jeremy Jude Lee Projects" />
           <meta
             name="keywords"
