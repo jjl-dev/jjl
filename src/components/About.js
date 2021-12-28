@@ -106,8 +106,11 @@ const About = () => {
               <Social>
                 <SocialHeading>Clients</SocialHeading>
                 <li>Lululemon</li>
+                <li>Arc'teryx</li>
                 <li>Nike Canada</li>
+                <li>Magazine B</li>
                 <li>Hypebeast</li>
+                <li>KOTN</li>
                 <li>Herschel Supply Co.</li>
                 <li>Canon Canada</li>
                 <li>Highsnobiety</li>
@@ -118,9 +121,7 @@ const About = () => {
                 <li>Roden Gray</li>
                 <li>Everlane</li>
                 <li>Aritzia</li>
-                <li>Maekan</li>
                 <li>Grailed</li>
-                <li>Etsy</li>
               </Social>
               <div>
                 <Social>
@@ -170,24 +171,6 @@ const About = () => {
                     </a>
                   </li>
 
-                  <li>
-                    <a
-                      href="https://www.canon.ca/en/consumer/Get-Inspired/One2Watch"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Canon Canada, 2018
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://mrgray.ca/blogs/stories/jeremy-jude-lee"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Mr. Gray Socks, 2018
-                    </a>
-                  </li>
                   <li>
                     <a
                       href="https://hypebae.com/2017/7/rubber-soul-editorial-jeremy-jude-lee-lauren-coutts"
