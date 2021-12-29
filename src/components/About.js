@@ -83,20 +83,7 @@ const About = () => {
 
             <Bio>
               <p>
-                Jeremy Jude Lee is a lifestyle and commercial photographer and
-                videographer based out of Vancouver, Canada.
-                <br />
-                <br />
-                Growing up in the city, Lee finds inspiration in the environment
-                that surrounds him, using his lens as a way to frame and
-                document the world as he sees it. His ability to capture unseen
-                moments and evoke feeling through his images has established Lee
-                as one of Vancouver’s go-to lifestyle photographers, and has
-                taken him around the world telling visual stories in both film
-                and in digital, for his global clients.
-                <br />
-                <br />
-                He’s also a very nice guy.
+                Jeremy Jude Lee is a photographer based in Vancouver, BC.
               </p>
             </Bio>
 
@@ -122,6 +109,11 @@ const About = () => {
                 <li>Everlane</li>
                 <li>Aritzia</li>
                 <li>Grailed</li>
+                <li>Wasserman</li>
+                <li>G.H. Bass</li>
+                <li>Classpass</li>
+                <li>Viberg Boots</li>
+                <li>Bailey Nelson</li>
               </Social>
               <div>
                 <Social>
@@ -137,75 +129,6 @@ const About = () => {
                       rel="noopener noreferrer"
                     >
                       @jeremyjudelee
-                    </a>
-                  </li>
-                </Social>
-                <Social>
-                  <SocialHeading>Press</SocialHeading>
-                  <li>
-                    <a
-                      href="https://www.heremagazine.com/articles/vancouver-bc-local-guide"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Here Magazine, 2020
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a
-                      href="https://www.booooooom.com/2019/02/19/myth-and-reality-by-photographer-jeremy-jude-lee/"
-                      target="_blank"
-                      rel="noopener noreferrer "
-                    >
-                      Booooooom.com, 2019
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://maekan.com/article/sights-sounds-jeremy-jude-lee/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Maekan, 2019
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://hypebae.com/2017/7/rubber-soul-editorial-jeremy-jude-lee-lauren-coutts"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Hypebae, 2017
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://missbish.com/the-missbish-photography-workshop-jeremy-jude-lee/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      MISSBISH 2016
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://www.creepmagazine.com/jeremy-jude-lee"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Creep Magazine, 2015
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://thecreatorclass.com/make-the-most-of-your-leading-lines-with-jeremy-jude-lee/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      The Creator Class, 2015
                     </a>
                   </li>
                 </Social>
