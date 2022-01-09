@@ -205,16 +205,7 @@ class Header extends React.Component {
                     </Links>
                     <Bio>
                       <p>
-                        Jeremy Jude Lee is a lifestyle and commercial
-                        photographer and videographer from Vancouver, Canada. He
-                        started photography as a teenager, when he picked up his
-                        parents’ cameras, and started recording whatever was of
-                        interest around him.
-                        <br />
-                        Now, almost a decade later, Jeremy has solidified a
-                        strong reputation as one of Vancouver’s “go to”
-                        photographers, telling visual stories for a long list of
-                        a long list of editorial and commercial clients.
+                        Jeremy Jude Lee is a photographer based in Vancouver, BC.
                       </p>
                       <br />
                       <a
