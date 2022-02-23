@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import FadeIn from "react-lazyload-fadein";
 import { Helmet } from "react-helmet";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, withRouter, Redirect } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./components/Header";
@@ -27,13 +27,7 @@ const App = ({ location }) => {
           <Route exact path="/projects" component={Home} />
           <Route path="/project/:id" component={SingleProject} />
           <Route path="/overview" component={Overview} />
-          <Route path="/about" render={() => (
-    <div>
-      <h2>About</h2>
-      ...
-    </div>
-  )}
-   component={About}/>
+          <Route path="/about" component={About} />
           <Route exact path="/journal" component={Journal} />
           <Route path="/journal/:id" component={SingleJournal} />
         <Footer />
