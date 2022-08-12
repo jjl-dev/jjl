@@ -149,7 +149,7 @@ class SingleProject extends React.Component {
 
   componentWillMount() {
     const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
-    const projectuID = window.location.pathname.replace("/project/", "");
+    const projectuID = window.location.hash.replace("#/project/", "");
 
     Prismic.api(apiEndpoint).then(api => {
       api

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Prismic from "prismic-javascript";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FadeIn from "react-lazyload-fadein";
 import { Helmet } from "react-helmet";
 
@@ -68,31 +68,24 @@ const BackToJournal = styled(Link)`
   line-height: 30px;
   color: #282829;
 `;
-class SingleJournal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      journal: []
-    };
-  }
+const SingleJournal = () => {
+  const [journal, setJournal] = useState([]);
 
-  componentWillMount() {
+  useEffect( () => {
     const apiEndpoint = "https://jeremyjudelee.prismic.io/api/v2";
-    const journalID = window.location.pathname.replace("/journal/", "");
-
+    const journalID = window.location.hash.replace("#/journal/", "");
     Prismic.api(apiEndpoint).then(api => {
       api
         .query(Prismic.Predicates.at("my.jour.uid", journalID), {
           orderings: "[my.blog_post.date desc]"
         })
         .then(response => {
-          this.setState({ journal: response.results[0] });
+          setJournal(response.results[0]);
         });
-    });
-  }
+    });  
+  });
 
-  render() {
-    const data = this.state.journal.data;
+    const data = journal.data;
     const friendlyTitle = data && data.title ? data.title[0].text : ''
 
     function createMarkup() {
@@ -151,6 +144,5 @@ class SingleJournal extends React.Component {
       </div>
     );
   }
-}
 
 export default SingleJournal;
