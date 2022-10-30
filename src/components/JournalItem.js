@@ -13,6 +13,10 @@ const JournalItemContainer = styled(Link)`
     flex-direction: column;
   }
 
+  &:hover {
+    opacity: .7;
+  }
+
 `;
 const Item = styled.div`
   flex-basis: 100%;
@@ -68,7 +72,9 @@ const JournalItem = props => {
   const data = props.data.data;
 
   function createMarkup() {
-    return {__html: data.description[0].text};
+    // return {__html: data.description[0].text};
+    const markup =  (data.description[0].text.length > 720) ? `${data.description[0].text.substring(0, 720)}...` : data.description[0].text
+    return {__html: markup}
   }
 
   return (

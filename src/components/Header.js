@@ -133,6 +133,10 @@ class Header extends React.Component {
                       ABOUT&nbsp;
                     </NavLink>
                     /&nbsp;
+                    <a href="https://shop.jeremyjudelee.com/" target="_blank">
+                      SHOP&nbsp;
+                    </a>
+                    /&nbsp;
                     <NavLink rel='canonical' activeClassName="is-active" to="/journal">
                       JOURNAL
                     </NavLink>
@@ -193,6 +197,10 @@ class Header extends React.Component {
                         >
                           ABOUT &nbsp;
                         </NavLink>
+                        / &nbsp;
+                        <a href="https://shop.jeremyjudelee.com/" target="_blank">
+                          SHOP&nbsp;
+                        </a>
                         / &nbsp;
                         <NavLink
                           activeClassName="is-active"

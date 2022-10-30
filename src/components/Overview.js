@@ -277,7 +277,7 @@ class Overview extends React.Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>Jeremy Jude Lee : Lifestyle and Commercial Photographer</title>
+          <title>Jeremy Jude Lee : Photographer</title>
           <meta name="description" content="Jeremy Jude Lee is a lifestyle and commercial photographer and videographer based out of Vancouver, Canada. He's also a very nice guy." />
           <meta
             name="keywords"
