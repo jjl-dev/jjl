@@ -387,8 +387,8 @@ class Overview extends React.Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>Jeremy Jude Lee : Photographer</title>
-          <meta name="description" content="Jeremy Jude Lee is a lifestyle and commercial photographer and videographer based out of Vancouver, Canada. He's also a very nice guy." />
+          <title>Jeremy Jude Lee (JJL) | Photography</title>
+          <meta name="description" content="Jeremy Jude Lee is a Chinese-Canadian artist & photographer known for nostalgic storytelling. Currently between Vancouver, Los Angeles + New York." />
           <meta
             name="keywords"
             content="jeremy jude lee, overview, portfolio, vancouver bc, canada, lifestyle photography"

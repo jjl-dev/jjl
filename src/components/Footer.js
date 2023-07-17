@@ -36,7 +36,7 @@ const Footer = () => {
     <Container>
         <Links>
           <a href="https://www.instagram.com/jeremyjudelee/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>/
-          <a href="mailto:jeremyjudelee@gmail.com">EMAIL</a>
+          <a href="mailto:info@jeremyjudelee.com" style={{textTransform: "uppercase"}}>info@jeremyjudelee.com</a>
         </Links>
         <Description>
         ©2023 JEREMY JUDE LEE. IMAGES AND CONTENT MAY NOT BE USED WITHOUT WRITTEN PERMISSION. ALL RIGHTS RESERVED. SITE DESIGN BY STUDIO FACULTY
