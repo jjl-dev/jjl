@@ -89,7 +89,7 @@ const About = () => {
               < br/>
               <p>In 2022, Jeremy self published his first book, Montage : a compilation of film photographs organized by tone and colour, captured in cities all over the world. He is currently working on his first exhibition debut.</p>
               < br/>
-              <p>Jeremy has been featured in HYPEBEAST, Highsnobiety, Editorial Magazine, Magazine B, i-D, Street Dreams Magazine, Montecristo Magazine, Booooooom, MAEKAN, and more.</p>
+              <p>Jeremy has been featured in Dazed, HYPEBEAST, Highsnobiety, Editorial Magazine, Magazine B, i-D, Street Dreams Magazine, Montecristo Magazine, Booooooom, MAEKAN, and more.</p>
             </Bio>
 
             <hr />
@@ -154,7 +154,7 @@ const About = () => {
 
               <Social>
                 <SocialHeading>Videos</SocialHeading>
-                  <li>Joyride, JJ Adrian, 07/19/23</li>
+                  <li><a href="https://youtu.be/F8jxQvOFCK8" target="_blank" rel="noopener noreferrer">Joyride, JJ Adrian, 07/27/03</a></li>
                   <li><a href="https://www.youtube.com/watch?v=2P1OzhstGVQ&ab_channel=Highsnobiety" target="_blank" rel="noopener noreferrer">Exploring Performance and Evolution with Arc'teryx Veilance, Highsnobiety, 12/07/17</a></li>
                   <li><a href="https://www.youtube.com/watch?v=8uEYnX06Eq8&ab_channel=J.Crew" target="_blank" rel="noopener noreferrer">J.Crew on Film : J.Crew x New Balance 997 Cortado, 03/21/17</a></li>
               </Social>
@@ -165,6 +165,7 @@ const About = () => {
                   <li><a href="https://www.heartsofcanada.com/features/jeremy-jude-lee" target="_blank" rel="noopener noreferrer">Hearts of Canada, From the Heart</a></li>
                   <li><a href="https://www.heremagazine.com/articles/vancouver-bc-local-guide" target="_blank" rel="noopener noreferrer">Here Magazine, Local Guide to Vancouver</a></li>
                   <li><a href="https://sortdays.com/blogs/journal/jeremy-jude-lee-interview-book-launch-friends" target="_blank" rel="noopener noreferrer">SORT, Book Launch & Friends</a></li>
+                  <li><a href="https://www.dazeddigital.com/art-photography/gallery/32503/0/pretty-boys-jeremy-jude-lee" target="_blank" rel="noopener noreferrer">Dazed, Sun-swamped photos of Vancouver’s prettiest boys  </a></li>
               </Social>
             </div>
           </Container>
