@@ -97,6 +97,7 @@ const About = () => {
             <Info>
               <Social>
                 <SocialHeading>Clients</SocialHeading>
+                  <li>Apple </li>
                   <li>Alterior / A Living Taste</li>
                   <li>Arc'teryx</li>
                   <li>Aritzia</li>
@@ -122,6 +123,7 @@ const About = () => {
                   <li>Uniqlo Canada</li>
                   <li>Viberg Boots</li>
                   <li>Vitruvi</li>
+                  <li>Reigning Champ</li>
               </Social>
               <div>
                 <Social>
