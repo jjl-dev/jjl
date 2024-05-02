@@ -5,181 +5,234 @@ import "react-image-lightbox/style.css"; // This only needs to be imported once 
 import FadeIn from "react-lazyload-fadein";
 import { Helmet } from "react-helmet";
 
-import img1 from "../assets/vancouver_photographer_jeremyjudelee_0001.jpg";
-import img2 from "../assets/vancouver_photographer_jeremyjudelee_0002.jpg";
-import img3 from "../assets/vancouver_photographer_jeremyjudelee_0003.jpg";
-import img4 from "../assets/vancouver_photographer_jeremyjudelee_0004.jpg";
-import img5 from "../assets/vancouver_photographer_jeremyjudelee_0005.jpg";
+import img1 from "../assets/0001-JJL-OVERVIEW-PAGE.jpg";
+import img2 from "../assets/0002-JJL-OVERVIEW-PAGE.jpg";
+import img3 from "../assets/0003-JJL-OVERVIEW-PAGE.jpg";
+import img4 from "../assets/0004-JJL-OVERVIEW-PAGE.jpg";
+import img5 from "../assets/0005-JJL-OVERVIEW-PAGE.jpg";
 
-import img6 from "../assets/vancouver_photographer_jeremyjudelee_0006.jpg";
-import img7 from "../assets/vancouver_photographer_jeremyjudelee_0007.jpg";
-import img8 from "../assets/vancouver_photographer_jeremyjudelee_0008.jpg";
-import img9 from "../assets/vancouver_photographer_jeremyjudelee_0009.jpg";
-import img10 from "../assets/vancouver_photographer_jeremyjudelee_0010.jpg";
-import img11 from "../assets/vancouver_photographer_jeremyjudelee_0011.jpg";
+import img6 from "../assets/0006-JJL-OVERVIEW-PAGE.jpg";
+import img7 from "../assets/0007-JJL-OVERVIEW-PAGE.jpg";
+import img8 from "../assets/0008-JJL-OVERVIEW-PAGE.jpg";
+import img9 from "../assets/0009-JJL-OVERVIEW-PAGE.jpg";
+import img10 from "../assets/0010-JJL-OVERVIEW-PAGE.jpg";
+import img11 from "../assets/0011-JJL-OVERVIEW-PAGE.jpg";
 
-import img12 from "../assets/vancouver_photographer_jeremyjudelee_0012.jpg";
+import img12 from "../assets/0012-JJL-OVERVIEW-PAGE.jpg";
 
-import img13 from "../assets/vancouver_photographer_jeremyjudelee_0013.jpg";
-import img14 from "../assets/vancouver_photographer_jeremyjudelee_0014.jpg";
-import img15 from "../assets/vancouver_photographer_jeremyjudelee_0015.jpg";
+import img13 from "../assets/0013-JJL-OVERVIEW-PAGE.jpg";
+import img14 from "../assets/0014-JJL-OVERVIEW-PAGE.jpg";
+import img15 from "../assets/0015-JJL-OVERVIEW-PAGE.jpg";
 
-import img16 from "../assets/vancouver_photographer_jeremyjudelee_0016.jpg";
-import img17 from "../assets/vancouver_photographer_jeremyjudelee_0017.jpg";
+import img16 from "../assets/0016-JJL-OVERVIEW-PAGE.jpg";
+import img17 from "../assets/0017-JJL-OVERVIEW-PAGE.jpg";
 
-import img18 from "../assets/vancouver_photographer_jeremyjudelee_0018.jpg";
-import img19 from "../assets/vancouver_photographer_jeremyjudelee_0019.jpg";
-import img20 from "../assets/vancouver_photographer_jeremyjudelee_0020.jpg";
+import img18 from "../assets/0018-JJL-OVERVIEW-PAGE.jpg";
+import img19 from "../assets/0019-JJL-OVERVIEW-PAGE.jpg";
+import img20 from "../assets/0020-JJL-OVERVIEW-PAGE.jpg";
 
-import img21 from "../assets/vancouver_photographer_jeremyjudelee_0021.jpg";
-import img22 from "../assets/vancouver_photographer_jeremyjudelee_0022.jpg";
-import img23 from "../assets/vancouver_photographer_jeremyjudelee_0023.jpg";
+import img21 from "../assets/0021-JJL-OVERVIEW-PAGE.jpg";
+import img22 from "../assets/0022-JJL-OVERVIEW-PAGE.jpg";
+import img23 from "../assets/0023-JJL-OVERVIEW-PAGE.jpg";
 
-import img24 from "../assets/vancouver_photographer_jeremyjudelee_0024.jpg";
+import img24 from "../assets/0024-JJL-OVERVIEW-PAGE.jpg";
 
-import img25 from "../assets/vancouver_photographer_jeremyjudelee_0025.jpg";
-import img26 from "../assets/vancouver_photographer_jeremyjudelee_0026.jpg";
-import img27 from "../assets/vancouver_photographer_jeremyjudelee_0027.jpg";
+import img25 from "../assets/0025-JJL-OVERVIEW-PAGE.jpg";
+import img26 from "../assets/0026-JJL-OVERVIEW-PAGE.jpg";
+import img27 from "../assets/0027-JJL-OVERVIEW-PAGE.jpg";
 
-import img28 from "../assets/vancouver_photographer_jeremyjudelee_0028.jpg";
-import img29 from "../assets/vancouver_photographer_jeremyjudelee_0029.jpg";
+import img28 from "../assets/0028-JJL-OVERVIEW-PAGE.jpg";
+import img29 from "../assets/0029-JJL-OVERVIEW-PAGE.jpg";
 
-import img30 from "../assets/vancouver_photographer_jeremyjudelee_0034.jpg";
-import img31 from "../assets/vancouver_photographer_jeremyjudelee_0031.jpg";
-import img32 from "../assets/vancouver_photographer_jeremyjudelee_0032.jpg";
+import img30 from "../assets/0030-JJL-OVERVIEW-PAGE.jpg";
+import img31 from "../assets/0031-JJL-OVERVIEW-PAGE.jpg";
+import img32 from "../assets/0032-JJL-OVERVIEW-PAGE.jpg";
 
-import img33 from "../assets/vancouver_photographer_jeremyjudelee_0033.jpg";
-import img34 from "../assets/vancouver_photographer_jeremyjudelee_0030.jpg";
-import img35 from "../assets/vancouver_photographer_jeremyjudelee_0035.jpg";
+import img33 from "../assets/0033-JJL-OVERVIEW-PAGE.jpg";
+import img34 from "../assets/0034-JJL-OVERVIEW-PAGE.jpg";
+import img35 from "../assets/0035-JJL-OVERVIEW-PAGE.jpg";
 
-import img36 from "../assets/vancouver_photographer_jeremyjudelee_0036.jpg";
+import img36 from "../assets/0036-JJL-OVERVIEW-PAGE.jpg";
 
-import img37 from "../assets/vancouver_photographer_jeremyjudelee_0037.jpg";
-import img38 from "../assets/vancouver_photographer_jeremyjudelee_0038.jpg";
-import img39 from "../assets/vancouver_photographer_jeremyjudelee_0039.jpg";
+import img37 from "../assets/0037-JJL-OVERVIEW-PAGE.jpg";
+import img38 from "../assets/0038-JJL-OVERVIEW-PAGE.jpg";
+import img39 from "../assets/0039-JJL-OVERVIEW-PAGE.jpg";
 
-import img40 from "../assets/vancouver_photographer_jeremyjudelee_0040.jpg";
-import img41 from "../assets/vancouver_photographer_jeremyjudelee_0041.jpg";
+import img40 from "../assets/0040-JJL-OVERVIEW-PAGE.jpg";
+import img41 from "../assets/0041-JJL-OVERVIEW-PAGE.jpg";
 
-import img42 from "../assets/vancouver_photographer_jeremyjudelee_0042.jpg";
-import img43 from "../assets/vancouver_photographer_jeremyjudelee_0043.jpg";
-import img44 from "../assets/vancouver_photographer_jeremyjudelee_0044.jpg";
+import img42 from "../assets/0042-JJL-OVERVIEW-PAGE.jpg";
+import img43 from "../assets/0043-JJL-OVERVIEW-PAGE.jpg";
+import img44 from "../assets/0044-JJL-OVERVIEW-PAGE.jpg";
 
-import img45 from "../assets/vancouver_photographer_jeremyjudelee_0045.jpg";
-import img46 from "../assets/vancouver_photographer_jeremyjudelee_0046.jpg";
-import img47 from "../assets/vancouver_photographer_jeremyjudelee_0047.jpg";
+import img45 from "../assets/0045-JJL-OVERVIEW-PAGE.jpg";
+import img46 from "../assets/0046-JJL-OVERVIEW-PAGE.jpg";
+import img47 from "../assets/0047-JJL-OVERVIEW-PAGE.jpg";
 
-import img48 from "../assets/vancouver_photographer_jeremyjudelee_0048.jpg";
+import img48 from "../assets/0048-JJL-OVERVIEW-PAGE.jpg";
 
-import img49 from "../assets/vancouver_photographer_jeremyjudelee_0049.jpg";
-import img50 from "../assets/vancouver_photographer_jeremyjudelee_0050.jpg";
-import img51 from "../assets/vancouver_photographer_jeremyjudelee_0051.jpg";
+import img49 from "../assets/0049-JJL-OVERVIEW-PAGE.jpg";
+import img50 from "../assets/0050-JJL-OVERVIEW-PAGE.jpg";
+import img51 from "../assets/0051-JJL-OVERVIEW-PAGE.jpg";
 
-import img52 from "../assets/vancouver_photographer_jeremyjudelee_0052.jpg";
-import img53 from "../assets/vancouver_photographer_jeremyjudelee_0053.jpg";
-import img54 from "../assets/vancouver_photographer_jeremyjudelee_0054.jpg";
+import img52 from "../assets/0052-JJL-OVERVIEW-PAGE.jpg";
+import img53 from "../assets/0053-JJL-OVERVIEW-PAGE.jpg";
+import img54 from "../assets/0054-JJL-OVERVIEW-PAGE.jpg";
 
-import img55 from "../assets/vancouver_photographer_jeremyjudelee_0055.jpg";
-import img56 from "../assets/vancouver_photographer_jeremyjudelee_0056.jpg";
-import img57 from "../assets/vancouver_photographer_jeremyjudelee_0057.jpg";
+import img55 from "../assets/0055-JJL-OVERVIEW-PAGE.jpg";
+import img56 from "../assets/0056-JJL-OVERVIEW-PAGE.jpg";
+import img57 from "../assets/0057-JJL-OVERVIEW-PAGE.jpg";
 
-import img58 from "../assets/vancouver_photographer_jeremyjudelee_0058.jpg";
-import img59 from "../assets/vancouver_photographer_jeremyjudelee_0059.jpg";
-import img60 from "../assets/vancouver_photographer_jeremyjudelee_0060.jpg";
+import img58 from "../assets/0058-JJL-OVERVIEW-PAGE.jpg";
+import img59 from "../assets/0059-JJL-OVERVIEW-PAGE.jpg";
+import img60 from "../assets/0060-JJL-OVERVIEW-PAGE.jpg";
 
-import img61 from "../assets/vancouver_photographer_jeremyjudelee_0061.jpg";
-import img62 from "../assets/vancouver_photographer_jeremyjudelee_0062.jpg";
-import img63 from "../assets/vancouver_photographer_jeremyjudelee_0063.jpg";
+import img61 from "../assets/0061-JJL-OVERVIEW-PAGE.jpg";
+import img62 from "../assets/0062-JJL-OVERVIEW-PAGE.jpg";
+import img63 from "../assets/0063-JJL-OVERVIEW-PAGE.jpg";
 
-import img64 from "../assets/vancouver_photographer_jeremyjudelee_0064.jpg";
-import img65 from "../assets/vancouver_photographer_jeremyjudelee_0065.jpg";
-import img66 from "../assets/vancouver_photographer_jeremyjudelee_0066.jpg";
+import img64 from "../assets/0064-JJL-OVERVIEW-PAGE.jpg";
+import img65 from "../assets/0065-JJL-OVERVIEW-PAGE.jpg";
+import img66 from "../assets/0066-JJL-OVERVIEW-PAGE.jpg";
 
-import img67 from "../assets/vancouver_photographer_jeremyjudelee_0067.jpg";
-import img68 from "../assets/vancouver_photographer_jeremyjudelee_0068.jpg";
-import img69 from "../assets/vancouver_photographer_jeremyjudelee_0069.jpg";
+import img67 from "../assets/0067-JJL-OVERVIEW-PAGE.jpg";
+import img68 from "../assets/0068-JJL-OVERVIEW-PAGE.jpg";
+import img69 from "../assets/0069-JJL-OVERVIEW-PAGE.jpg";
 
-import img70 from "../assets/vancouver_photographer_jeremyjudelee_0070.jpg";
-import img71 from "../assets/vancouver_photographer_jeremyjudelee_0071.jpg";
-import img72 from "../assets/vancouver_photographer_jeremyjudelee_0072.jpg";
+import img70 from "../assets/0070-JJL-OVERVIEW-PAGE.jpg";
+import img71 from "../assets/0071-JJL-OVERVIEW-PAGE.jpg";
+import img72 from "../assets/0072-JJL-OVERVIEW-PAGE.jpg";
 
-import img73 from "../assets/vancouver_photographer_jeremyjudelee_0073.jpg";
-import img74 from "../assets/vancouver_photographer_jeremyjudelee_0074.jpg";
-import img75 from "../assets/vancouver_photographer_jeremyjudelee_0075.jpg";
+import img73 from "../assets/0073-JJL-OVERVIEW-PAGE.jpg";
+import img74 from "../assets/0074-JJL-OVERVIEW-PAGE.jpg";
+import img75 from "../assets/0075-JJL-OVERVIEW-PAGE.jpg";
 
-import img76 from "../assets/vancouver_photographer_jeremyjudelee_0076.jpg";
-import img77 from "../assets/vancouver_photographer_jeremyjudelee_0077.jpg";
-import img78 from "../assets/vancouver_photographer_jeremyjudelee_0078.jpg";
+import img76 from "../assets/0076-JJL-OVERVIEW-PAGE.jpg";
+import img77 from "../assets/0077-JJL-OVERVIEW-PAGE.jpg";
+import img78 from "../assets/0078-JJL-OVERVIEW-PAGE.jpg";
 
-import img79 from "../assets/vancouver_photographer_jeremyjudelee_0079.jpg";
-import img80 from "../assets/vancouver_photographer_jeremyjudelee_0080.jpg";
-import img81 from "../assets/vancouver_photographer_jeremyjudelee_0081.jpg";
+import img79 from "../assets/0079-JJL-OVERVIEW-PAGE.jpg";
+import img80 from "../assets/0080-JJL-OVERVIEW-PAGE.jpg";
+import img81 from "../assets/0081-JJL-OVERVIEW-PAGE.jpg";
 
-import img82 from "../assets/vancouver_photographer_jeremyjudelee_0082.jpg";
-import img83 from "../assets/vancouver_photographer_jeremyjudelee_0083.jpg";
-import img84 from "../assets/vancouver_photographer_jeremyjudelee_0084.jpg";
+import img82 from "../assets/0082-JJL-OVERVIEW-PAGE.jpg";
+import img83 from "../assets/0083-JJL-OVERVIEW-PAGE.jpg";
+import img84 from "../assets/0084-JJL-OVERVIEW-PAGE.jpg";
 
-import img85 from "../assets/vancouver_photographer_jeremyjudelee_0085.jpg";
-import img86 from "../assets/vancouver_photographer_jeremyjudelee_0086.jpg";
-import img87 from "../assets/vancouver_photographer_jeremyjudelee_0087.jpg";
+import img85 from "../assets/0085-JJL-OVERVIEW-PAGE.jpg";
+import img86 from "../assets/0086-JJL-OVERVIEW-PAGE.jpg";
+import img87 from "../assets/0087-JJL-OVERVIEW-PAGE.jpg";
 
-import img88 from "../assets/vancouver_photographer_jeremyjudelee_0088.jpg";
-import img89 from "../assets/vancouver_photographer_jeremyjudelee_0089.jpg";
-import img90 from "../assets/vancouver_photographer_jeremyjudelee_0090.jpg";
+import img88 from "../assets/0088-JJL-OVERVIEW-PAGE.jpg";
+import img89 from "../assets/0089-JJL-OVERVIEW-PAGE.jpg";
+import img90 from "../assets/0090-JJL-OVERVIEW-PAGE.jpg";
 
-import img91 from "../assets/vancouver_photographer_jeremyjudelee_0091.jpg";
-import img92 from "../assets/vancouver_photographer_jeremyjudelee_0092.jpg";
-import img93 from "../assets/vancouver_photographer_jeremyjudelee_0093.jpg";
+import img91 from "../assets/0091-JJL-OVERVIEW-PAGE.jpg";
+import img92 from "../assets/0092-JJL-OVERVIEW-PAGE.jpg";
+import img93 from "../assets/0093-JJL-OVERVIEW-PAGE.jpg";
 
-import img94 from "../assets/vancouver_photographer_jeremyjudelee_0094.jpg";
-import img95 from "../assets/vancouver_photographer_jeremyjudelee_0095.jpg";
-import img96 from "../assets/vancouver_photographer_jeremyjudelee_0096.jpg";
+import img94 from "../assets/0094-JJL-OVERVIEW-PAGE.jpg";
+import img95 from "../assets/0095-JJL-OVERVIEW-PAGE.jpg";
+import img96 from "../assets/0096-JJL-OVERVIEW-PAGE.jpg";
 
-import img97 from "../assets/vancouver_photographer_jeremyjudelee_0097.jpg";
-import img98 from "../assets/vancouver_photographer_jeremyjudelee_0098.jpg";
-import img99 from "../assets/vancouver_photographer_jeremyjudelee_0099.jpg";
+import img97 from "../assets/0097-JJL-OVERVIEW-PAGE.jpg";
+import img98 from "../assets/0098-JJL-OVERVIEW-PAGE.jpg";
+import img99 from "../assets/0099-JJL-OVERVIEW-PAGE.jpg";
 
-import img100 from "../assets/vancouver_photographer_jeremyjudelee_0100.jpg";
-import img101 from "../assets/vancouver_photographer_jeremyjudelee_0101.jpg";
-import img102 from "../assets/vancouver_photographer_jeremyjudelee_0102.jpg";
+import img100 from "../assets/0100-JJL-OVERVIEW-PAGE.jpg";
+import img101 from "../assets/0101-JJL-OVERVIEW-PAGE.jpg";
+import img102 from "../assets/0102-JJL-OVERVIEW-PAGE.jpg";
 
-import img103 from "../assets/vancouver_photographer_jeremyjudelee_0103.jpg";
-import img104 from "../assets/vancouver_photographer_jeremyjudelee_0104.jpg";
-import img105 from "../assets/vancouver_photographer_jeremyjudelee_0105.jpg";
+import img103 from "../assets/0103-JJL-OVERVIEW-PAGE.jpg";
+import img104 from "../assets/0104-JJL-OVERVIEW-PAGE.jpg";
+import img105 from "../assets/0105-JJL-OVERVIEW-PAGE.jpg";
 
-import img106 from "../assets/vancouver_photographer_jeremyjudelee_0106.jpg";
-import img107 from "../assets/vancouver_photographer_jeremyjudelee_0107.jpg";
-import img108 from "../assets/vancouver_photographer_jeremyjudelee_0108.jpg";
+import img106 from "../assets/0106-JJL-OVERVIEW-PAGE.jpg";
+import img107 from "../assets/0107-JJL-OVERVIEW-PAGE.jpg";
+import img108 from "../assets/0108-JJL-OVERVIEW-PAGE.jpg";
 
-import img109 from "../assets/vancouver_photographer_jeremyjudelee_0109.jpg";
-import img110 from "../assets/vancouver_photographer_jeremyjudelee_0110.jpg";
-import img111 from "../assets/vancouver_photographer_jeremyjudelee_0111.jpg";
+import img109 from "../assets/0109-JJL-OVERVIEW-PAGE.jpg";
+import img110 from "../assets/0110-JJL-OVERVIEW-PAGE.jpg";
+import img111 from "../assets/0111-JJL-OVERVIEW-PAGE.jpg";
 
-import img112 from "../assets/vancouver_photographer_jeremyjudelee_0112.jpg";
-import img113 from "../assets/vancouver_photographer_jeremyjudelee_0113.jpg";
-import img114 from "../assets/vancouver_photographer_jeremyjudelee_0114.jpg";
+import img112 from "../assets/0112-JJL-OVERVIEW-PAGE.jpg";
+import img113 from "../assets/0113-JJL-OVERVIEW-PAGE.jpg";
+import img114 from "../assets/0114-JJL-OVERVIEW-PAGE.jpg";
 
-import img115 from "../assets/vancouver_photographer_jeremyjudelee_0115.jpg";
-import img116 from "../assets/vancouver_photographer_jeremyjudelee_0116.jpg";
-import img117 from "../assets/vancouver_photographer_jeremyjudelee_0117.jpg";
+import img115 from "../assets/0115-JJL-OVERVIEW-PAGE.jpg";
+import img116 from "../assets/0116-JJL-OVERVIEW-PAGE.jpg";
+import img117 from "../assets/0117-JJL-OVERVIEW-PAGE.jpg";
 
-import img118 from "../assets/vancouver_photographer_jeremyjudelee_0118.jpg";
-import img119 from "../assets/vancouver_photographer_jeremyjudelee_0119.jpg";
-import img120 from "../assets/vancouver_photographer_jeremyjudelee_0120.jpg";
+import img118 from "../assets/0118-JJL-OVERVIEW-PAGE.jpg";
+import img119 from "../assets/0119-JJL-OVERVIEW-PAGE.jpg";
+import img120 from "../assets/0120-JJL-OVERVIEW-PAGE.jpg";
 
-import img121 from "../assets/vancouver_photographer_jeremyjudelee_0121.jpg";
-import img122 from "../assets/vancouver_photographer_jeremyjudelee_0122.jpg";
-import img123 from "../assets/vancouver_photographer_jeremyjudelee_0123.jpg";
-import img124 from "../assets/vancouver_photographer_jeremyjudelee_0124.jpg";
-import img125 from "../assets/vancouver_photographer_jeremyjudelee_0125.jpg";
-import img126 from "../assets/vancouver_photographer_jeremyjudelee_0126.jpg";
-import img127 from "../assets/vancouver_photographer_jeremyjudelee_0127.jpg";
-import img128 from "../assets/vancouver_photographer_jeremyjudelee_0128.jpg";
-import img129 from "../assets/vancouver_photographer_jeremyjudelee_0129.jpg";
+import img121 from "../assets/0121-JJL-OVERVIEW-PAGE.jpg";
+import img122 from "../assets/0122-JJL-OVERVIEW-PAGE.jpg";
+import img123 from "../assets/0123-JJL-OVERVIEW-PAGE.jpg";
+import img124 from "../assets/0124-JJL-OVERVIEW-PAGE.jpg";
+import img125 from "../assets/0125-JJL-OVERVIEW-PAGE.jpg";
+import img126 from "../assets/0126-JJL-OVERVIEW-PAGE.jpg";
+import img127 from "../assets/0127-JJL-OVERVIEW-PAGE.jpg";
+import img128 from "../assets/0128-JJL-OVERVIEW-PAGE.jpg";
+import img129 from "../assets/0129-JJL-OVERVIEW-PAGE.jpg";
+import img130 from "../assets/0130-JJL-OVERVIEW-PAGE.jpg";
+import img131 from "../assets/0131-JJL-OVERVIEW-PAGE.jpg";
+import img132 from "../assets/0132-JJL-OVERVIEW-PAGE.jpg";
 
-import img130 from "../assets/vancouver_photographer_jeremyjudelee_0130.jpg";
-import img131 from "../assets/vancouver_photographer_jeremyjudelee_0131.jpg";
-import img132 from "../assets/vancouver_photographer_jeremyjudelee_0132.jpg";
+import img133 from "../assets/0133-JJL-OVERVIEW-PAGE.jpg";
+import img134 from "../assets/0134-JJL-OVERVIEW-PAGE.jpg";
+import img135 from "../assets/0135-JJL-OVERVIEW-PAGE.jpg";
+import img136 from "../assets/0136-JJL-OVERVIEW-PAGE.jpg";
+import img137 from "../assets/0137-JJL-OVERVIEW-PAGE.jpg";
+import img138 from "../assets/0138-JJL-OVERVIEW-PAGE.jpg";
+import img139 from "../assets/0139-JJL-OVERVIEW-PAGE.jpg";
+
+import img140 from "../assets/0140-JJL-OVERVIEW-PAGE.jpg";
+import img141 from "../assets/0141-JJL-OVERVIEW-PAGE.jpg";
+import img142 from "../assets/0142-JJL-OVERVIEW-PAGE.jpg";
+import img143 from "../assets/0143-JJL-OVERVIEW-PAGE.jpg";
+import img144 from "../assets/0144-JJL-OVERVIEW-PAGE.jpg";
+import img145 from "../assets/0145-JJL-OVERVIEW-PAGE.jpg";
+import img146 from "../assets/0146-JJL-OVERVIEW-PAGE.jpg";
+import img147 from "../assets/0147-JJL-OVERVIEW-PAGE.jpg";
+import img148 from "../assets/0148-JJL-OVERVIEW-PAGE.jpg";
+import img149 from "../assets/0149-JJL-OVERVIEW-PAGE.jpg";
+
+import img150 from "../assets/0150-JJL-OVERVIEW-PAGE.jpg";
+import img151 from "../assets/0151-JJL-OVERVIEW-PAGE.jpg";
+import img152 from "../assets/0152-JJL-OVERVIEW-PAGE.jpg";
+import img153 from "../assets/0153-JJL-OVERVIEW-PAGE.jpg";
+import img154 from "../assets/0154-JJL-OVERVIEW-PAGE.jpg";
+import img155 from "../assets/0155-JJL-OVERVIEW-PAGE.jpg";
+import img156 from "../assets/0156-JJL-OVERVIEW-PAGE.jpg";
+import img157 from "../assets/0157-JJL-OVERVIEW-PAGE.jpg";
+import img158 from "../assets/0158-JJL-OVERVIEW-PAGE.jpg";
+import img159 from "../assets/0159-JJL-OVERVIEW-PAGE.jpg";
+
+import img160 from "../assets/0160-JJL-OVERVIEW-PAGE.jpg";
+import img161 from "../assets/0161-JJL-OVERVIEW-PAGE.jpg";
+import img162 from "../assets/0162-JJL-OVERVIEW-PAGE.jpg";
+import img163 from "../assets/0163-JJL-OVERVIEW-PAGE.jpg";
+import img164 from "../assets/0164-JJL-OVERVIEW-PAGE.jpg";
+import img165 from "../assets/0165-JJL-OVERVIEW-PAGE.jpg";
+import img166 from "../assets/0166-JJL-OVERVIEW-PAGE.jpg";
+import img167 from "../assets/0167-JJL-OVERVIEW-PAGE.jpg";
+import img168 from "../assets/0168-JJL-OVERVIEW-PAGE.jpg";
+import img169 from "../assets/0169-JJL-OVERVIEW-PAGE.jpg";
+
+import img170 from "../assets/0170-JJL-OVERVIEW-PAGE.jpg";
+import img171 from "../assets/0171-JJL-OVERVIEW-PAGE.jpg";
+import img172 from "../assets/0172-JJL-OVERVIEW-PAGE.jpg";
+import img173 from "../assets/0173-JJL-OVERVIEW-PAGE.jpg";
+import img174 from "../assets/0174-JJL-OVERVIEW-PAGE.jpg";
+import img175 from "../assets/0175-JJL-OVERVIEW-PAGE.jpg";
+import img176 from "../assets/0176-JJL-OVERVIEW-PAGE.jpg";
+import img177 from "../assets/0177-JJL-OVERVIEW-PAGE.jpg";
+import img178 from "../assets/0178-JJL-OVERVIEW-PAGE.jpg";
+import img179 from "../assets/0179-JJL-OVERVIEW-PAGE.jpg";
+
+import img180 from "../assets/0180-JJL-OVERVIEW-PAGE.jpg";
 
 const Container = styled.div`
   padding: 0 15px;
@@ -367,6 +420,54 @@ class Overview extends React.Component {
         img130,
         img131,
         img132,
+        img133,
+        img134,
+        img135,
+        img136,
+        img137,
+        img138,
+        img139,
+        img140,
+        img141,
+        img142,
+        img143,
+        img144,
+        img145,
+        img146,
+        img147,
+        img148,
+        img149,
+        img150,
+        img151,
+        img152,
+        img153,
+        img154,
+        img155,
+        img156,
+        img157,
+        img158,
+        img159,
+        img160,
+        img161,
+        img162,
+        img163,
+        img164,
+        img165,
+        img166,
+        img167,
+        img168,
+        img169,
+        img170,
+        img171,
+        img172,
+        img173,
+        img174,
+        img175,
+        img176,
+        img177,
+        img178,
+        img179,
+        img180
       ],
       photoIndex: 0,
       isOpen: false
@@ -1366,8 +1467,8 @@ class Overview extends React.Component {
               >
                 {onload => (
                   <Img
-                    onClick={() => handlePhotoClick(61)}
-                    src={img61}
+                    onClick={() => handlePhotoClick(62)}
+                    src={img62}
                     onLoad={onload}
                     width="237"
                     alt="Jeremy Jude Lee lifestyle commercial photography"
@@ -1381,8 +1482,8 @@ class Overview extends React.Component {
               >
                 {onload => (
                   <Img
-                    onClick={() => handlePhotoClick(62)}
-                    src={img62}
+                    onClick={() => handlePhotoClick(61)}
+                    src={img61}
                     onLoad={onload}
                     width="194"
                     alt="Jeremy Jude Lee lifestyle commercial photography"
@@ -2522,6 +2623,794 @@ class Overview extends React.Component {
                 )}
               </FadeIn>
             </ImgRow>
+
+            {/* start the loop again */}
+
+            {/* hello */}
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(133)}
+                    src={img133}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(134)}
+                    src={img134}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(135)}
+                    src={img135}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(136)}
+                    onLoad={onload}
+                    src={img136}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(137)}
+                    src={img137}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(138)}
+                    src={img138}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(139)}
+                    src={img139}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(140)}
+                    src={img140}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(141)}
+                    src={img141}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(142)}
+                    src={img142}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(143)}
+                    src={img143}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <ImgSingle
+                    onClick={() => handlePhotoClick(144)}
+                    src={img144}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(145)}
+                    src={img145}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(146)}
+                    src={img146}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(147)}
+                    src={img147}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(148)}
+                    onLoad={onload}
+                    src={img148}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(149)}
+                    src={img149}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(150)}
+                    src={img150}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(151)}
+                    src={img151}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(152)}
+                    src={img152}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(153)}
+                    src={img153}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(154)}
+                    src={img154}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(155)}
+                    src={img155}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <ImgSingle
+                    onClick={() => handlePhotoClick(156)}
+                    src={img156}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            {/* goodbye */}
+
+            {/* start the loop again */}
+
+            {/* hello */}
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(157)}
+                    src={img157}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(158)}
+                    src={img158}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(159)}
+                    src={img159}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(160)}
+                    onLoad={onload}
+                    src={img160}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(161)}
+                    src={img161}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(162)}
+                    src={img162}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(163)}
+                    src={img163}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(164)}
+                    src={img164}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(165)}
+                    src={img165}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(166)}
+                    src={img166}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(167)}
+                    src={img167}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <ImgSingle
+                    onClick={() => handlePhotoClick(168)}
+                    src={img168}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(169)}
+                    src={img169}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(170)}
+                    src={img170}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(171)}
+                    src={img171}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(172)}
+                    onLoad={onload}
+                    src={img172}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(173)}
+                    src={img173}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(174)}
+                    src={img174}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(175)}
+                    src={img175}
+                    onLoad={onload}
+                    width="192"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(176)}
+                    src={img176}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(177)}
+                    src={img177}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(178)}
+                    src={img178}
+                    onLoad={onload}
+                    width="237"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <Img
+                    onClick={() => handlePhotoClick(179)}
+                    src={img179}
+                    onLoad={onload}
+                    width="432"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+            <ImgRow>
+              <FadeIn
+                height={imageHeight}
+                duration={imageFadeInDuration}
+                easing={"ease-in-out"}
+              >
+                {onload => (
+                  <ImgSingle
+                    onClick={() => handlePhotoClick(180)}
+                    src={img180}
+                    onLoad={onload}
+                    width="194"
+                    alt="Jeremy Jude Lee lifestyle commercial photography"
+                  />
+                )}
+              </FadeIn>
+            </ImgRow>
+
+            {/* goodbye */}
 
 
           </ImgContainer>
