@@ -156,14 +156,12 @@ const About = () => {
 
               <Social>
                 <SocialHeading>Videos</SocialHeading>
-                  <li><a href="https://youtu.be/F8jxQvOFCK8" target="_blank" rel="noopener noreferrer">Joyride, JJ Adrian, 07/27/03</a></li>
                   <li><a href="https://www.youtube.com/watch?v=2P1OzhstGVQ&ab_channel=Highsnobiety" target="_blank" rel="noopener noreferrer">Exploring Performance and Evolution with Arc'teryx Veilance, Highsnobiety, 12/07/17</a></li>
                   <li><a href="https://www.youtube.com/watch?v=8uEYnX06Eq8&ab_channel=J.Crew" target="_blank" rel="noopener noreferrer">J.Crew on Film : J.Crew x New Balance 997 Cortado, 03/21/17</a></li>
               </Social>
 
               <Social>
                 <SocialHeading>Interviews</SocialHeading>
-                  <li><a href="https://mrgray.ca/blogs/stories/jeremy-jude-lee" target="_blank" rel="noopener noreferrer">Mr Gray, Creative Pioneer</a></li>
                   <li><a href="https://www.heartsofcanada.com/features/jeremy-jude-lee" target="_blank" rel="noopener noreferrer">Hearts of Canada, From the Heart</a></li>
                   <li><a href="https://www.heremagazine.com/articles/vancouver-bc-local-guide" target="_blank" rel="noopener noreferrer">Here Magazine, Local Guide to Vancouver</a></li>
                   <li><a href="https://sortdays.com/blogs/journal/jeremy-jude-lee-interview-book-launch-friends" target="_blank" rel="noopener noreferrer">SORT, Book Launch & Friends</a></li>
